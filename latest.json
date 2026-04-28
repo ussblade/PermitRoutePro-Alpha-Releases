@@ -1,11 +1,11 @@
 {
-  "latestVersionName": "0.4.13-dev",
-  "latestVersionCode": 115,
-  "minimumVersionCode": 115,
+  "latestVersionName": "0.4.14-dev",
+  "latestVersionCode": 116,
+  "minimumVersionCode": 116,
   "required": true,
-  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.13-alpha.1/permit-route-pro-v0.4.13-alpha.1.apk",
+  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.14-alpha.1/permit-route-pro-v0.4.14-alpha.1.apk",
   "releaseNotes": [
     "Download and install this APK to update Permit Route Pro."
   ],
-  "publishedAt": "2026-04-27T23:25:11Z"
+  "publishedAt": "2026-04-28T00:26:58Z"
 }
