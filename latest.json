@@ -1,9 +1,9 @@
 {
-  "latestVersionName": "0.4.15-dev",
-  "latestVersionCode": 117,
-  "minimumVersionCode": 117,
+  "latestVersionName": "0.4.17-dev",
+  "latestVersionCode": 119,
+  "minimumVersionCode": 119,
   "required": true,
-  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.15-alpha.1/permit-route-pro-v0.4.15-alpha.1.apk",
-  "releaseNotes": ["Removed the in-app tutorial and tutorial replay controls.", "Removed the extra route-accepted screen before navigation so accepted routes open directly in the in-app navigator.", "Fixed sunrise, sunset, twilight, and solar-noon calculations to use legal US time zones and daylight saving time instead of longitude-based solar time.", "Corrected sunrise/sunset zenith math for more accurate daily sun times.", "Added app keep-awake behavior and immersive Android navigation bar hiding while the app is in use.", "Simplified the About page to version and contact information only.", "Added changelog details to the in-app update screen before APK download.", "Snapped official route instruction waypoints to nearby route vertices so map preview pins and navigation prompts align better with real turns.", "Added regular-user debug reports with sender identity, screenshots, and permit file attachments.", "Changed debug reporting so attachments can be reviewed before pressing a separate Send button.", "Improved in-app navigation camera tilt and driver position for a more traditional GPS view.", "Reduced Nevada route prompts to real decision points instead of sparse route waypoints.", "Added a manual Check for Updates button in My Account.", "Improved User Directory recovery after temporary network loss when unlocking the phone.", "Enabled Dart symbol obfuscation for GitHub release APK builds.", "Fixed GitHub release signing key path so CI APKs are signed with the same app key as local release builds.", "Switched GitHub release builds to the app release signing key for installable updates.", "Added hard logout enforcement for revoked and suspended accounts.", "Added GitHub APK update checks with required update support.", "Fixed second-device sign-in so the new device claims the session and the old device is forced out.", "Added in-app Firebase login and registration for alpha users.", "Added server-backed user profiles with real name, email, phone, and role metadata.", "Added single-device session enforcement that signs out the previous device on new login.", "Switched alpha email/password auth to Firebase REST to bypass the broken Android SDK verification path.", "Added GitHub release workflow support for publishing Android APK builds."],
-  "publishedAt": "2026-04-29T16:05:38Z"
+  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.17-alpha.1/permit-route-pro-v0.4.17-alpha.1.apk",
+  "releaseNotes": ["Added a one-time alpha access notice after update checks.", "Fixed the update screen so Download APK stays reachable while changelog content scrolls.", "Shortened release notes in the update manifest so older builds can reach the download button."],
+  "publishedAt": "2026-04-29T16:41:08Z"
 }
