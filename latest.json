@@ -3,7 +3,7 @@
   "latestVersionCode": 119,
   "minimumVersionCode": 119,
   "required": true,
-  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.17-alpha.1/permit-route-pro-v0.4.17-alpha.1.apk",
-  "releaseNotes": ["Added a one-time alpha access notice after update checks.", "Fixed the update screen so Download APK stays reachable while changelog content scrolls.", "Shortened release notes in the update manifest so older builds can reach the download button."],
-  "publishedAt": "2026-04-29T16:41:08Z"
+  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.17-dev+119/permit-route-pro-v0.4.17-dev+119.apk",
+  "releaseNotes": ["Added Stripe subscription checkout, email verification, and one-device session enforcement.", "Updated trial/subscription access gates so expired trials must subscribe before continuing.", "Replaced referral-code sharing with simple text/email download-link sharing.", "Kept Android status bar visible while preserving hidden bottom navigation behavior."],
+  "publishedAt": "2026-05-08T11:34:48Z"
 }
