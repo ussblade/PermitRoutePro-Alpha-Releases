@@ -276,6 +276,31 @@ figure {
   padding: 24px;
 }
 
+.status-section {
+  padding-bottom: 34px;
+}
+
+.status-panel {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.55fr) minmax(0, 1fr);
+  gap: 32px;
+  align-items: start;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.status-content {
+  display: grid;
+  gap: 12px;
+  color: var(--muted);
+}
+
+.status-content p {
+  margin: 0;
+}
+
 #download-status {
   margin: 8px 0 0;
   color: var(--muted);
@@ -394,7 +419,8 @@ figcaption {
 
   .hero,
   .split,
-  .download-panel {
+  .download-panel,
+  .status-panel {
     grid-template-columns: 1fr;
   }
 
