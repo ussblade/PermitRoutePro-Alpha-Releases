@@ -1,6 +1,7 @@
+const cacheBust = Date.now().toString();
 const manifestSources = [
-  "latest.json",
-  "https://raw.githubusercontent.com/ussblade/PermitRoutePro-Alpha-Releases/main/latest.json",
+  `latest.json?v=${cacheBust}`,
+  `https://raw.githubusercontent.com/ussblade/PermitRoutePro-Alpha-Releases/main/latest.json?v=${cacheBust}`,
 ];
 
 const fallbackApkUrl =
