@@ -1,9 +1,9 @@
 {
-  "latestVersionName": "0.4.19-alpha.1",
-  "latestVersionCode": 121,
-  "minimumVersionCode": 121,
+  "latestVersionName": "0.4.20-alpha.2",
+  "latestVersionCode": 123,
+  "minimumVersionCode": 123,
   "required": true,
-  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.19-alpha.1/permit-route-pro-v0.4.19-alpha.1.apk",
-  "releaseNotes": ["Fixed update detection for testers on stale or mismatched alpha builds.", "About now shows the actual installed Android package version and build number.", "Added Stripe subscription checkout, email verification, and one-device session enforcement.", "Updated trial/subscription access gates so expired trials must subscribe before continuing.", "Replaced referral-code sharing with simple text/email download-link sharing.", "Kept Android status bar visible while preserving hidden bottom navigation behavior."],
-  "publishedAt": "2026-05-08T12:42:52Z"
+  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.20-alpha.2/permit-route-pro-v0.4.20-alpha.2.apk",
+  "releaseNotes": ["Removed legacy Google/GitHub routing fallbacks so permit routing uses state-authoritative sources.", "Fixed Virginia EZ-Haul QR routes to load the complete official route geometry.", "Added readable Virginia road-change waypoints on top of the official route line.", "Preserved QR routing support for Texas, Colorado, Nevada, Virginia, and Illinois.", "Improved session handling so approved users are not logged out by unavailable Firestore listeners.", "Updated the alpha download site and in-app update release flow."],
+  "publishedAt": "2026-06-19T02:15:52Z"
 }
