@@ -8,7 +8,7 @@
       name="description"
       content="Download Permit Route Pro for Android and review installation and app use instructions."
     >
-    <link rel="stylesheet" href="styles.css?v=0.4.20-alpha.2">
+    <link rel="stylesheet" href="styles.css?v=0.4.21-alpha.1">
   </head>
   <body>
     <header class="site-header">
@@ -19,6 +19,7 @@
         </a>
         <div class="nav-links">
           <a href="#screenshots">Screenshots</a>
+          <a href="#changes">What's New</a>
           <a href="#use">App Use</a>
           <a href="#install">Install</a>
           <a href="#download">Download</a>
@@ -81,7 +82,12 @@
             </p>
             <p>
               New Mexico and South Dakota are partially supported while additional route
-              validation work continues. Other states are in active development.
+              validation work continues.
+            </p>
+            <p>
+              Arizona, Louisiana, Arkansas, and Oklahoma are in progress. Their permit
+              extraction and state-data routing integrations are included for active alpha
+              testing, but they are not yet classified as fully supported.
             </p>
             <p>
               If a waypoint is placed incorrectly, press and hold the waypoint, drag it to
@@ -90,6 +96,24 @@
             </p>
           </div>
         </div>
+      </section>
+
+      <section class="section compact" id="changes">
+        <div class="section-heading">
+          <p class="eyebrow">Release changelog</p>
+          <h2>What's new in 0.4.21-alpha.1</h2>
+          <p>This release combines the latest routing, compliance-data, permit-import, navigation, and sharing work.</p>
+        </div>
+        <ul class="steps">
+          <li><strong>Four state integrations in progress.</strong> Added active alpha routing work for Arizona, Louisiana, Arkansas, and Oklahoma using state permit data and public state GIS sources.</li>
+          <li><strong>50-state pilot-car reference.</strong> Added escort triggers, sign/banner mounting, flag fields, cones, triangles, warning equipment, certification, and official source links.</li>
+          <li><strong>Safer state-rule updates.</strong> Added official-source monitoring, reviewed-package validation, offline caching, and immutable rule-package details in accepted-trip audits.</li>
+          <li><strong>Direct PDF import.</strong> Android can open permit PDFs from email, downloads, and document providers directly in Permit Route Pro.</li>
+          <li><strong>Routing and extraction reliability.</strong> Improved QR recovery, permit text parsing, mileage handling, ramps, frontage roads, detours, and disconnected-route safeguards.</li>
+          <li><strong>Navigation improvements.</strong> Added navigation-audio voice guidance, live speed, map-lock settings, larger instructions, and a light-map default.</li>
+          <li><strong>Android presentation.</strong> Refreshed the launcher and splash branding with the adaptive app icon and kept the status and navigation bars available.</li>
+          <li><strong>Sharing improvements.</strong> The app now shares the public install page through email or the Android share sheet, and the Text action prefills the message and install link.</li>
+        </ul>
       </section>
 
       <section class="section compact" id="download">
@@ -218,6 +242,6 @@
       <a href="https://github.com/ussblade/PermitRoutePro-Alpha-Releases">Public release repository</a>
     </footer>
 
-    <script src="script.js?v=0.4.20-alpha.2"></script>
+    <script src="script.js?v=0.4.21-alpha.1"></script>
   </body>
 </html>
