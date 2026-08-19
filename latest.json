@@ -1,9 +1,9 @@
 {
-  "latestVersionName": "0.4.21-alpha.1",
-  "latestVersionCode": 124,
-  "minimumVersionCode": 124,
+  "latestVersionName": "0.4.22-alpha.1",
+  "latestVersionCode": 125,
+  "minimumVersionCode": 125,
   "required": true,
-  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.21-alpha.1/permit-route-pro-v0.4.21-alpha.1.apk",
-  "releaseNotes": ["Added in-progress permit routing for Arizona, Louisiana, Arkansas, and Oklahoma using state permit data and public state GIS sources.", "Added all 50 state pilot-car profiles covering escort triggers, sign and banner placement, flags, safety equipment, and certification guidance.", "Added monitored official state-rule sources, reviewed-package validation, offline caching, and immutable state-rule snapshots in trip audit records.", "Added Android PDF permit import so a permit can be opened directly from email, downloads, or a document provider.", "Improved permit OCR, QR recovery, route mileage parsing, ramp and frontage-road handling, detours, and disconnected-route safeguards.", "Improved navigation with navigation-audio voice guidance, a live speed display, map-lock controls, larger instructions, and a light-map default.", "Refreshed the Android launcher and splash branding and kept the status and navigation bars persistently available.", "Improved app sharing with the public install page, native email and share-sheet support, and a text-message composer that prefills the message and install link."],
-  "publishedAt": "2026-08-17T02:35:53Z"
+  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.22-alpha.1/permit-route-pro-v0.4.22-alpha.1.apk",
+  "releaseNotes": ["Moved debug-report email delivery to the secure Firebase backend so email credentials are no longer included in the APK.", "Added server-enforced single-device sessions and automatic sign-out when an account is activated on another device.", "Added online, offline, last-seen, and last-login status to the admin user directory.", "Improved navigation camera behavior, voice-prompt timing, and maneuver progression near turns.", "Improved TxDOT route mileage mapping and placement of official road-change maneuvers on the authoritative GPS route."],
+  "publishedAt": "2026-08-19T22:00:37Z"
 }
