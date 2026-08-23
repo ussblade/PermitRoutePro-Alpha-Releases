@@ -1,11 +1,11 @@
 {
-  "latestVersionName": "0.4.23-alpha.1",
-  "latestVersionCode": 126,
-  "minimumVersionCode": 126,
+  "latestVersionName": "0.4.24-alpha.1",
+  "latestVersionCode": 127,
+  "minimumVersionCode": 127,
   "required": true,
-  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.23-alpha.1/permit-route-pro-v0.4.23-alpha.1.apk",
-  "apkSha256": "14fe93f09f510438ade836e5cf3999d2dd06facaed8107488ad87232193671c2",
-  "apkSizeBytes": 123351320,
-  "releaseNotes": ["Added in-app APK downloads with a progress meter and an Install Update button.", "Added APK size and SHA-256 verification before Android installation.", "Added Forgot Password to send secure Firebase password-reset emails from the sign-in screen.", "Improved update release metadata so future downloads can be verified before installation."],
-  "publishedAt": "2026-08-19T22:40:40Z"
+  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.24-alpha.1/permit-route-pro-v0.4.24-alpha.1.apk",
+  "apkSha256": "a842bb3bfac74a5eea9700c9d84e41250fb3b5e16e63394a544663c2af2e4d97",
+  "apkSizeBytes": 123384264,
+  "releaseNotes": ["Navigation improvements.", "Secured direct PDF imports so permit processing waits until onboarding, sign-in, email verification, and access checks are complete."],
+  "publishedAt": "2026-08-23T19:51:38Z"
 }
