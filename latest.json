@@ -1,11 +1,11 @@
 {
-  "latestVersionName": "0.4.26-alpha.1",
-  "latestVersionCode": 129,
-  "minimumVersionCode": 129,
+  "latestVersionName": "0.4.27-alpha.1",
+  "latestVersionCode": 2130,
+  "minimumVersionCode": 2130,
   "required": true,
-  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.26-alpha.1/permit-route-pro-v0.4.26-alpha.1.apk",
-  "apkSha256": "85afdf728fa15ef2d5889bc5032e2d2f85fcb041b555067478759a85d159555b",
-  "apkSizeBytes": 123830331,
-  "releaseNotes": ["Added route-condition reporting for vehicles on the shoulder and roadway obstructions, including the requested vehicle and obstruction details.", "Moved the report control into the navigation button stack and enabled reporting while off route for testing.", "Rechecked all 50 state profiles for pilot and escort vehicle requirements and removed truck-only requirements from the escort guidance.", "Added a clear bumper-mount or roof-mount sign status above each state's escort trigger requirements."],
-  "publishedAt": "2026-08-27T22:27:39Z"
+  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.27-alpha.1/permit-route-pro-v0.4.27-alpha.1.apk",
+  "apkSha256": "5d8a2d58a3307e2362a2c94788fc595c5a52adb1fe37ec0717453365bf6955d7",
+  "apkSizeBytes": 123830727,
+  "releaseNotes": ["Clarified that Georgia escort vehicles still need the required top-mounted amber warning light, but Georgia ended its amber-light permit and windshield-sticker requirement effective July 1, 2024."],
+  "publishedAt": "2026-08-27T22:58:26Z"
 }
