@@ -1,11 +1,11 @@
 {
-  "latestVersionName": "0.4.25-alpha.1",
-  "latestVersionCode": 128,
-  "minimumVersionCode": 128,
+  "latestVersionName": "0.4.26-alpha.1",
+  "latestVersionCode": 129,
+  "minimumVersionCode": 129,
   "required": true,
-  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.25-alpha.1/permit-route-pro-v0.4.25-alpha.1.apk",
-  "apkSha256": "cbc491376e38fd68e3cfe9a2e7bf39976a83bd98daa418bba5aacd131d132166",
-  "apkSizeBytes": 123466184,
-  "releaseNotes": ["Prevented stationary GPS noise and stale readings from showing a false driving speed.", "Fixed navigation zoom so it stays anchored on the truck and keeps the location marker visible.", "Downloaded update APKs are now removed after Android confirms the new version was installed and launched."],
-  "publishedAt": "2026-08-27T17:30:21Z"
+  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.26-alpha.1/permit-route-pro-v0.4.26-alpha.1.apk",
+  "apkSha256": "85afdf728fa15ef2d5889bc5032e2d2f85fcb041b555067478759a85d159555b",
+  "apkSizeBytes": 123830331,
+  "releaseNotes": ["Added route-condition reporting for vehicles on the shoulder and roadway obstructions, including the requested vehicle and obstruction details.", "Moved the report control into the navigation button stack and enabled reporting while off route for testing.", "Rechecked all 50 state profiles for pilot and escort vehicle requirements and removed truck-only requirements from the escort guidance.", "Added a clear bumper-mount or roof-mount sign status above each state's escort trigger requirements."],
+  "publishedAt": "2026-08-27T22:27:39Z"
 }
