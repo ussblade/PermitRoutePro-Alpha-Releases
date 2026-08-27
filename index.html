@@ -8,7 +8,7 @@
       name="description"
       content="Download Permit Route Pro for Android and review installation and app use instructions."
     >
-    <link rel="stylesheet" href="styles.css?v=0.4.25-alpha.1">
+    <link rel="stylesheet" href="styles.css?v=0.4.25-alpha.1-1518179-manual">
   </head>
   <body>
     <header class="site-header">
@@ -24,6 +24,16 @@
           <a href="#install">Install</a>
           <a href="#download">Download</a>
         </div>
+        <details class="nav-menu" id="nav-menu">
+          <summary>Menu</summary>
+          <div class="nav-menu-links">
+            <a href="#download">Download</a>
+            <a href="#changes">What's New</a>
+            <a href="#screenshots">Screenshots</a>
+            <a href="#use">App Use</a>
+            <a href="#install">Install</a>
+          </div>
+        </details>
       </nav>
     </header>
 
@@ -36,18 +46,19 @@
             Scan permit pages, verify the route against the permit, store an audit record,
             and resume navigation on the approved path.
           </p>
-          <div class="alpha-notice">
-            <h2>Alpha access notice</h2>
-            <p>
-              Permit Route Pro is early-access alpha software. Bugs should be expected,
-              and routes, permit data, navigation behavior, and state support are still
-              being tested and improved.
-            </p>
-            <p>
-              Selected alpha testers receive free access during the alpha period. Other
-              early-access users require a $5/month subscription while the app remains in
-              alpha. Pricing may increase as more states and features are added.
-            </p>
+          <div class="alpha-download-notice" role="note">
+            <strong>Alpha testing build</strong>
+            <span>
+              Expect bugs, incomplete features, and limited state support. Access is free for
+              selected testers or $5/month during alpha.
+            </span>
+          </div>
+          <div class="pdf-recommendation" role="note">
+            <strong>Use the original permit PDF whenever possible.</strong>
+            <span>
+              Permit Route Pro processes PDF files more reliably and accurately than
+              camera captures or saved pictures.
+            </span>
           </div>
           <div class="hero-download-area">
             <div class="hero-actions">
@@ -84,6 +95,19 @@
         </div>
       </section>
 
+      <section class="section compact" id="changes">
+        <div class="section-heading">
+          <p class="eyebrow">Release changelog</p>
+          <h2 id="changes-title">What's new in the latest release</h2>
+          <p id="changes-summary">
+            Release details are loaded automatically from the latest public build.
+          </p>
+        </div>
+        <ul class="changelog-list" id="changes-list">
+          <li>Loading the latest release notes...</li>
+        </ul>
+      </section>
+
       <section class="section compact status-section" aria-label="State support status">
         <div class="status-panel">
           <div>
@@ -104,25 +128,8 @@
               extraction and state-data routing integrations are included for active alpha
               testing, but they are not yet classified as fully supported.
             </p>
-            <p>
-              If a waypoint is placed incorrectly, press and hold the waypoint, drag it to
-              the correct location, then use the rebuild route button to regenerate the
-              route from the corrected points.
-            </p>
           </div>
         </div>
-      </section>
-
-      <section class="section compact" id="changes">
-        <div class="section-heading">
-          <p class="eyebrow">Release changelog</p>
-          <h2>What's new in 0.4.24-alpha.1</h2>
-          <p>This release improves in-trip navigation and secures direct permit-PDF imports.</p>
-        </div>
-        <ul class="steps">
-          <li><strong>Navigation improvements.</strong></li>
-          <li><strong>Secure PDF imports.</strong> Opening a permit PDF now follows onboarding, sign-in, email verification, and access checks before processing.</li>
-        </ul>
       </section>
 
       <section class="section compact" id="download">
@@ -210,6 +217,10 @@
             Reopen the verified trip and follow the permit-approved route.
           </li>
         </ol>
+        <p class="note">
+          If a waypoint is placed incorrectly, press and hold it, drag it to the correct
+          location, and use the rebuild route button to regenerate the route.
+        </p>
       </section>
 
       <section class="section split" id="install">
@@ -251,6 +262,6 @@
       <a href="https://github.com/ussblade/PermitRoutePro-Alpha-Releases">Public release repository</a>
     </footer>
 
-    <script src="script.js?v=0.4.24-alpha.1"></script>
+    <script src="script.js?v=0.4.25-alpha.1-1518179-manual"></script>
   </body>
 </html>

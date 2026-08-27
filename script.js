@@ -15,6 +15,10 @@ const elements = {
   latestVersion: document.querySelector("#latest-version"),
   publishedAt: document.querySelector("#published-at"),
   releaseNotes: document.querySelector("#release-notes"),
+  changesTitle: document.querySelector("#changes-title"),
+  changesSummary: document.querySelector("#changes-summary"),
+  changesList: document.querySelector("#changes-list"),
+  navMenu: document.querySelector("#nav-menu"),
 };
 
 function formatDate(value) {
@@ -35,6 +39,21 @@ function enableDownload(url) {
   elements.heroDownload.href = url;
 }
 
+function renderReleaseNotes(target, notes) {
+  target.replaceChildren();
+  for (const note of notes) {
+    const item = document.createElement("li");
+    item.textContent = note;
+    target.appendChild(item);
+  }
+}
+
+for (const link of elements.navMenu.querySelectorAll("a")) {
+  link.addEventListener("click", () => {
+    elements.navMenu.removeAttribute("open");
+  });
+}
+
 function renderManifest(manifest) {
   const versionName = manifest.latestVersionName || "Unknown";
   const versionCode = manifest.latestVersionCode
@@ -46,17 +65,20 @@ function renderManifest(manifest) {
   elements.downloadTitle.textContent = `Permit Route Pro ${versionName}`;
   elements.downloadStatus.textContent =
     "Use this APK for the current alpha release.";
+  elements.changesTitle.textContent = `What's new in ${versionName}`;
+  elements.changesSummary.textContent =
+    "These notes are updated automatically whenever a new public build is published.";
 
   if (manifest.apkUrl) {
     enableDownload(manifest.apkUrl);
   }
 
-  elements.releaseNotes.replaceChildren();
-  for (const note of manifest.releaseNotes || []) {
-    const item = document.createElement("li");
-    item.textContent = note;
-    elements.releaseNotes.appendChild(item);
-  }
+  const notes =
+    Array.isArray(manifest.releaseNotes) && manifest.releaseNotes.length > 0
+      ? manifest.releaseNotes
+      : ["Release notes are not available for this build."];
+  renderReleaseNotes(elements.releaseNotes, notes);
+  renderReleaseNotes(elements.changesList, notes);
 }
 
 async function fetchLatestManifest() {
@@ -84,4 +106,10 @@ fetchLatestManifest()
       "The latest manifest could not be loaded. Open the public releases page instead.";
     enableDownload(fallbackApkUrl);
     elements.downloadLink.textContent = "Open releases";
+    elements.changesTitle.textContent = "Latest release notes unavailable";
+    elements.changesSummary.textContent =
+      "Open the public releases page for the newest build and its changelog.";
+    renderReleaseNotes(elements.changesList, [
+      "The release manifest could not be loaded.",
+    ]);
   });
