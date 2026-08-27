@@ -157,11 +157,50 @@ h3 {
   font-size: 1.2rem;
 }
 
+.hero-download-area,
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 12px;
+}
+
+.hero-download-area {
+  gap: 18px;
   margin-top: 20px;
+}
+
+.hero-qr {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 14px 8px 8px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.hero-qr-image {
+  width: 112px;
+  height: 112px;
+  flex: 0 0 auto;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.hero-qr p {
+  margin: 0;
+}
+
+.hero-qr strong,
+.hero-qr span {
+  display: block;
+}
+
+.hero-qr span {
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 0.82rem;
 }
 
 .alpha-notice {
@@ -495,6 +534,12 @@ figcaption {
 
   .button,
   .button.large {
+    width: 100%;
+  }
+
+  .hero-download-area,
+  .hero-actions,
+  .hero-qr {
     width: 100%;
   }
 
