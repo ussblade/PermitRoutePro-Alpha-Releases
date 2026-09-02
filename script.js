@@ -3,6 +3,10 @@ const manifestSources = [
   `latest.json?v=${cacheBust}`,
   `https://raw.githubusercontent.com/ussblade/PermitRoutePro-Alpha-Releases/main/latest.json?v=${cacheBust}`,
 ];
+const changelogSources = [
+  `changelog.json?v=${cacheBust}`,
+  `https://raw.githubusercontent.com/ussblade/PermitRoutePro-Alpha-Releases/main/changelog.json?v=${cacheBust}`,
+];
 
 const fallbackApkUrl =
   "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases";
@@ -18,6 +22,7 @@ const elements = {
   changesTitle: document.querySelector("#changes-title"),
   changesSummary: document.querySelector("#changes-summary"),
   changesList: document.querySelector("#changes-list"),
+  changelogHistory: document.querySelector("#changelog-history"),
   navMenu: document.querySelector("#nav-menu"),
 };
 
@@ -29,6 +34,45 @@ function formatDate(value) {
     year: "numeric",
     month: "short",
     day: "numeric",
+  });
+}
+
+function renderChangelogHistory(payload) {
+  const releases = Array.isArray(payload.releases) ? payload.releases : [];
+  if (releases.length === 0) {
+    throw new Error("The changelog contains no releases.");
+  }
+
+  elements.changelogHistory.replaceChildren();
+  releases.forEach((release, index) => {
+    const details = document.createElement("details");
+    details.className = "changelog-version";
+    details.open = index === 0;
+
+    const summary = document.createElement("summary");
+    const version = document.createElement("span");
+    version.className = "changelog-version-name";
+    version.textContent = release.version || "Unknown version";
+    summary.appendChild(version);
+
+    if (release.date) {
+      const date = document.createElement("span");
+      date.className = "changelog-version-date";
+      date.textContent = release.date;
+      summary.appendChild(date);
+    }
+    details.appendChild(summary);
+
+    const notes = Array.isArray(release.notes) ? release.notes : [];
+    const list = document.createElement("ul");
+    list.className = "changelog-version-notes";
+    for (const note of notes) {
+      const item = document.createElement("li");
+      item.textContent = note;
+      list.appendChild(item);
+    }
+    details.appendChild(list);
+    elements.changelogHistory.appendChild(details);
   });
 }
 
@@ -81,9 +125,9 @@ function renderManifest(manifest) {
   renderReleaseNotes(elements.changesList, notes);
 }
 
-async function fetchLatestManifest() {
+async function fetchFromSources(sources) {
   let lastError;
-  for (const source of manifestSources) {
+  for (const source of sources) {
     try {
       const response = await fetch(source, { cache: "no-store" });
       if (!response.ok) {
@@ -96,6 +140,9 @@ async function fetchLatestManifest() {
   }
   throw lastError;
 }
+
+const fetchLatestManifest = () => fetchFromSources(manifestSources);
+const fetchChangelog = () => fetchFromSources(changelogSources);
 
 fetchLatestManifest()
   .then(renderManifest)
@@ -112,4 +159,14 @@ fetchLatestManifest()
     renderReleaseNotes(elements.changesList, [
       "The release manifest could not be loaded.",
     ]);
+  });
+
+fetchChangelog()
+  .then(renderChangelogHistory)
+  .catch(() => {
+    const message = document.createElement("p");
+    message.className = "changelog-loading";
+    message.textContent =
+      "The full changelog could not be loaded. Open the public release repository for release history.";
+    elements.changelogHistory.replaceChildren(message);
   });

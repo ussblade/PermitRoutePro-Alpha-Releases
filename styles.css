@@ -423,6 +423,70 @@ figure {
   font-weight: 900;
 }
 
+.changelog-history {
+  display: grid;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.changelog-loading {
+  margin: 0;
+  color: var(--muted);
+}
+
+.changelog-version {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.changelog-version summary {
+  position: relative;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 58px 18px 20px;
+  color: var(--text);
+  font-weight: 800;
+  cursor: pointer;
+  list-style-position: inside;
+}
+
+.changelog-version summary::after {
+  content: "+";
+  position: absolute;
+  right: 20px;
+  color: var(--accent-strong);
+  font-size: 1.45rem;
+  line-height: 1;
+}
+
+.changelog-version[open] summary::after {
+  content: "\2212";
+}
+
+.changelog-version[open] summary {
+  border-bottom: 1px solid var(--line);
+  color: var(--accent-strong);
+}
+
+.changelog-version-date {
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 650;
+  text-align: right;
+}
+
+.changelog-version-notes {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 18px 24px 20px 42px;
+  color: var(--muted);
+}
+
 .screenshot-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -643,6 +707,16 @@ figcaption {
 
   .alpha-download-notice {
     margin-top: 16px;
+  }
+
+  .changelog-version summary {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .changelog-version-date {
+    text-align: left;
   }
 
   .footer {

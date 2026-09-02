@@ -1,0 +1,266 @@
+{
+  "generatedFrom": "mobile/CHANGELOG.md",
+  "releases": [
+    {
+      "version": "0.4.28-alpha.2+132",
+      "date": "2026-09-02",
+      "notes": [
+        "Added a secure administrator action to extend a user trial by a chosen number of days, continuing active trials from their current end date and restarting expired trials from the extension date.",
+        "Added secure administrator push-notification composition and made new registrations approved by default.",
+        "Made received push notifications prominent, centered, and persistent until the user explicitly closes them.",
+        "Changed Android PDF opening so files shared from Gmail or another app return to the existing Permit Route Pro task instead of creating a second, source-owned app instance.",
+        "Replaced cloud-capable photo pickers with an on-device-only gallery for permit pages and debug screenshots; cloud-only media is filtered before thumbnails or files are read.",
+        "Added Android Gallery-style long-press multi-selection and batch deletion to every Permit History route status, with confirmation and immutable accepted-route audit retention.",
+        "Made permit effective and expiration dates informational so routes remain available for advance review and later reference.",
+        "Fixed permit attachment from Trip Details and added an explicit accepted-route chooser for trips containing multiple permits.",
+        "Added secure recovery for interrupted registration and missing user profiles.",
+        "Enforced denied and suspended accounts immediately without spending an additional Firebase document read for every access check.",
+        "Changed account denial to cancel every manageable Stripe subscription and expire open subscription checkouts before revoking access.",
+        "Hardened court-safe audit uploads with active-access checks, exact schema validation, idempotency, size limits, and per-user quotas.",
+        "Made Stripe webhook processing recoverable after an interrupted worker without double-processing completed events.",
+        "Added complete pagination to the administrator user and push-notification recipient directory.",
+        "Improved administrator presence handling so user records remain available, collapsed cards show Last seen, and live-status failures are identified instead of being reported as reliable presence data.",
+        "Bounded the numbered map-marker cache and updated compatible mobile dependencies, including a staged secure-storage migration.",
+        "Added manual and configurable age-based removal of accepted routes from Permit History without deleting permit data, trip references, or immutable audit records.",
+        "Securely upgraded legacy HTTP QR links from allowlisted state permit providers to HTTPS before route retrieval.",
+        "Connected stay-on-route waypoint settings to newly processed routes and corrected trip-state updates.",
+        "Strengthened mandatory-update enforcement, secure PDF import, cache cleanup, and startup failure handling for the single-build alpha policy.",
+        "Permanently removed the ramp-warning disclaimer and internal test-permit injection code from production.",
+        "Added temporary, community-reported Permit Route Alerts with route-ahead map markers, voice warnings, confirmations, automatic expiration, and server-side abuse controls.",
+        "Kept community alerts advisory-only so they never modify an accepted permit route or its immutable audit record.",
+        "Rebuilt all 50 state escort-rule profiles from official sources.",
+        "Added escort thresholds and positioning, vehicle requirements, sign and flag placement, installed and carried equipment, insurance, certification and reciprocity, operating rules, police escorts, and explicit source gaps.",
+        "Added one canonical profile per state, deterministic catalog compilation, source-ID validation, and scheduled checks that reject incomplete or stale state-rule data.",
+        "Added daily official-source change ingestion, a claim-protected human review and publication API, immutable escort-rule delivery packages, independent verified mobile refresh/caching, and escort-package audit provenance.",
+        "Added an owner-only local review inbox with automatic pending-change alerts; its implementation is excluded from source control and all GitHub APK builds."
+      ]
+    },
+    {
+      "version": "0.4.27-alpha.1+130",
+      "date": "2026-08-27",
+      "notes": [
+        "Clarified that Georgia escort vehicles still require a top-mounted amber warning light while Georgia no longer requires the former amber-light permit or windshield sticker."
+      ]
+    },
+    {
+      "version": "0.4.26-alpha.1+129",
+      "date": "2026-08-27",
+      "notes": [
+        "Added temporary route-condition reports for vehicles on the shoulder and roadway obstructions, including detailed report categories.",
+        "Moved route reporting into the navigation control stack and kept it available while off route for alpha field testing.",
+        "Rechecked all 50 state escort profiles and removed truck-only requirements from escort-vehicle guidance.",
+        "Added clear bumper-mount and roof-mount sign status above each state's escort requirements."
+      ]
+    },
+    {
+      "version": "0.4.25-alpha.1+128",
+      "date": "2026-08-27",
+      "notes": [
+        "Prevented stationary GPS noise and stale readings from displaying false driving speeds.",
+        "Kept navigation zoom anchored on the truck with the location marker visible.",
+        "Removed downloaded update APKs after Android confirmed that the new version was installed and launched."
+      ]
+    },
+    {
+      "version": "0.4.24-alpha.1+127",
+      "date": "2026-08-23",
+      "notes": [
+        "Improved navigation behavior.",
+        "Secured direct PDF imports so permit processing waits for onboarding, sign-in, email verification, and access checks."
+      ]
+    },
+    {
+      "version": "0.4.23-alpha.1+126",
+      "date": "2026-08-19",
+      "notes": [
+        "Added in-app APK downloads with visible byte and percentage progress.",
+        "Added an Install Update action that securely hands the downloaded APK to Android's package installer.",
+        "Added APK size and SHA-256 verification to reject incomplete or altered update downloads.",
+        "Added release-manifest generation for APK checksums and exact file sizes.",
+        "Added Forgot Password to send Firebase password-reset emails from the sign-in screen without exposing whether an account exists."
+      ]
+    },
+    {
+      "version": "0.4.22-alpha.1+125",
+      "date": "2026-08-19",
+      "notes": [
+        "Moved debug-report email delivery to Firebase so SMTP credentials are no longer packaged in the Android app.",
+        "Added server-enforced single-device sessions and automatic sign-out after another device claims the account.",
+        "Added online, offline, last-seen, and last-login status to the admin user directory.",
+        "Improved the navigation camera, voice-prompt thresholds, and maneuver progression near turns.",
+        "Improved TxDOT official-mileage mapping and road-change placement on the authoritative GPS route."
+      ]
+    },
+    {
+      "version": "0.4.21-alpha.1+124",
+      "date": "2026-08-16",
+      "notes": [
+        "Added in-progress permit routing for Arizona, Louisiana, Arkansas, and Oklahoma using state permit data and public state GIS sources.",
+        "Added Arizona permit extraction, route/milepost resolution, and route-service tests.",
+        "Added Louisiana LaGeaux QR/deep-link parsing, official route loading, PDF text extraction, and route tests.",
+        "Added Arkansas ARDOT route-inventory geometry, mile-marker routing, state-route aliases, and integration tests.",
+        "Added Oklahoma roadway, turnpike, ramp, frontage-road, business-route, segment-mileage, and full-route audit handling.",
+        "Added a 50-state pilot-car catalog covering escort triggers, roof/bumper sign and banner placement, flags, warning equipment, cones, triangles, certification programs, and reciprocity guidance.",
+        "Added a versioned official state-rule source registry, scheduled change monitoring, validation tools, reviewed-package caching, and fail-closed publication rules.",
+        "Added immutable state-rule package version and hash snapshots to accepted-trip audit records.",
+        "Removed the legacy hard-coded state-rule and escort-equipment fallback tables.",
+        "Added Android PDF permit import from email, downloads, and document providers.",
+        "Improved OCR and QR recovery for photographed permits and TxDOT portal Permit IDs.",
+        "Improved route geometry continuity, mileage walking, detour instructions, ramp/frontage-road transitions, disconnected-leg rejection, and generic state-GIS routing.",
+        "Improved navigation with navigation-audio voice guidance, live MPH display, map-lock settings, larger guidance text, and a light-map default.",
+        "Refreshed the Android launcher and splash branding with the new adaptive app icon.",
+        "Kept the Android status and navigation bars persistently visible using edge-to-edge system UI handling.",
+        "Improved public app sharing through native email and the Android share sheet, and fixed the Text action to prefill the message and install-page link."
+      ]
+    },
+    {
+      "version": "0.4.20-alpha.2+123",
+      "date": "2026-06-18",
+      "notes": [
+        "Removed legacy Google and GitHub routing fallbacks so permit routing uses state-authoritative sources.",
+        "Fixed Virginia EZ-Haul QR permits to load complete official route geometry with readable road-change waypoints.",
+        "Preserved QR routing for Texas, Colorado, Nevada, Virginia, and Illinois.",
+        "Improved session handling so temporary Firestore listener failures do not sign out approved users.",
+        "Updated the public alpha download site and in-app release flow.",
+        "Increased GitHub release-build memory after the first `0.4.20` build failed."
+      ]
+    },
+    {
+      "version": "0.4.19-alpha.1+121",
+      "date": "2026-05-08",
+      "notes": [
+        "Fixed required-update detection for stale or mismatched alpha builds.",
+        "Changed About to display the installed Android package version and build number."
+      ]
+    },
+    {
+      "version": "0.4.18-alpha.1+120",
+      "date": "2026-05-08",
+      "notes": [
+        "Added Stripe subscription checkout and email verification.",
+        "Updated trial and subscription access gates so expired trials must subscribe before continuing.",
+        "Replaced referral-code sharing with direct text and email sharing of the public download page.",
+        "Kept the Android status bar visible while preserving the navigation layout."
+      ]
+    },
+    {
+      "version": "0.4.17-alpha.1+119",
+      "date": "2026-04-29",
+      "notes": [
+        "Added a one-time alpha access notice after update checks."
+      ]
+    },
+    {
+      "version": "0.4.16-alpha.1+118",
+      "date": "2026-04-29",
+      "notes": [
+        "Fixed the update screen so the APK download remains reachable while release notes scroll.",
+        "Shortened update-manifest notes for compatibility with older builds."
+      ]
+    },
+    {
+      "version": "0.4.15-alpha.1+117",
+      "date": "2026-04-29",
+      "notes": [
+        "Removed the tutorial and replay controls.",
+        "Opened accepted routes directly in the in-app navigator instead of showing an extra intermediate screen.",
+        "Corrected sunrise, sunset, twilight, and solar-noon calculations for US time zones and daylight saving time.",
+        "Added keep-awake behavior and simplified the About page.",
+        "Added release details to the in-app update screen."
+      ]
+    },
+    {
+      "version": "0.4.14-alpha.1+116",
+      "date": "2026-04-27",
+      "notes": [
+        "Snapped official instruction waypoints to nearby route vertices so map pins and navigation prompts align with turns.",
+        "Added user debug reports with identity, screenshots, and permit attachments.",
+        "Added attachment review before sending a debug report."
+      ]
+    },
+    {
+      "version": "0.4.13-alpha.1+115",
+      "date": "2026-04-27",
+      "notes": [
+        "Improved navigation follow-camera behavior with a forward-looking tilted view that keeps the driver marker lower on screen.",
+        "Suppressed non-decision route prompts so Nevada navigation focuses on actual turns, merges, bears, exits, and roundabouts.",
+        "Added manual update checking from My Account.",
+        "Improved User Directory handling after temporary network loss on device unlock.",
+        "Enabled Dart symbol obfuscation for GitHub release APK builds."
+      ]
+    },
+    {
+      "version": "0.4.12-alpha.1+114",
+      "date": "2026-04-27",
+      "notes": [
+        "Fixed the GitHub Actions signing key path so public release APKs are signed with the same release key as local builds.",
+        "Supersedes the failed `v0.4.11-alpha.1` release attempt."
+      ]
+    },
+    {
+      "version": "0.4.11-dev+113",
+      "date": "2026-04-27",
+      "notes": [
+        "Updated GitHub release builds to use the app release signing key from Actions secrets.",
+        "Future public APKs will be signed consistently so Android can install them as updates."
+      ]
+    },
+    {
+      "version": "0.4.10-alpha.1+112",
+      "date": "2026-04-27",
+      "notes": [
+        "Added hard sign-out enforcement for Firestore `revoked` and `suspended` user statuses.",
+        "Reduced profile polling interval so account revocations and device takeovers are detected faster."
+      ]
+    },
+    {
+      "version": "0.4.9-dev+111",
+      "date": "2026-04-27",
+      "notes": [
+        "Added startup update checks against the public GitHub release manifest.",
+        "Added a required-update screen that opens the latest public APK download.",
+        "Updated release automation to publish `latest.json` for in-app update checks."
+      ]
+    },
+    {
+      "version": "0.4.8-alpha.1+110",
+      "date": "2026-04-27",
+      "notes": [
+        "Fixed second-device sign-in so the new device claims the Firestore session before profile refresh.",
+        "Old devices now see the changed `activeDeviceId` and are forced out instead of remaining logged in."
+      ]
+    },
+    {
+      "version": "0.4.7-alpha.1+109",
+      "date": "2026-04-25",
+      "notes": [
+        "Fixed the dev flavor using a stale Firebase project config.",
+        "Switched alpha email/password auth to Firebase Auth REST so signup/sign-in work in-app without the Android reCAPTCHA blocker.",
+        "Kept Firestore-backed user profiles, admin bootstrap, and single-device enforcement on top of the new auth flow.",
+        "Added GitHub Actions release workflow support for building and publishing the Android APK on tag push."
+      ]
+    },
+    {
+      "version": "0.4.6-dev+108",
+      "date": "2026-04-25",
+      "notes": [
+        "Added in-app Firebase email/password authentication for alpha testers.",
+        "Added Firestore-backed user profiles storing real name, email, phone, role, and access status.",
+        "Added single-device session enforcement so a second login signs out the first device automatically.",
+        "Added an auth gate so users must authenticate in-app before reaching protected screens.",
+        "Removed test-oriented local admin creation from the normal app flow.",
+        "Centralized app version metadata for build numbering and release notes."
+      ]
+    },
+    {
+      "version": "Pre-alpha routing prototype",
+      "date": "2025-12-25 through 2026-04-24",
+      "notes": [
+        "Established permit photo and PDF intake, OCR, route extraction, multi-page handling, and QR scanning.",
+        "Added state-aware highway parsing, state route extractors, route validation, mileage checks, and authoritative GIS routing experiments.",
+        "Added route preview, waypoint correction, route acceptance, audit records, saved permits and trips, and resumable navigation.",
+        "Added local and shared route-data caching, debug reporting, theme development, and the initial Android dev-flavor build system."
+      ]
+    }
+  ]
+}
