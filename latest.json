@@ -1,11 +1,11 @@
 {
-  "latestVersionName": "0.4.28-alpha.2",
-  "latestVersionCode": 2132,
-  "minimumVersionCode": 2132,
+  "latestVersionName": "0.4.28-alpha.3",
+  "latestVersionCode": 2133,
+  "minimumVersionCode": 2133,
   "required": true,
-  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.2/permit-route-pro-v0.4.28-alpha.2.apk",
-  "apkSha256": "006683d0b713bad049f03e30ecf9d4daebc71ac70de0ecfcfc155c5216007b64",
-  "apkSizeBytes": 124400406,
-  "releaseNotes": ["Added a secure administrator action to extend any user trial by a chosen number of days.", "PDFs opened from Gmail now return to the single Permit Route Pro app task instead of creating a second Gmail-owned app instance.", "Changed every photo-gallery import to an on-device-only browser that excludes cloud-only Google Photos media.", "Added Android-style long-press multi-selection and batch deletion for every route status in Permit History while preserving immutable accepted-route audit records.", "Made push notifications prominent, centered, and persistent until the user closes them.", "Added manual and scheduled removal of accepted routes from Permit History while preserving retained audit records.", "Improved Texas QR permit recovery, securely upgraded legacy state-provider links to HTTPS, and prevented surrounding page text from becoming QR route data.", "Added secure administrator push notifications and automatic approval for new registrations.", "Fixed administrator presence handling so user records remain available, collapsed cards show Last seen, and live-status failures are reported accurately.", "Added temporary community Route Alerts with route-ahead markers, voice warnings, confirmations, expiration, and abuse controls.", "Expanded and revalidated all 50 state escort-rule profiles using monitored official sources and reviewed delivery packages.", "Strengthened Stripe subscription status, customer portal, webhook, and duplicate-subscription handling.", "Cancel billing before an administrator denies an account, and recover interrupted registrations safely.", "Fixed trip permit attachment and added an explicit route chooser for multi-permit trips.", "Hardened audit uploads, bounded map-marker memory, and kept permit dates informational instead of blocking access.", "Enforced denied and suspended accounts immediately without additional Firebase reads.", "Connected stay-on-route waypoint settings to newly processed routes and corrected trip state updates.", "Improved mandatory update, secure PDF import, cache cleanup, and startup failure handling.", "Permanently removed the ramp-warning disclaimer and internal test-permit injection code from production.", "Clarified Georgia escort warning-light requirements."],
-  "publishedAt": "2026-09-02T16:38:12Z"
+  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.3/permit-route-pro-v0.4.28-alpha.3.apk",
+  "apkSha256": "bc5e3eae6702c6f9697f9b79e7354cc723fd7464b4bf93eba7a0ca7142a8d7c8",
+  "apkSizeBytes": 124400482,
+  "releaseNotes": ["Fixed closed-app push delivery with a dedicated high-importance Android channel and persistent system notifications that remain until the user closes them."],
+  "publishedAt": "2026-09-02T17:25:03Z"
 }

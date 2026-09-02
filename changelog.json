@@ -2,6 +2,13 @@
   "generatedFrom": "mobile/CHANGELOG.md",
   "releases": [
     {
+      "version": "0.4.28-alpha.3+133",
+      "date": "2026-09-02",
+      "notes": [
+        "Fixed closed-app push delivery with a dedicated high-importance Android channel, maximum-priority FCM presentation, lock-screen visibility, sound, vibration, and persistent system notifications that remain until the user closes them."
+      ]
+    },
+    {
       "version": "0.4.28-alpha.2+132",
       "date": "2026-09-02",
       "notes": [
