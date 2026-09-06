@@ -2,6 +2,17 @@
   "generatedFrom": "mobile/CHANGELOG.md",
   "releases": [
     {
+      "version": "0.4.28-alpha.5+135",
+      "date": "2026-09-06",
+      "notes": [
+        "Automated Utah permit routing by extracting the UTCVIEW permit number, printed origin and destination GPS coordinates, and every printed route leg for review.",
+        "Added secure New Mexico official-route retrieval by permit number, including state-source response hashing and immutable audit provenance.",
+        "Preserved disconnected official route sections across map preview and navigation, with clear section-complete guidance instead of routing across gaps.",
+        "Added each user’s installed app version and build number to the administrator directory.",
+        "Redesigned the public download website with the live APK link, complete changelog, and a secure permit-research submission form."
+      ]
+    },
+    {
       "version": "0.4.28-alpha.3+133",
       "date": "2026-09-02",
       "notes": [

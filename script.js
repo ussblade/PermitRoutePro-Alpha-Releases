@@ -1,11 +1,11 @@
 const cacheBust = Date.now().toString();
 const manifestSources = [
-  `latest.json?v=${cacheBust}`,
   `https://raw.githubusercontent.com/ussblade/PermitRoutePro-Alpha-Releases/main/latest.json?v=${cacheBust}`,
+  `latest.json?v=${cacheBust}`,
 ];
 const changelogSources = [
-  `changelog.json?v=${cacheBust}`,
   `https://raw.githubusercontent.com/ussblade/PermitRoutePro-Alpha-Releases/main/changelog.json?v=${cacheBust}`,
+  `changelog.json?v=${cacheBust}`,
 ];
 
 const fallbackApkUrl =
@@ -133,7 +133,7 @@ async function fetchFromSources(sources) {
       if (!response.ok) {
         throw new Error(`Manifest request failed: ${response.status}`);
       }
-      return response.json();
+      return await response.json();
     } catch (error) {
       lastError = error;
     }

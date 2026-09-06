@@ -1,11 +1,11 @@
 {
-  "latestVersionName": "0.4.28-alpha.3",
-  "latestVersionCode": 2133,
-  "minimumVersionCode": 2133,
+  "latestVersionName": "0.4.28-alpha.5",
+  "latestVersionCode": 2135,
+  "minimumVersionCode": 2135,
   "required": true,
-  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.3/permit-route-pro-v0.4.28-alpha.3.apk",
-  "apkSha256": "bc5e3eae6702c6f9697f9b79e7354cc723fd7464b4bf93eba7a0ca7142a8d7c8",
-  "apkSizeBytes": 124400482,
-  "releaseNotes": ["Fixed closed-app push delivery with a dedicated high-importance Android channel and persistent system notifications that remain until the user closes them."],
-  "publishedAt": "2026-09-02T17:25:03Z"
+  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.5/permit-route-pro-v0.4.28-alpha.5.apk",
+  "apkSha256": "87d458940f0ebb80b1645bfd885c062c542ade0ad2b9471d3b68bf3f4d5b3b3f",
+  "apkSizeBytes": 124514466,
+  "releaseNotes": ["Automated Utah permit routing by extracting the UTCVIEW permit number, printed origin and destination GPS coordinates, and every printed route leg for review.", "Added secure New Mexico official-route retrieval by permit number, including state-source response hashing and immutable audit provenance.", "Preserved disconnected official route sections across map preview and navigation, with clear section-complete guidance instead of routing across gaps.", "Added each user\u2019s installed app version and build number to the administrator directory.", "Redesigned the public download website with the live APK link, complete changelog, and a secure permit-research submission form."],
+  "publishedAt": "2026-09-06T16:59:46Z"
 }

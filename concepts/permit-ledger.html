@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Permit Ledger design concept for Permit Route Pro.">
+    <title>Permit Ledger — Permit Route Pro concept</title>
+    <link rel="stylesheet" href="concepts.css">
+  </head>
+  <body class="ledger">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="ledger-wrap">
+      <nav class="ledger-nav" aria-label="Primary navigation">
+        <a class="ledger-brand" href="../index.html">Permit Route Pro <small>Approved-route navigation for Android</small></a>
+        <div class="concept-jump" role="group" aria-label="Design concepts">
+          <span>Concept</span>
+          <a href="night-dispatch.html"><span>1</span></a>
+          <a href="permit-ledger.html" aria-current="page"><span>2</span></a>
+          <a href="high-visibility.html"><span>3</span></a>
+          <a href="route-atlas.html"><span>4</span></a>
+          <a href="clear-passage.html"><span>5</span></a>
+        </div>
+        <a class="ledger-download" data-download href="https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases">Get the alpha APK</a>
+      </nav>
+    </header>
+
+    <main id="main" class="ledger-wrap">
+      <section class="ledger-hero">
+        <div class="ledger-copy">
+          <h1>The permit stays the source of truth.</h1>
+          <p>
+            Permit Route Pro reads the route, gives the driver a clear review step,
+            and preserves the accepted path before navigation begins.
+          </p>
+          <div class="ledger-actions">
+            <a class="route-button primary" data-download href="https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases">Download version <span data-version>latest alpha</span></a>
+            <a class="route-button secondary" href="#proof">Follow the proof chain</a>
+          </div>
+        </div>
+
+        <aside class="permit-sheet" aria-label="Example verified permit record">
+          <div class="sheet-head">Route acceptance record</div>
+          <dl>
+            <div><dt>Source</dt><dd>Original permit PDF</dd></div>
+            <div><dt>Route</dt><dd>Driver reviewed</dd></div>
+            <div><dt>Waypoints</dt><dd>Confirmed on map</dd></div>
+            <div><dt>Audit record</dt><dd>Stored before trip</dd></div>
+          </dl>
+        </aside>
+      </section>
+
+      <section class="proof" id="proof">
+        <h2>A review trail people can understand.</h2>
+        <div class="proof-chain">
+          <article><span>1</span><h3>Capture</h3><p>Add permit pages or, preferably, the original PDF.</p></article>
+          <article><span>2</span><h3>Compare</h3><p>Check extracted route language and restrictions against the permit.</p></article>
+          <article><span>3</span><h3>Accept</h3><p>Confirm the displayed path and store a court-safe audit record.</p></article>
+          <article><span>4</span><h3>Resume</h3><p>Return to the verified trip and follow the accepted route.</p></article>
+        </div>
+      </section>
+
+      <section class="ledger-release" aria-label="Current release">
+        <div>
+          <strong>Current alpha: <span data-version>Checking…</span></strong>
+          <p data-release-note>Loading the current release note…</p>
+        </div>
+        <a class="route-button primary" href="../index.html#install">Read installation instructions</a>
+      </section>
+    </main>
+
+    <footer class="ledger-wrap ledger-footer">
+      Alpha testing currently includes full routing support for Texas, Colorado, Virginia, Nevada, Illinois, and New Mexico.
+    </footer>
+    <script src="concepts.js"></script>
+  </body>
+</html>

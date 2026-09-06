@@ -4,9 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Download Permit Route Pro for Android, review state routing support, screenshots, release notes, and installation guidance.">
-    <link rel="canonical" href="https://permit-route-pro.com/">
-    <title>Permit Route Pro — Permit-approved routing</title>
-    <link rel="stylesheet" href="concepts/concepts.css?v=0.4.28-alpha.5-8ae001e-27">
+    <title>Route Atlas — Permit Route Pro</title>
+    <link rel="stylesheet" href="concepts.css">
   </head>
   <body class="atlas" id="top">
     <a class="skip-link" href="#main">Skip to content</a>
@@ -21,7 +20,14 @@
           <a href="#history">Changelog</a>
           <a href="#install">Install</a>
         </div>
-        <a class="atlas-nav-download route-button primary" data-download href="https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases">Download alpha</a>
+        <div class="concept-jump" role="group" aria-label="Design concepts">
+          <span>Field concept</span>
+          <a href="night-dispatch.html"><span>1</span></a>
+          <a href="permit-ledger.html"><span>2</span></a>
+          <a href="high-visibility.html"><span>3</span></a>
+          <a href="route-atlas.html" aria-current="page"><span>4</span></a>
+          <a href="clear-passage.html"><span>5</span></a>
+        </div>
       </nav>
     </header>
 
@@ -47,7 +53,7 @@
           </div>
         </div>
         <figure class="atlas-inset">
-          <img src="assets/screenshots/route-map.jpg" alt="Permit Route Pro approved route map">
+          <img src="../assets/screenshots/route-map.jpg" alt="Permit Route Pro approved route map">
           <p>Approved-route map, current field build</p>
         </figure>
       </section>
@@ -68,11 +74,17 @@
         <div class="atlas-wrap field-note-grid">
           <article class="field-note alpha-note">
             <span>Field notice</span>
-            <div><h2>Alpha testing build</h2><p>Expect bugs, incomplete features, and limited state support. Access is free for selected testers or $5/month during alpha.</p></div>
+            <div>
+              <h2>Alpha testing build</h2>
+              <p>Expect bugs, incomplete features, and limited state support. Access is free for selected testers or $5/month during alpha.</p>
+            </div>
           </article>
           <article class="field-note pdf-note">
             <span>Source quality</span>
-            <div><h2>Use the original permit PDF whenever possible</h2><p>Permit Route Pro processes PDF files more reliably and accurately than camera captures or saved pictures.</p></div>
+            <div>
+              <h2>Use the original permit PDF whenever possible</h2>
+              <p>Permit Route Pro processes PDF files more reliably and accurately than camera captures or saved pictures.</p>
+            </div>
           </article>
         </div>
       </section>
@@ -89,7 +101,9 @@
             </dl>
             <a class="route-button primary" data-download href="https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases">Download the current APK</a>
           </header>
-          <ul class="atlas-current-notes" data-release-list aria-live="polite"><li>Loading the latest release notes…</li></ul>
+          <ul class="atlas-current-notes" data-release-list aria-live="polite">
+            <li>Loading the latest release notes…</li>
+          </ul>
         </div>
       </section>
 
@@ -146,19 +160,25 @@
           <p>Six views cover the first action, route verification, approved-map review, and off-route navigation.</p>
         </div>
         <div class="atlas-contact-sheet" role="group" aria-label="Permit Route Pro screenshots">
-          <figure><img src="assets/screenshots/launch.jpg" alt="Permit Route Pro landing page"><figcaption>Landing page</figcaption></figure>
-          <figure><img src="assets/screenshots/home-actions.jpg" alt="Permit Route Pro quick actions screen"><figcaption>Quick actions</figcaption></figure>
-          <figure><img src="assets/screenshots/route-verification.jpg" alt="Permit Route Pro route verification map preview"><figcaption>Route verification</figcaption></figure>
-          <figure><img src="assets/screenshots/route-map.jpg" alt="Permit Route Pro expanded approved route map"><figcaption>Approved route map</figcaption></figure>
-          <figure><img src="assets/screenshots/off-route-detail.jpg" alt="Permit Route Pro off-route warning near the driver location"><figcaption>Off-route warning</figcaption></figure>
-          <figure><img src="assets/screenshots/off-route-overview.jpg" alt="Permit Route Pro off-route navigation overview"><figcaption>Navigation overview</figcaption></figure>
+          <figure><img src="../assets/screenshots/launch.jpg" alt="Permit Route Pro landing page"><figcaption>Landing page</figcaption></figure>
+          <figure><img src="../assets/screenshots/home-actions.jpg" alt="Permit Route Pro quick actions screen"><figcaption>Quick actions</figcaption></figure>
+          <figure><img src="../assets/screenshots/route-verification.jpg" alt="Permit Route Pro route verification map preview"><figcaption>Route verification</figcaption></figure>
+          <figure><img src="../assets/screenshots/route-map.jpg" alt="Permit Route Pro expanded approved route map"><figcaption>Approved route map</figcaption></figure>
+          <figure><img src="../assets/screenshots/off-route-detail.jpg" alt="Permit Route Pro off-route warning near the driver location"><figcaption>Off-route warning</figcaption></figure>
+          <figure><img src="../assets/screenshots/off-route-overview.jpg" alt="Permit Route Pro off-route navigation overview"><figcaption>Navigation overview</figcaption></figure>
         </div>
       </section>
 
       <section class="atlas-log" id="history">
         <div class="atlas-wrap atlas-log-grid">
-          <header><p class="map-key">Field log</p><h2>Full changelog.</h2><p>Select a version to review its changes. The newest release opens first.</p></header>
-          <div class="atlas-release-history" data-changelog aria-live="polite"><p>Loading the complete release history…</p></div>
+          <header>
+            <p class="map-key">Field log</p>
+            <h2>Full changelog.</h2>
+            <p>Select a version to review its changes. The newest release opens first.</p>
+          </header>
+          <div class="atlas-release-history" data-changelog aria-live="polite">
+            <p>Loading the complete release history…</p>
+          </div>
         </div>
       </section>
 
@@ -169,7 +189,7 @@
             <h2>Install the alpha build.</h2>
             <p>This testing build is distributed outside the Play Store. Download it only from this website or the public Permit Route Pro release repository.</p>
             <div class="atlas-install-qr">
-              <img src="assets/permit-route-pro-download-qr.svg" alt="QR code linking to the Permit Route Pro website">
+              <img src="../assets/permit-route-pro-download-qr.svg" alt="QR code linking to the Permit Route Pro website">
               <p><strong>Installing on another device?</strong><span>Scan the code with its camera.</span></p>
             </div>
           </div>
@@ -184,13 +204,13 @@
       </section>
 
       <section class="atlas-wrap atlas-release" aria-label="Current release download">
-        <img src="assets/permit-route-pro-download-qr.svg" alt="QR code linking to the Permit Route Pro website">
+        <img src="../assets/permit-route-pro-download-qr.svg" alt="QR code linking to the Permit Route Pro website">
         <div><strong>Field build <span data-version>Checking…</span></strong><p>Published <span data-published>Checking…</span>. Verify every route against the issued permit.</p></div>
         <a class="route-button primary" data-download href="https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases">Get the APK</a>
       </section>
     </main>
 
     <footer class="atlas-wrap atlas-footer">For alpha testing and evaluation. Verify every route against the issued permit.</footer>
-    <script src="concepts/concepts.js?v=0.4.28-alpha.5-8ae001e-27"></script>
+    <script src="concepts.js"></script>
   </body>
 </html>

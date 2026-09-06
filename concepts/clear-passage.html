@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Download Permit Route Pro for Android, review state support, release notes, screenshots, and installation guidance.">
+    <title>Clear Passage — Permit Route Pro</title>
+    <link rel="stylesheet" href="concepts.css">
+  </head>
+  <body class="clear" id="top">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="clear-wrap">
+      <nav class="clear-nav" aria-label="Primary navigation">
+        <a class="clear-brand" href="#top"><i>P</i>Permit Route Pro</a>
+        <div class="clear-links"><a href="#journey">How it works</a><a href="#updates">Updates</a><a href="#coverage">States</a><a href="#screens">Screens</a><a href="#history">Changelog</a><a href="#install">Install</a></div>
+        <a class="route-button" data-download href="https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases">Download alpha</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="clear-wrap clear-hero">
+        <div class="concept-jump hero-concept-jump" role="group" aria-label="Design concepts">
+          <span>Concept</span>
+          <a href="night-dispatch.html"><span>1</span></a>
+          <a href="permit-ledger.html"><span>2</span></a>
+          <a href="high-visibility.html"><span>3</span></a>
+          <a href="route-atlas.html"><span>4</span></a>
+          <a href="clear-passage.html" aria-current="page"><span>5</span></a>
+        </div>
+        <h1>A clear path from issued permit to completed trip.</h1>
+        <p>
+          Review the route once, save what was accepted, and give the driver one
+          verified trip to follow from start to finish.
+        </p>
+        <div class="clear-actions">
+          <a class="route-button primary" data-download href="https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases">Download <span data-version>latest alpha</span></a>
+          <a class="route-button secondary" href="#install">Read Android install steps</a>
+        </div>
+
+        <div class="trip-line" id="journey">
+          <article><span></span><h3>Add the permit</h3><p>Choose the original PDF for the most reliable route extraction.</p></article>
+          <article><span></span><h3>Review the path</h3><p>Compare directions, restrictions, and every mapped waypoint.</p></article>
+          <article><span></span><h3>Save the record</h3><p>Accept the route and preserve the verified audit trail.</p></article>
+          <article><span></span><h3>Drive with context</h3><p>Resume the trip and stay on the approved route.</p></article>
+        </div>
+      </section>
+
+      <section class="clear-notices" aria-label="Important alpha testing information">
+        <div class="clear-wrap notice-grid">
+          <article class="testing-notice">
+            <span aria-hidden="true">!</span>
+            <div>
+              <h2>Alpha testing build</h2>
+              <p>Expect bugs, incomplete features, and limited state support. Access is free for selected testers or $5/month during alpha.</p>
+            </div>
+          </article>
+          <article class="pdf-notice">
+            <span aria-hidden="true">PDF</span>
+            <div>
+              <h2>Use the original permit PDF whenever possible</h2>
+              <p>Permit Route Pro processes PDF files more reliably and accurately than camera captures or saved pictures.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="clear-updates" id="updates">
+        <div class="clear-wrap updates-grid">
+          <header class="updates-heading">
+            <h2>What’s new in <span data-version>the latest release</span>.</h2>
+            <p>Release information updates automatically when a new public Android build is published.</p>
+            <dl class="build-facts">
+              <div><dt>Version</dt><dd data-version>Checking…</dd></div>
+              <div><dt>Published</dt><dd data-published>Checking…</dd></div>
+            </dl>
+            <a class="route-button primary" data-download href="https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases">Download the current APK</a>
+          </header>
+          <ul class="current-notes" data-release-list aria-live="polite">
+            <li>Loading the latest release notes…</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="clear-coverage" id="coverage">
+        <div class="clear-wrap coverage-grid">
+          <header>
+            <h2>Current operational status for state routing.</h2>
+            <p>Coverage labels describe the current permit-routing implementation, not whether a state permit is valid for travel.</p>
+          </header>
+          <table class="coverage-table">
+            <caption class="sr-only">Current state routing support</caption>
+            <tbody>
+              <tr class="coverage-row ready">
+                <th scope="row"><span></span><strong>Full routing support</strong></th>
+                <td>Texas, Colorado, Virginia, Nevada, Illinois, and New Mexico</td>
+              </tr>
+              <tr class="coverage-row partial">
+                <th scope="row"><span></span><strong>Partial support</strong></th>
+                <td>South Dakota and Utah</td>
+              </tr>
+              <tr class="coverage-row progress">
+                <th scope="row"><span></span><strong>In progress</strong></th>
+                <td>Arizona, Louisiana, Arkansas, and Oklahoma</td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="coverage-note">In-progress states include permit extraction and state-data routing integrations for active alpha testing, but are not yet classified as fully supported.</p>
+        </div>
+      </section>
+
+      <section class="clear-screens" id="screens">
+        <div class="clear-wrap screens-heading">
+          <h2>See the whole route-review flow.</h2>
+          <p>From the first action through route verification, approved-map review, and an off-route warning.</p>
+        </div>
+        <div class="screen-gallery" role="group" aria-label="Permit Route Pro screenshots">
+          <figure><img src="../assets/screenshots/launch.jpg" alt="Permit Route Pro landing page"><figcaption>Landing page</figcaption></figure>
+          <figure><img src="../assets/screenshots/home-actions.jpg" alt="Permit Route Pro quick actions screen"><figcaption>Quick actions</figcaption></figure>
+          <figure><img src="../assets/screenshots/route-verification.jpg" alt="Permit Route Pro route verification map preview"><figcaption>Route verification</figcaption></figure>
+          <figure><img src="../assets/screenshots/route-map.jpg" alt="Permit Route Pro expanded approved route map"><figcaption>Approved route map</figcaption></figure>
+          <figure><img src="../assets/screenshots/off-route-detail.jpg" alt="Permit Route Pro off-route warning near the driver location"><figcaption>Off-route warning</figcaption></figure>
+          <figure><img src="../assets/screenshots/off-route-overview.jpg" alt="Permit Route Pro off-route navigation overview"><figcaption>Navigation overview</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="clear-history" id="history">
+        <div class="clear-wrap history-grid">
+          <header>
+            <h2>Full changelog.</h2>
+            <p>Select a version to review its changes. The newest release opens first.</p>
+          </header>
+          <div class="release-history" data-changelog aria-live="polite">
+            <p>Loading the complete release history…</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="clear-install" id="install">
+        <div class="clear-wrap install-grid">
+          <div class="install-intro">
+            <h2>Install the Android alpha.</h2>
+            <p>
+              This testing build is distributed outside the Play Store. Download it
+              only from this website or the public Permit Route Pro release repository.
+            </p>
+            <div class="install-qr">
+              <img src="../assets/permit-route-pro-download-qr.svg" alt="QR code linking to the Permit Route Pro website">
+              <p><strong>Installing on another device?</strong><span>Scan the code with its camera.</span></p>
+            </div>
+          </div>
+          <ol class="install-steps">
+            <li><strong>Download the APK.</strong><span>Use a download button on this page from your Android device.</span></li>
+            <li><strong>Open the downloaded file.</strong><span>Android may ask which app should install the package.</span></li>
+            <li><strong>Allow this source.</strong><span>If prompted, permit installs from the browser or file manager you used.</span></li>
+            <li><strong>Finish installation.</strong><span>Return to the installer and tap Install.</span></li>
+            <li><strong>Open Permit Route Pro.</strong><span>Sign in, verify your email if prompted, and begin with a test permit.</span></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="clear-wrap clear-release" aria-label="Current release download">
+        <div><strong>Ready to test Permit Route Pro?</strong><p>Current Android alpha <span data-version>Checking…</span>, published <span data-published>Checking…</span>.</p></div>
+        <a class="route-button primary" data-download href="https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases">Get the APK</a>
+      </section>
+    </main>
+
+    <footer class="clear-wrap clear-footer"><span>Permit Route Pro alpha</span><a href="https://github.com/ussblade/PermitRoutePro-Alpha-Releases">Public release repository</a></footer>
+    <script src="concepts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Night Dispatch design concept for Permit Route Pro.">
+    <title>Night Dispatch — Permit Route Pro concept</title>
+    <link rel="stylesheet" href="concepts.css">
+  </head>
+  <body class="night">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="night-shell">
+      <nav class="night-nav" aria-label="Primary navigation">
+        <a class="night-brand" href="../index.html"><b>PRP</b> Permit Route Pro</a>
+        <div class="night-links">
+          <a href="#workflow">Route control</a>
+          <a href="../index.html#install">Install guide</a>
+          <a href="../index.html#history">Release history</a>
+        </div>
+        <div class="concept-jump" role="group" aria-label="Design concepts">
+          <span>Concept</span>
+          <a href="night-dispatch.html" aria-current="page"><span>1</span></a>
+          <a href="permit-ledger.html"><span>2</span></a>
+          <a href="high-visibility.html"><span>3</span></a>
+          <a href="route-atlas.html"><span>4</span></a>
+          <a href="clear-passage.html"><span>5</span></a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main" class="night-shell">
+      <section class="night-hero">
+        <aside class="status-rail" aria-label="System status">
+          <span class="status-light" aria-hidden="true"></span>
+          <p>Route control ready</p>
+        </aside>
+        <div class="night-copy">
+          <h1>Keep every permitted mile on record.</h1>
+          <p>
+            Turn the permit into a route the driver can inspect, accept, save, and
+            follow—without losing the approved path between the office and the cab.
+          </p>
+          <div class="night-actions">
+            <a class="route-button primary" data-download href="https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases">Download Android alpha</a>
+            <a class="route-button secondary" href="#workflow">See route control</a>
+          </div>
+          <div class="release-line">
+            <span>Current build <strong data-version>Checking…</strong></span>
+            <span>Published <strong data-published>Checking…</strong></span>
+          </div>
+        </div>
+        <div class="night-visual">
+          <div class="phone-shot">
+            <img src="../assets/screenshots/route-verification.jpg" alt="Permit Route Pro route verification screen">
+          </div>
+        </div>
+      </section>
+
+      <section class="night-process" id="workflow">
+        <h2>One controlled handoff from permit to pavement.</h2>
+        <div class="process-track">
+          <article><span>01</span><h3>Add the permit</h3><p>Choose the original PDF when available for the clearest extraction.</p></article>
+          <article><span>02</span><h3>Read the route</h3><p>OCR identifies the origin, destination, route segments, and restrictions.</p></article>
+          <article><span>03</span><h3>Check every point</h3><p>Compare the map with the permit and correct misplaced waypoints.</p></article>
+          <article><span>04</span><h3>Accept the record</h3><p>Save the reviewed route with the evidence needed to show what was approved.</p></article>
+          <article><span>05</span><h3>Drive the line</h3><p>Resume the verified trip and navigate along the permit-approved path.</p></article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="night-shell night-footer">
+      <span>Android alpha for controlled testing.</span>
+      <a href="https://github.com/ussblade/PermitRoutePro-Alpha-Releases">Public release repository</a>
+    </footer>
+    <script src="concepts.js"></script>
+  </body>
+</html>
