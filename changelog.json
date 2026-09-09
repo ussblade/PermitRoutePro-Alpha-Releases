@@ -2,6 +2,16 @@
   "generatedFrom": "mobile/CHANGELOG.md",
   "releases": [
     {
+      "version": "0.4.28-alpha.9+139",
+      "date": "2026-09-09",
+      "notes": [
+        "Deferred update checks, mandatory-update screens, update-check errors, and APK installation throughout active permit navigation, including app resumes, navigation overlays, and pauses between permit segments.",
+        "Discarded update results and errors from checks already in progress when navigation starts. Update checks become available again after navigation ends.",
+        "Added an Allow cloud photos toggle for new permits and additional permit pages. It defaults to off and remembers the user's choice across app restarts until changed.",
+        "Navigation update protection takes effect after installing this version; older installed versions retain their previous update behavior."
+      ]
+    },
+    {
       "version": "0.4.28-alpha.7+137",
       "date": "2026-09-09",
       "notes": [

@@ -1,31 +1,31 @@
 {
-  "latestVersionName": "0.4.28-alpha.7",
-  "latestVersionCode": 2137,
-  "minimumVersionCode": 2137,
+  "latestVersionName": "0.4.28-alpha.9",
+  "latestVersionCode": 2139,
+  "minimumVersionCode": 2139,
   "required": true,
-  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.7/permit-route-pro-v0.4.28-alpha.7.apk",
-  "apkSha256": "339b4fb2ec46553d92d5a8fcb8e0168c58d2966c3e1d8d4c21ddd31b44229196",
-  "apkSizeBytes": 131770135,
+  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.9/permit-route-pro-v0.4.28-alpha.9.apk",
+  "apkSha256": "fec8272a9447b7d6ee4022119363a73ee5622abc2abe220707620a56fcf2f2bd",
+  "apkSizeBytes": 131786559,
   "apks": {
     "arm64-v8a": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.7/permit-route-pro-v0.4.28-alpha.7-arm64-v8a.apk",
-      "apkSha256": "b499bbed09023fe191f390e350620cc09979c43474aff6d3c563ad9498242bde",
-      "apkSizeBytes": 57958913
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.9/permit-route-pro-v0.4.28-alpha.9-arm64-v8a.apk",
+      "apkSha256": "0fe85d2145d69284f23281352fe6d993c742e49594fbe4b25307eede26ea0362",
+      "apkSizeBytes": 57958953
     },
     "armeabi-v7a": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.7/permit-route-pro-v0.4.28-alpha.7-armeabi-v7a.apk",
-      "apkSha256": "90ba8eaca57591ef9cf8544716a4e6dd56a4e3be06a0af71c27def80f96cc241",
-      "apkSizeBytes": 50273397
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.9/permit-route-pro-v0.4.28-alpha.9-armeabi-v7a.apk",
+      "apkSha256": "6783a7f3004111fcd6ee7591b80cd3da310b64b8c361a3e0a52ba4c99e67f46b",
+      "apkSizeBytes": 50289821
     },
     "x86_64": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.7/permit-route-pro-v0.4.28-alpha.7-x86_64.apk",
-      "apkSha256": "e5615fda779240586d073dffa5df7592498fa260a3bdc21661434da4deb7aa83",
-      "apkSizeBytes": 61137401
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.9/permit-route-pro-v0.4.28-alpha.9-x86_64.apk",
+      "apkSha256": "8329db3cf290f067039bc8f514acfd8da13e4431b8e2e56d3f9844e36d01a337",
+      "apkSizeBytes": 61137441
     }
   },
   "releaseNotes": [
-    "Fixed cramped action buttons across account, permit, fleet, and trip screens; buttons stack when needed and grow for larger text settings.",
-    "Added searchable notification recipients and a refresh control, including legacy registered accounts while preserving denied access."
+    "Update checks, required-update screens, and update-check errors are deferred throughout active permit navigation, including app resumes and checks already in progress when navigation starts.",
+    "Added an Allow cloud photos toggle to the permit gallery and additional permit pages. Your choice stays saved across app restarts until you change it."
   ],
-  "publishedAt": "2026-09-09T02:50:53Z"
+  "publishedAt": "2026-09-09T15:39:48Z"
 }
