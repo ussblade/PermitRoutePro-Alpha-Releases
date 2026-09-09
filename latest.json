@@ -1,11 +1,31 @@
 {
-  "latestVersionName": "0.4.28-alpha.6",
-  "latestVersionCode": 2136,
-  "minimumVersionCode": 2136,
+  "latestVersionName": "0.4.28-alpha.7",
+  "latestVersionCode": 2137,
+  "minimumVersionCode": 2137,
   "required": true,
-  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.6/permit-route-pro-v0.4.28-alpha.6.apk",
-  "apkSha256": "9bf58b1cbdc99beb1b3c8f806041e9d121ea69099cf2589d97c29c6d8f345647",
-  "apkSizeBytes": 131770027,
-  "releaseNotes": ["Replaced Illinois ProMiles routing with authenticated ITAP retrieval of the issued permit route and preserved official-source evidence in accepted-route audits.", "Fixed Illinois permit-number recognition and kept map markers at turns, ramps, forks, road changes, and route endpoints while removing repeated continuation markers.", "Added Indiana official permit-route retrieval and improved Oklahoma original-PDF recovery and ordered road reconstruction with explicit review of unresolved geometry.", "Kept Permit Route Pro in its own Android task when opened from another app, including PDF imports and launches that expect a result.", "Added live trial and subscription status on every home theme, plus administrator shortcuts and an updated User List.", "Added six home appearances, font and navigation display choices, and improved access to accepted-route audit records.", "Updated website download controls and Android icons, with verified device-specific APK selection when matching release assets are available and a universal fallback."],
-  "publishedAt": "2026-09-09T00:45:01Z"
+  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.7/permit-route-pro-v0.4.28-alpha.7.apk",
+  "apkSha256": "339b4fb2ec46553d92d5a8fcb8e0168c58d2966c3e1d8d4c21ddd31b44229196",
+  "apkSizeBytes": 131770135,
+  "apks": {
+    "arm64-v8a": {
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.7/permit-route-pro-v0.4.28-alpha.7-arm64-v8a.apk",
+      "apkSha256": "b499bbed09023fe191f390e350620cc09979c43474aff6d3c563ad9498242bde",
+      "apkSizeBytes": 57958913
+    },
+    "armeabi-v7a": {
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.7/permit-route-pro-v0.4.28-alpha.7-armeabi-v7a.apk",
+      "apkSha256": "90ba8eaca57591ef9cf8544716a4e6dd56a4e3be06a0af71c27def80f96cc241",
+      "apkSizeBytes": 50273397
+    },
+    "x86_64": {
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.7/permit-route-pro-v0.4.28-alpha.7-x86_64.apk",
+      "apkSha256": "e5615fda779240586d073dffa5df7592498fa260a3bdc21661434da4deb7aa83",
+      "apkSizeBytes": 61137401
+    }
+  },
+  "releaseNotes": [
+    "Fixed cramped action buttons across account, permit, fleet, and trip screens; buttons stack when needed and grow for larger text settings.",
+    "Added searchable notification recipients and a refresh control, including legacy registered accounts while preserving denied access."
+  ],
+  "publishedAt": "2026-09-09T02:50:53Z"
 }

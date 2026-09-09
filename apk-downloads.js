@@ -26,7 +26,9 @@
     const result = [];
     const universalUrl = trustedApkUrl(manifest?.apkUrl);
     if (universalUrl) {
-      result.push({ abi: 'universal', label: 'Universal — all supported Android architectures', url: universalUrl });
+      const size = Number(manifest?.apkSizeBytes);
+      result.push({ abi: 'universal', label: 'Universal — all supported Android architectures', url: universalUrl,
+        ...(Number.isSafeInteger(size) && size > 0 ? { sizeBytes: size } : {}) });
     }
     for (const [abi, label] of Object.entries(labels)) {
       const entry = manifest?.apks?.[abi];

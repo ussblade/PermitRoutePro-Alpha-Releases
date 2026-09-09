@@ -2,6 +2,15 @@
   "generatedFrom": "mobile/CHANGELOG.md",
   "releases": [
     {
+      "version": "0.4.28-alpha.7+137",
+      "date": "2026-09-09",
+      "notes": [
+        "Fixed cramped action buttons across account, permit, fleet, and trip screens; buttons stack when needed and grow for larger text settings.",
+        "Added searchable notification recipients and a refresh control, including legacy registered accounts while preserving denied access.",
+        "Published a full universal APK and smaller ARM64, ARM32, and x86-64 APKs, with a dedicated universal download on the website."
+      ]
+    },
+    {
       "version": "0.4.28-alpha.6+136",
       "date": "2026-09-09",
       "notes": [

@@ -2750,3 +2750,13 @@ a[data-download]::before {
   -webkit-mask: url("../assets/android.svg") center / contain no-repeat;
   mask: url("../assets/android.svg") center / contain no-repeat;
 }
+
+.apk-universal-download { margin-top: 0.75rem; white-space: normal; text-align: center; }
+.apk-update-notice { padding: 0.9rem 1rem; border-left: 3px solid #52738a; background: #edf2ed; font-size: 0.95rem; line-height: 1.6; }
+.apk-update-notice strong { display: block; color: #28352f; }
+
+@media (max-width: 600px) {
+  .atlas .atlas-nav { flex-wrap: wrap; gap: 12px; padding: 12px 0; }
+  .atlas .atlas-brand { white-space: normal; flex-shrink: 1; }
+  .atlas .atlas-nav-download { max-width: 100%; }
+}

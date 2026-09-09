@@ -90,6 +90,14 @@ async function configureDownloads(manifest) {
   const container = document.querySelector('[data-download-options]');
   const status = document.querySelector('[data-download-status]');
   const options = PermitApkDownloads.downloads(manifest);
+  const universal = options.find((entry) => entry.abi === 'universal');
+  document.querySelectorAll('[data-download-universal]').forEach((link) => {
+    link.href = universal?.url || releaseFallback;
+    const size = universal?.sizeBytes
+      ? ` (${(universal.sizeBytes / 1024 / 1024).toFixed(1)} MB)` : '';
+    link.textContent = universal
+      ? `Download full universal APK${size}` : 'Open all APK releases';
+  });
   let manuallySelected = false;
 
   function select(abi) {
