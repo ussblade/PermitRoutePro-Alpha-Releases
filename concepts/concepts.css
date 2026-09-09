@@ -2719,3 +2719,34 @@ a {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Device-specific APK choices extend the current field bulletin. */
+.apk-download-status { font-size: 0.9rem; line-height: 1.5; }
+.apk-download-options { margin-top: 1rem; }
+.apk-download-options[hidden] { display: none; }
+.apk-download-options summary { cursor: pointer; font-weight: 700; }
+.apk-download-options label { display: block; margin: 1rem 0 0.5rem; }
+.apk-download-options select {
+  width: 100%; max-width: 100%; padding: 0.75rem; font: inherit;
+  color: #172f40; background: #fff; border: 1px solid #52738a; border-radius: 4px;
+}
+.apk-download-options p { font-size: 0.9rem; line-height: 1.5; }
+
+/* Google Material Android mark; source and license: assets/android.LICENSE.txt. */
+a[data-download] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+a[data-download]::before {
+  content: "";
+  display: block;
+  flex: 0 0 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: currentColor;
+  -webkit-mask: url("../assets/android.svg") center / contain no-repeat;
+  mask: url("../assets/android.svg") center / contain no-repeat;
+}

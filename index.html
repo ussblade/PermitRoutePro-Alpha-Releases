@@ -6,7 +6,7 @@
     <meta name="description" content="Download Permit Route Pro for Android, review state routing support, screenshots, release notes, and installation guidance.">
     <link rel="canonical" href="https://permit-route-pro.com/">
     <title>Permit Route Pro — Permit-approved routing</title>
-    <link rel="stylesheet" href="concepts/concepts.css?v=0.4.28-alpha.5-8ae001e-27">
+    <link rel="stylesheet" href="concepts/concepts.css?v=0.4.28-alpha.6-e6f1975-28">
   </head>
   <body class="atlas" id="top">
     <a class="skip-link" href="#main">Skip to content</a>
@@ -88,6 +88,13 @@
               <div><dt>Published</dt><dd data-published>Checking…</dd></div>
             </dl>
             <a class="route-button primary" data-download href="https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases">Download the current APK</a>
+            <p class="apk-download-status" data-download-status role="status"></p>
+            <details class="apk-download-options" data-download-options hidden>
+              <summary>Other downloads</summary>
+              <label for="apk-choice">Android download</label>
+              <select id="apk-choice" data-apk-choice></select>
+              <p>Not sure which one to use? Choose Universal. Your choice applies to every download button on this page.</p>
+            </details>
           </header>
           <ul class="atlas-current-notes" data-release-list aria-live="polite"><li>Loading the latest release notes…</li></ul>
         </div>
@@ -104,7 +111,7 @@
             <caption class="sr-only">Current state routing support</caption>
             <tbody>
               <tr class="atlas-ready"><th scope="row"><span></span>Full routing support</th><td>Texas, Colorado, Virginia, Nevada, Illinois, and New Mexico</td></tr>
-              <tr class="atlas-partial"><th scope="row"><span></span>Partial support</th><td>South Dakota and Utah</td></tr>
+              <tr class="atlas-partial"><th scope="row"><span></span>Partial support</th><td>Indiana, South Dakota, and Utah</td></tr>
               <tr class="atlas-progress"><th scope="row"><span></span>In progress</th><td>Arizona, Louisiana, Arkansas, and Oklahoma</td></tr>
             </tbody>
           </table>
@@ -191,6 +198,7 @@
     </main>
 
     <footer class="atlas-wrap atlas-footer">For alpha testing and evaluation. Verify every route against the issued permit.</footer>
-    <script src="concepts/concepts.js?v=0.4.28-alpha.5-8ae001e-27"></script>
+    <script src="apk-downloads.js?v=0.4.28-alpha.6-e6f1975-28"></script>
+    <script src="concepts/concepts.js?v=0.4.28-alpha.6-e6f1975-28"></script>
   </body>
 </html>

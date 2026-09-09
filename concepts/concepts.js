@@ -54,7 +54,7 @@ function applyManifest(manifest) {
   const versionCode = manifest?.latestVersionCode
     ? ` (${manifest.latestVersionCode})`
     : "";
-  const downloadUrl = manifest?.apkUrl || releaseFallback;
+  const downloadUrl = PermitApkDownloads.selectDownload(manifest, null).url;
 
   document.querySelectorAll("[data-version]").forEach((element) => {
     element.textContent = `${version}${versionCode}`;
@@ -65,6 +65,10 @@ function applyManifest(manifest) {
   document.querySelectorAll("[data-download]").forEach((link) => {
     link.href = downloadUrl;
   });
+
+  // Enable the universal link immediately; device detection is bounded and
+  // never delays release notes or leaves download buttons disabled.
+  configureDownloads(manifest);
 
   const note = Array.isArray(manifest?.releaseNotes)
     ? manifest.releaseNotes[0]
@@ -79,6 +83,51 @@ function applyManifest(manifest) {
   document.querySelectorAll("[data-release-list]").forEach((list) => {
     replaceList(list, notes);
   });
+}
+
+async function configureDownloads(manifest) {
+  const picker = document.querySelector('[data-apk-choice]');
+  const container = document.querySelector('[data-download-options]');
+  const status = document.querySelector('[data-download-status]');
+  const options = PermitApkDownloads.downloads(manifest);
+  let manuallySelected = false;
+
+  function select(abi) {
+    const selection = PermitApkDownloads.selectDownload(manifest, abi);
+    document.querySelectorAll('[data-download]').forEach((link) => {
+      link.href = selection.url;
+    });
+    if (picker) picker.value = selection.abi || '';
+    if (status) {
+      status.textContent = selection.abi === 'universal'
+        ? options.length > 1
+          ? 'Universal Android APK selected. Choose a smaller download below if you know your device’s architecture.'
+          : 'Universal Android APK selected.'
+        : selection.abi
+          ? `${selection.label.split(' — ')[0]} Android APK selected.`
+          : 'Open the public releases page for the current Android download.';
+    }
+  }
+
+  if (picker) {
+    picker.replaceChildren();
+    options.forEach((entry) => {
+      const option = document.createElement('option');
+      option.value = entry.abi;
+      const size = entry.sizeBytes ? ` (${(entry.sizeBytes / 1024 / 1024).toFixed(1)} MB)` : '';
+      option.textContent = entry.label + size;
+      picker.appendChild(option);
+    });
+    picker.onchange = () => {
+      manuallySelected = true;
+      select(picker.value);
+    };
+  }
+  if (container) container.hidden = options.length < 2;
+  select(null);
+  const abi = await PermitApkDownloads.detectAbi();
+  // A late hint must not replace an explicit user choice.
+  if (!manuallySelected) select(abi);
 }
 
 function renderChangelog(payload) {

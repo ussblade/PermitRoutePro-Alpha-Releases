@@ -2,6 +2,19 @@
   "generatedFrom": "mobile/CHANGELOG.md",
   "releases": [
     {
+      "version": "0.4.28-alpha.6+136",
+      "date": "2026-09-09",
+      "notes": [
+        "Replaced Illinois ProMiles routing with authenticated ITAP retrieval of the issued permit route and preserved official-source evidence in accepted-route audits.",
+        "Fixed Illinois permit-number recognition and kept map markers at turns, ramps, forks, road changes, and route endpoints while removing repeated continuation markers.",
+        "Added Indiana official permit-route retrieval and improved Oklahoma original-PDF recovery and ordered road reconstruction with explicit review of unresolved geometry.",
+        "Kept Permit Route Pro in its own Android task when opened from another app, including PDF imports and launches that expect a result.",
+        "Added live trial and subscription status on every home theme, plus administrator shortcuts and an updated User List.",
+        "Added six home appearances, font and navigation display choices, and improved access to accepted-route audit records.",
+        "Updated website download controls and Android icons, with verified device-specific APK selection when matching release assets are available and a universal fallback."
+      ]
+    },
+    {
       "version": "0.4.28-alpha.5+135",
       "date": "2026-09-06",
       "notes": [
