@@ -290,7 +290,6 @@ document.querySelectorAll("[data-permit-form]").forEach((form) => {
           state: form.elements.state.value,
           notes: form.elements.notes.value,
           permissionConfirmed: form.elements.permissionConfirmed.checked,
-          companyWebsite: form.elements.companyWebsite.value,
           attachments,
         }),
       });
@@ -298,11 +297,14 @@ document.querySelectorAll("[data-permit-form]").forEach((form) => {
       if (!response.ok) {
         throw new Error(result.error || "We could not send your permit right now. Please try again.");
       }
+      if (result.ok !== true || typeof result.message !== "string" || !result.message.trim()) {
+        throw new Error("We could not confirm your permit was sent. Your files are still selected. Please try again or email permitroutepro@gmail.com directly.");
+      }
       form.reset();
       summary.textContent = "No files selected.";
       setPermitStatus(
         status,
-        result.message || "Your permit was sent. Thank you for helping us improve routing coverage.",
+        result.message,
         "success",
       );
     } catch (error) {

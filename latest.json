@@ -1,31 +1,45 @@
 {
-  "latestVersionName": "0.4.28-alpha.9",
-  "latestVersionCode": 2139,
-  "minimumVersionCode": 2139,
+  "latestVersionName": "0.4.28-alpha.21",
+  "latestVersionCode": 2151,
+  "minimumVersionCode": 2151,
   "required": true,
-  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.9/permit-route-pro-v0.4.28-alpha.9.apk",
-  "apkSha256": "fec8272a9447b7d6ee4022119363a73ee5622abc2abe220707620a56fcf2f2bd",
-  "apkSizeBytes": 131786559,
+  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.21/permit-route-pro-v0.4.28-alpha.21.apk",
+  "apkSha256": "1fdf73058993c305b98c5a9020f93e74dac5d6dbdf684a836c8a031d2fb198e5",
+  "apkSizeBytes": 65308525,
   "apks": {
     "arm64-v8a": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.9/permit-route-pro-v0.4.28-alpha.9-arm64-v8a.apk",
-      "apkSha256": "0fe85d2145d69284f23281352fe6d993c742e49594fbe4b25307eede26ea0362",
-      "apkSizeBytes": 57958953
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.21/permit-route-pro-v0.4.28-alpha.21-arm64-v8a.apk",
+      "apkSha256": "be78ff613e3d7545642206fa94379e04bd83a9c01bc125966334c4b852e114f5",
+      "apkSizeBytes": 33290099
     },
     "armeabi-v7a": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.9/permit-route-pro-v0.4.28-alpha.9-armeabi-v7a.apk",
-      "apkSha256": "6783a7f3004111fcd6ee7591b80cd3da310b64b8c361a3e0a52ba4c99e67f46b",
-      "apkSizeBytes": 50289821
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.21/permit-route-pro-v0.4.28-alpha.21-armeabi-v7a.apk",
+      "apkSha256": "16c46be4025994941d32730f71492fe1313d2ad9fdb3a836d4bb643461e0250b",
+      "apkSizeBytes": 31918943
     },
     "x86_64": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.9/permit-route-pro-v0.4.28-alpha.9-x86_64.apk",
-      "apkSha256": "8329db3cf290f067039bc8f514acfd8da13e4431b8e2e56d3f9844e36d01a337",
-      "apkSizeBytes": 61137441
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.21/permit-route-pro-v0.4.28-alpha.21-x86_64.apk",
+      "apkSha256": "79b715738530dacd41007f8bf4034f20b00fed7091ce89150215feb529763f46",
+      "apkSizeBytes": 33866615
     }
   },
   "releaseNotes": [
-    "Update checks, required-update screens, and update-check errors are deferred throughout active permit navigation, including app resumes and checks already in progress when navigation starts.",
-    "Added an Allow cloud photos toggle to the permit gallery and additional permit pages. Your choice stays saved across app restarts until you change it."
+    "Fixed Indiana permit routes that leave a connector early for another interstate, including the I-80 Exit 12 connection to I-65. Verified routes and turn instructions remain available for offline resume.",
+    "Ohio permits now report a navigation-provider server error clearly when their linked route cannot be retrieved.",
+    "Fixed older Utah permits with required ramp bypasses and shared highway names. Unknown road names now use neighboring instructions, state road geometry, travel direction and printed mileage to identify a single matching connection. Ambiguous or incomplete routes stop for review.",
+    "Fixed Utah route distances when scanning reads a decimal point as a comma or the digit 1 as a letter. All numbered steps and route mileage still require validation.",
+    "Added closer scanning of small Utah route text and improved recognition of Interstate labels. PDF parsing failures now show an error instead of opening an empty verification map, with better details in debug reports.",
+    "Fixed Utah permit step extraction, short distances in feet, and state-border endpoints. Supported Utah routes follow the printed itinerary using state road and ramp geometry, including Exit 87A, and preserve the reviewed path for offline resume. Incomplete or unsupported routes stop for review.",
+    "Fixed South Dakota route parsing when phone OCR joins county names, milepost numbers, or road labels, wraps county names across lines, or reads I-29 as 1-29. Required route anchors remain checked before routing.",
+    "Fixed South Dakota receipt recognition and small-text PDF scanning. Routes retain US-16B and use state road geometry across counties, preserving the reviewed path for offline resume. Incomplete routes now stop with an error.",
+    "Simplified Ohio permit route labels, loading messages, and errors.",
+    "Fixed Ohio state permit QR scanning by locating the Audible Route Guidance section on later PDF pages and scanning a focused image. Unreadable QR errors now explain the scan failure correctly.",
+    "Fixed missing gallery photos by adding selected-photo access management and refreshing the gallery after app resumes. Debug screenshots now use the same saved cloud-photo setting as permit imports.",
+    "Indiana routing now supports connected ramp bypasses and named connectors, preserving required bridge slowdowns in navigation and saved route records.",
+    "Ohio state permits now use their linked permit route, with checks that keep township permits and conflicting permit identities from being treated as the state-approved route.",
+    "Smaller APK downloads through compressed native libraries and removal of duplicate artwork and unused packages. Offline scanning, road data, and themes remain available.",
+    "Android now manages update downloads in the background so progress can be recovered after screen lock or app recreation. Updates are verified before installation and remain deferred during active navigation.",
+    "Pages and dialogs now stay above the persistent system navigation bar, allowing the final content to scroll fully into view across themes."
   ],
-  "publishedAt": "2026-09-09T15:39:48Z"
+  "publishedAt": "2026-09-14T21:15:39Z"
 }

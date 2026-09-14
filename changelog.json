@@ -2,6 +2,28 @@
   "generatedFrom": "mobile/CHANGELOG.md",
   "releases": [
     {
+      "version": "0.4.28-alpha.21+151",
+      "date": "2026-09-14",
+      "notes": [
+        "Fixed Indiana permit routes that leave a connector early for another interstate, including the I-80 Exit 12 connection to I-65. Verified routes and turn instructions remain available for offline resume.",
+        "Ohio permits now report a navigation-provider server error clearly when their linked route cannot be retrieved.",
+        "Fixed older Utah permits with required ramp bypasses and shared highway names. Unknown road names now use neighboring instructions, state road geometry, travel direction and printed mileage to identify a single matching connection. Ambiguous or incomplete routes stop for review.",
+        "Fixed Utah route distances when scanning reads a decimal point as a comma or the digit 1 as a letter. All numbered steps and route mileage still require validation.",
+        "Added closer scanning of small Utah route text and improved recognition of Interstate labels. PDF parsing failures now show an error instead of opening an empty verification map, with better details in debug reports.",
+        "Fixed Utah permit step extraction, short distances in feet, and state-border endpoints. Supported Utah routes follow the printed itinerary using state road and ramp geometry, including Exit 87A, and preserve the reviewed path for offline resume. Incomplete or unsupported routes stop for review.",
+        "Fixed South Dakota route parsing when phone OCR joins county names, milepost numbers, or road labels, wraps county names across lines, or reads I-29 as 1-29. Required route anchors remain checked before routing.",
+        "Fixed South Dakota receipt recognition and small-text PDF scanning. Routes retain US-16B and use state road geometry across counties, preserving the reviewed path for offline resume. Incomplete routes now stop with an error.",
+        "Simplified Ohio permit route labels, loading messages, and errors.",
+        "Fixed Ohio state permit QR scanning by locating the Audible Route Guidance section on later PDF pages and scanning a focused image. Unreadable QR errors now explain the scan failure correctly.",
+        "Fixed missing gallery photos by adding selected-photo access management and refreshing the gallery after app resumes. Debug screenshots now use the same saved cloud-photo setting as permit imports.",
+        "Indiana routing now supports connected ramp bypasses and named connectors, preserving required bridge slowdowns in navigation and saved route records.",
+        "Ohio state permits now use their linked permit route, with checks that keep township permits and conflicting permit identities from being treated as the state-approved route.",
+        "Smaller APK downloads through compressed native libraries and removal of duplicate artwork and unused packages. Offline scanning, road data, and themes remain available.",
+        "Android now manages update downloads in the background so progress can be recovered after screen lock or app recreation. Updates are verified before installation and remain deferred during active navigation.",
+        "Pages and dialogs now stay above the persistent system navigation bar, allowing the final content to scroll fully into view across themes."
+      ]
+    },
+    {
       "version": "0.4.28-alpha.9+139",
       "date": "2026-09-09",
       "notes": [

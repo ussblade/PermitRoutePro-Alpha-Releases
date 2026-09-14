@@ -3,10 +3,19 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Download Permit Route Pro for Android, review state routing support, screenshots, release notes, and installation guidance.">
+    <meta name="google-site-verification" content="u55weYqI1f1QMS4rmIIku3oM1XNT6R3yiwb7f9ApbpE" />
+    <meta name="description" content="Review oversize and overweight permit routes with Permit Route Pro for Android. Import permits, verify the mapped route, and resume trips. Explore the alpha.">
     <link rel="canonical" href="https://permit-route-pro.com/">
-    <title>Permit Route Pro — Permit-approved routing</title>
-    <link rel="stylesheet" href="concepts/concepts.css?v=0.4.28-alpha.7-0f006c1-31">
+    <title>Permit Route Pro | Oversize &amp; Overweight Permit Routing App</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Permit Route Pro",
+        "url": "https://permit-route-pro.com/"
+      }
+    </script>
+    <link rel="stylesheet" href="concepts/concepts.css?v=0.4.28-alpha.21-13dd20d-33">
   </head>
   <body class="atlas" id="top">
     <a class="skip-link" href="#main">Skip to content</a>
@@ -38,8 +47,9 @@
         <div class="atlas-copy">
           <h1>Make the permit route visible before the trip begins.</h1>
           <p>
-            Permit Route Pro turns permit language into a map the driver can review,
-            correct, accept, and carry through the full trip.
+            Permit Route Pro is an Android app for oversize and overweight permit routing.
+            Import a permit, review and correct the mapped route, save the accepted route
+            record, and resume the verified trip for navigation.
           </p>
           <div class="atlas-actions">
             <a class="route-button primary" data-download href="https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases">Download the Android alpha</a>
@@ -54,13 +64,14 @@
 
       <section class="route-spine" id="route">
         <div class="atlas-wrap">
-          <h2>Four stops between the permit and the destination.</h2>
+          <h2>From permit scanning to verified-route navigation.</h2>
           <div class="atlas-route">
             <article class="atlas-stop"><h3>Permit in</h3><p>Add the original PDF or permit images. The source stays attached to the trip.</p></article>
             <article class="atlas-stop"><h3>Route found</h3><p>Review extracted roads, turns, origin, destination, and restrictions in plain language.</p></article>
             <article class="atlas-stop"><h3>Path accepted</h3><p>Compare every waypoint with the permit, make corrections, then store the audit record.</p></article>
             <article class="atlas-stop"><h3>Trip resumed</h3><p>Open the verified trip and navigate along the permit-approved path.</p></article>
           </div>
+          <p><a href="/permit-route-review">Read the permit route review walkthrough</a> for the steps from importing a permit to resuming a verified trip.</p>
         </div>
       </section>
 
@@ -106,7 +117,7 @@
         <div class="atlas-wrap coverage-atlas-grid">
           <header>
             <p class="map-key">Routing coverage legend</p>
-            <h2>Current operational status for state routing.</h2>
+            <h2>State coverage for oversize and overweight permit routing.</h2>
             <p>Coverage labels describe the current permit-routing implementation, not whether a state permit is valid for travel.</p>
           </header>
           <table class="atlas-coverage-table">
@@ -140,7 +151,6 @@
                 <output data-permit-file-summary>No files selected.</output>
               </label>
               <label class="permit-consent"><input name="permissionConfirmed" type="checkbox" required><span>I have permission to share these files and understand they will be emailed to Permit Route Pro for routing research.</span></label>
-              <label class="permit-trap" aria-hidden="true">Leave this field empty<input name="companyWebsite" type="text" tabindex="-1" autocomplete="off"></label>
               <button class="route-button permit-submit" type="submit">Send permit for routing research</button>
               <p class="permit-form-status" role="status" aria-live="polite" data-permit-status></p>
             </form>
@@ -200,7 +210,7 @@
     </main>
 
     <footer class="atlas-wrap atlas-footer">For alpha testing and evaluation. Verify every route against the issued permit.</footer>
-    <script src="apk-downloads.js?v=0.4.28-alpha.7-0f006c1-31"></script>
-    <script src="concepts/concepts.js?v=0.4.28-alpha.7-0f006c1-31"></script>
+    <script src="apk-downloads.js?v=0.4.28-alpha.21-13dd20d-33"></script>
+    <script src="concepts/concepts.js?v=0.4.28-alpha.21-13dd20d-33"></script>
   </body>
 </html>
