@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Share a permitted trip example privately to help improve oversize and overweight permit routing coverage.">
+    <link rel="canonical" href="https://permit-route-pro.com/share-a-permit">
+    <title>Share a Permit for Routing Research | Permit Route Pro</title>
+    <link rel="stylesheet" href="concepts/concepts.css?v=0.4.28-alpha.23-a766804-34">
+  </head>
+  <body class="atlas">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="atlas-wrap site-header">
+      <nav class="atlas-nav" aria-label="Primary navigation">
+        <a class="atlas-brand" href="/">Permit Route Pro</a>
+        <button class="site-menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="site-menu"><span class="site-menu-icon" aria-hidden="true">☰</span> Menu</button>
+        <div class="site-menu" id="site-menu" hidden>
+            <a href="/">Home</a>
+            <a href="/#coverage">State coverage</a>
+            <a href="/#updates">What’s new</a>
+            <a href="/permit-route-review">Route review guide</a>
+            <a href="/screenshots">App screenshots</a>
+            <a href="/changelog">Changelog</a>
+            <a href="/share-a-permit" aria-current="page">Share a permit</a>
+            <a href="/#install">Install</a>
+        </div>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="atlas-share" aria-labelledby="permit-research-title">
+        <div class="atlas-wrap">
+          <section class="permit-research-callout" aria-labelledby="permit-research-title">
+            <div class="permit-research-copy">
+              <p class="map-key">Help chart the next state</p>
+              <h1 id="permit-research-title">A real permit helps us build a better route.</h1>
+              <p>Every state writes and formats permits differently. Examples from real trips show us how a state describes roads, turns, restrictions, and special instructions. Permits from states we do not support help us start new coverage; additional examples from supported states help us catch more formats and make existing routing stronger.</p>
+              <p class="permit-privacy-note"><strong>Before you upload:</strong> remove or cover Social Security numbers, driver’s-license numbers, payment details, signatures, or other private information that is not needed to understand the route. Submit only files you have permission to share.</p>
+              <p class="permit-email-note">Submissions are sent privately to <a href="mailto:permitroutepro@gmail.com">permitroutepro@gmail.com</a>. They are used for routing research, not published, and are not requests to route an active trip.</p>
+            </div>
+            <form class="permit-research-form" data-permit-form>
+              <div class="permit-field-grid">
+                <label>Your name<input name="name" type="text" autocomplete="name" maxlength="120" required></label>
+                <label>Your email<input name="email" type="email" autocomplete="email" maxlength="254" required></label>
+              </div>
+              <label>State that issued the permit<input name="state" type="text" autocomplete="address-level1" maxlength="80" placeholder="For example: Utah" required></label>
+              <label>What should we know? <span>(optional)</span><textarea name="notes" rows="4" maxlength="4000" placeholder="Tell us about an unusual route format, a routing problem, or anything else that may help our research."></textarea></label>
+              <label class="permit-file-drop">
+                <span>Permit PDF or clear images</span>
+                <small>Choose up to 3 PDF, JPG, PNG, or WebP files. Maximum 3 MB each and 5 MB combined.</small>
+                <input name="permitFiles" type="file" accept=".pdf,.jpg,.jpeg,.png,.webp,application/pdf,image/jpeg,image/png,image/webp" multiple required data-permit-files>
+                <output data-permit-file-summary>No files selected.</output>
+              </label>
+              <label class="permit-consent"><input name="permissionConfirmed" type="checkbox" required><span>I have permission to share these files and understand they will be emailed to Permit Route Pro for routing research.</span></label>
+              <button class="route-button permit-submit" type="submit">Send permit for routing research</button>
+              <p class="permit-form-status" role="status" aria-live="polite" data-permit-status></p>
+            </form>
+          </section>
+        </div>
+      </section>
+    </main>
+    <footer class="atlas-wrap atlas-footer">For alpha testing and evaluation. Verify every route against the issued permit.</footer>
+    <script src="apk-downloads.js?v=0.4.28-alpha.23-a766804-34"></script>
+    <script src="concepts/concepts.js?v=0.4.28-alpha.23-a766804-34"></script>
+  </body>
+</html>

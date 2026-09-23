@@ -187,12 +187,28 @@ loadJson(manifestSources).then(applyManifest);
 loadJson(changelogSources).then(renderChangelog);
 
 document.querySelectorAll("[data-menu-button]").forEach((button) => {
+  const menu = document.getElementById(button.getAttribute("aria-controls"));
+  if (!menu) return;
+  const closeMenu = () => {
+    button.setAttribute("aria-expanded", "false");
+    menu.hidden = true;
+  };
   button.addEventListener("click", () => {
-    const menu = document.querySelector(`#${button.getAttribute("aria-controls")}`);
-    if (!menu) return;
     const isOpen = button.getAttribute("aria-expanded") === "true";
     button.setAttribute("aria-expanded", String(!isOpen));
     menu.hidden = isOpen;
+  });
+  menu.addEventListener("click", (event) => {
+    if (event.target.closest("a")) closeMenu();
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !menu.hidden) {
+      closeMenu();
+      button.focus();
+    }
+  });
+  document.addEventListener("click", (event) => {
+    if (!menu.hidden && !button.contains(event.target) && !menu.contains(event.target)) closeMenu();
   });
 });
 

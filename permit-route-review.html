@@ -6,7 +6,7 @@
     <meta name="description" content="Learn how to import a permit, check extracted route details, review the map, save an accepted route record, and resume a trip in Permit Route Pro for Android.">
     <link rel="canonical" href="https://permit-route-pro.com/permit-route-review">
     <title>How to Review a Permit Route | Permit Route Pro</title>
-    <link rel="stylesheet" href="concepts/concepts.css?v=0.4.28-alpha.21-13dd20d-33">
+    <link rel="stylesheet" href="concepts/concepts.css?v=0.4.28-alpha.23-a766804-34">
     <style>
       .permit-guide-page .atlas-nav { flex-wrap: wrap; padding-block: 16px; }
       .permit-guide { max-width: 780px; padding-block: 48px 64px; line-height: 1.75; }
@@ -18,10 +18,20 @@
   </head>
   <body class="atlas permit-guide-page">
     <a class="skip-link" href="#main">Skip to content</a>
-    <header class="atlas-wrap">
+    <header class="atlas-wrap site-header">
       <nav class="atlas-nav" aria-label="Primary navigation">
         <a class="atlas-brand" href="/">Permit Route Pro</a>
-        <a class="route-button primary" href="/#install">Get the Android alpha</a>
+        <button class="site-menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="site-menu"><span class="site-menu-icon" aria-hidden="true">☰</span> Menu</button>
+        <div class="site-menu" id="site-menu" hidden>
+            <a href="/">Home</a>
+            <a href="/#coverage">State coverage</a>
+            <a href="/#updates">What’s new</a>
+            <a href="/permit-route-review" aria-current="page">Route review guide</a>
+            <a href="/screenshots">App screenshots</a>
+            <a href="/changelog">Changelog</a>
+            <a href="/share-a-permit">Share a permit</a>
+            <a href="/#install">Install</a>
+        </div>
       </nav>
     </header>
     <main id="main" class="atlas-wrap permit-guide">
@@ -39,13 +49,13 @@
         <p>If a detail is missing or unclear, resolve it before continuing. A map preview is useful for review, but it does not establish that the permit text was interpreted correctly.</p>
 
         <h2>3. Compare the mapped path with the permit.</h2>
-        <p>Review the waypoints and the path between them. Check where the route enters and leaves each road, and confirm that the mapped sequence matches the permit instructions. The <a href="/#screens">app screenshots</a> show the verification and approved-route map views.</p>
+        <p>Review the waypoints and the path between them. Check where the route enters and leaves each road, and confirm that the mapped sequence matches the permit instructions. The <a href="/screenshots">app screenshots</a> show the verification and approved-route map views.</p>
 
         <h2>4. Save the accepted route record.</h2>
         <p>After reviewing and correcting the route, accept it to store its audit record. That record preserves the accepted route for the trip. Keep the original permit available alongside the saved record.</p>
 
         <h2>5. Resume the verified trip.</h2>
-        <p>Open the verified trip to resume navigation along its accepted path. The app includes off-route warnings; you can see examples in the <a href="/#screens">navigation screenshots</a>.</p>
+        <p>Open the verified trip to resume navigation along its accepted path. The app includes off-route warnings; you can see examples in the <a href="/screenshots">navigation screenshots</a>.</p>
 
         <h2>Does Permit Route Pro issue permits?</h2>
         <p>No. This workflow starts with a permit you already have. The app helps extract, review, record, and navigate its route.</p>
@@ -59,5 +69,7 @@
       </article>
     </main>
     <footer class="atlas-wrap atlas-footer">For alpha testing and evaluation. Verify every route against the issued permit.</footer>
+    <script src="apk-downloads.js?v=0.4.28-alpha.23-a766804-34"></script>
+    <script src="concepts/concepts.js?v=0.4.28-alpha.23-a766804-34"></script>
   </body>
 </html>

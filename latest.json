@@ -1,45 +1,34 @@
 {
-  "latestVersionName": "0.4.28-alpha.21",
-  "latestVersionCode": 2151,
-  "minimumVersionCode": 2151,
+  "latestVersionName": "0.4.28-alpha.23",
+  "latestVersionCode": 2153,
+  "minimumVersionCode": 2153,
   "required": true,
-  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.21/permit-route-pro-v0.4.28-alpha.21.apk",
-  "apkSha256": "1fdf73058993c305b98c5a9020f93e74dac5d6dbdf684a836c8a031d2fb198e5",
-  "apkSizeBytes": 65308525,
+  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.23/permit-route-pro-v0.4.28-alpha.23.apk",
+  "apkSha256": "6954e8c1c496e5cb2f2bc5894e2325f555891ff6d0a9954a852ebeda790a65a1",
+  "apkSizeBytes": 65430093,
   "apks": {
     "arm64-v8a": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.21/permit-route-pro-v0.4.28-alpha.21-arm64-v8a.apk",
-      "apkSha256": "be78ff613e3d7545642206fa94379e04bd83a9c01bc125966334c4b852e114f5",
-      "apkSizeBytes": 33290099
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.23/permit-route-pro-v0.4.28-alpha.23-arm64-v8a.apk",
+      "apkSha256": "cb4f34ee02cc33acb4fedf66499f2953fea6d42aef07b0ae70605ed1e08b06bb",
+      "apkSizeBytes": 33327311
     },
     "armeabi-v7a": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.21/permit-route-pro-v0.4.28-alpha.21-armeabi-v7a.apk",
-      "apkSha256": "16c46be4025994941d32730f71492fe1313d2ad9fdb3a836d4bb643461e0250b",
-      "apkSizeBytes": 31918943
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.23/permit-route-pro-v0.4.28-alpha.23-armeabi-v7a.apk",
+      "apkSha256": "58a4ca3ff83d7fca4fcbbd1da93e070b6a43ed6a3572e3ebbf3f9e89821bed24",
+      "apkSizeBytes": 31960615
     },
     "x86_64": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.21/permit-route-pro-v0.4.28-alpha.21-x86_64.apk",
-      "apkSha256": "79b715738530dacd41007f8bf4034f20b00fed7091ce89150215feb529763f46",
-      "apkSizeBytes": 33866615
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.23/permit-route-pro-v0.4.28-alpha.23-x86_64.apk",
+      "apkSha256": "c7144f5135cc910448580246b00208c858eff2477ca578641e952bd67b136fac",
+      "apkSizeBytes": 33909295
     }
   },
   "releaseNotes": [
-    "Fixed Indiana permit routes that leave a connector early for another interstate, including the I-80 Exit 12 connection to I-65. Verified routes and turn instructions remain available for offline resume.",
-    "Ohio permits now report a navigation-provider server error clearly when their linked route cannot be retrieved.",
-    "Fixed older Utah permits with required ramp bypasses and shared highway names. Unknown road names now use neighboring instructions, state road geometry, travel direction and printed mileage to identify a single matching connection. Ambiguous or incomplete routes stop for review.",
-    "Fixed Utah route distances when scanning reads a decimal point as a comma or the digit 1 as a letter. All numbered steps and route mileage still require validation.",
-    "Added closer scanning of small Utah route text and improved recognition of Interstate labels. PDF parsing failures now show an error instead of opening an empty verification map, with better details in debug reports.",
-    "Fixed Utah permit step extraction, short distances in feet, and state-border endpoints. Supported Utah routes follow the printed itinerary using state road and ramp geometry, including Exit 87A, and preserve the reviewed path for offline resume. Incomplete or unsupported routes stop for review.",
-    "Fixed South Dakota route parsing when phone OCR joins county names, milepost numbers, or road labels, wraps county names across lines, or reads I-29 as 1-29. Required route anchors remain checked before routing.",
-    "Fixed South Dakota receipt recognition and small-text PDF scanning. Routes retain US-16B and use state road geometry across counties, preserving the reviewed path for offline resume. Incomplete routes now stop with an error.",
-    "Simplified Ohio permit route labels, loading messages, and errors.",
-    "Fixed Ohio state permit QR scanning by locating the Audible Route Guidance section on later PDF pages and scanning a focused image. Unreadable QR errors now explain the scan failure correctly.",
-    "Fixed missing gallery photos by adding selected-photo access management and refreshing the gallery after app resumes. Debug screenshots now use the same saved cloud-photo setting as permit imports.",
-    "Indiana routing now supports connected ramp bypasses and named connectors, preserving required bridge slowdowns in navigation and saved route records.",
-    "Ohio state permits now use their linked permit route, with checks that keep township permits and conflicting permit identities from being treated as the state-approved route.",
-    "Smaller APK downloads through compressed native libraries and removal of duplicate artwork and unused packages. Offline scanning, road data, and themes remain available.",
-    "Android now manages update downloads in the background so progress can be recovered after screen lock or app recreation. Updates are verified before installation and remain deferred during active navigation.",
-    "Pages and dialogs now stay above the persistent system navigation bar, allowing the final content to scroll fully into view across themes."
+    "Fixed Ohio permits appearing as Hawaii in permit lists and trips. Issuing states now use exact agency codes instead of substring matches.",
+    "Georgia and Idaho state permits can retrieve their saved issued routes by permit number. Montana and Wyoming can retrieve their saved permit maps from the state QR link. Missing or conflicting state route evidence stops import for review.",
+    "Ohio now retrieves the saved OHPS trip and directions by printed permit number, including when its navigation QR service is unavailable. Mileage-based turn markers remain approximate.",
+    "Multi-state trips can show the complete sequence of accepted permit routes, validate connected state-line endpoints, and resume with a confirmed permit handoff. Each saved leg remains tied to its verified audit record.",
+    "South Dakota routes are identified as reconstructions from printed permit instructions and state road data. Illinois route guidance more clearly distinguishes saved geometry from approximate instruction markers."
   ],
-  "publishedAt": "2026-09-14T21:15:39Z"
+  "publishedAt": "2026-09-23T01:20:48Z"
 }

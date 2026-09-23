@@ -762,6 +762,45 @@ a {
   align-items: center;
 }
 
+.atlas .site-header { position: relative; z-index: 20; }
+.atlas .site-menu-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  padding: 11px 17px;
+  border: 1px solid #28352f;
+  background: transparent;
+  color: #28352f;
+  font: 700 0.95rem Verdana, Geneva, sans-serif;
+  cursor: pointer;
+}
+.atlas .site-menu-button:hover,
+.atlas .site-menu-button[aria-expanded="true"] { background: #1b4332; color: #f7f0de; }
+.atlas .site-menu-icon { font-size: 1.2rem; line-height: 1; }
+.atlas .site-menu[hidden] { display: none; }
+.atlas .site-menu {
+  position: absolute;
+  top: calc(100% - 2px);
+  right: 0;
+  width: min(560px, 100%);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding: 12px;
+  border: 2px solid #1b4332;
+  background: #fffaf0;
+  box-shadow: 10px 12px 0 rgba(27, 67, 50, 0.18);
+}
+.atlas .site-menu a {
+  padding: 15px 18px;
+  color: #28352f;
+  text-decoration: none;
+  font-weight: 700;
+}
+.atlas .site-menu a:hover,
+.atlas .site-menu a[aria-current="page"] { background: #d8c39b; }
+.atlas .site-menu-button:focus-visible,
+.atlas .site-menu a:focus-visible { outline: 3px solid #b5482d; outline-offset: 3px; }
+
 .atlas .atlas-links {
   display: flex;
   gap: 17px;
@@ -1150,6 +1189,10 @@ a {
   background: #e97658;
 }
 
+.atlas .atlas-unsupported th span {
+  background: #86978e;
+}
+
 .atlas .atlas-coverage-table td {
   color: #cfddd3;
   line-height: 1.55;
@@ -1162,6 +1205,26 @@ a {
   font-size: 0.86rem;
   line-height: 1.6;
 }
+
+.atlas .coverage-more { grid-column: 2; margin: 5px 0 0; line-height: 1.6; }
+.atlas .coverage-more a { color: #f7f0de; font-weight: 700; text-underline-offset: 4px; }
+.atlas .download-coverage-reminder { padding: 12px 16px; border-left: 4px solid #b5482d; background: #eddfc1; line-height: 1.5; }
+.atlas .download-coverage-reminder a { color: #1b4332; font-weight: 700; }
+
+.atlas .atlas-explore { padding: 76px 0 84px; background: #e7d7b7; }
+.atlas .atlas-explore h2 { margin: 0 0 32px; font: 400 clamp(2.5rem, 5vw, 4.5rem)/1 Palatino, "Book Antiqua", serif; letter-spacing: -0.04em; }
+.atlas .atlas-explore-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 30px; }
+.atlas .atlas-explore-links a { display: grid; gap: 8px; padding: 20px 0; border-top: 1px solid #8d856e; color: #28352f; text-decoration: none; }
+.atlas .atlas-explore-links a:hover strong { color: #b5482d; text-decoration: underline; }
+.atlas .atlas-explore-links strong { font: 700 1.5rem Palatino, "Book Antiqua", serif; }
+.atlas .atlas-explore-links span { color: #4c5851; line-height: 1.5; }
+
+.atlas .atlas-share { min-height: 70vh; padding: 55px 0 90px; background: #1b4332; }
+.atlas .atlas-share .permit-research-callout { margin-top: 0; }
+.atlas .permit-research-copy h1,
+.atlas .atlas-screens-heading h1,
+.atlas .atlas-log-grid h1 { margin: 0; font: 400 clamp(2.7rem, 4.8vw, 5rem)/0.98 Palatino, "Book Antiqua", serif; letter-spacing: -0.04em; }
+.atlas .permit-research-copy h1 { font-size: clamp(2.15rem, 4vw, 4.1rem); }
 
 .atlas .permit-research-callout {
   grid-column: 1 / -1;
@@ -2020,6 +2083,10 @@ a {
   background: #f2554a;
 }
 
+.clear .coverage-row.unsupported th span {
+  background: #8a96a8;
+}
+
 .clear .coverage-row td {
   color: #43536a;
   line-height: 1.55;
@@ -2346,6 +2413,8 @@ a {
     grid-column: auto;
     margin-top: 0;
   }
+
+  .atlas .coverage-more { grid-column: auto; }
 
   .atlas .permit-research-callout {
     grid-template-columns: 1fr;
@@ -2759,4 +2828,6 @@ a[data-download]::before {
   .atlas .atlas-nav { flex-wrap: wrap; gap: 12px; padding: 12px 0; }
   .atlas .atlas-brand { white-space: normal; flex-shrink: 1; }
   .atlas .atlas-nav-download { max-width: 100%; }
+  .atlas .site-menu { grid-template-columns: 1fr; }
+  .atlas .atlas-explore-links { grid-template-columns: 1fr; }
 }

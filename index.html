@@ -15,22 +15,24 @@
         "url": "https://permit-route-pro.com/"
       }
     </script>
-    <link rel="stylesheet" href="concepts/concepts.css?v=0.4.28-alpha.21-13dd20d-33">
+    <link rel="stylesheet" href="concepts/concepts.css?v=0.4.28-alpha.23-a766804-34">
   </head>
   <body class="atlas" id="top">
     <a class="skip-link" href="#main">Skip to content</a>
-    <header class="atlas-wrap">
+    <header class="atlas-wrap site-header">
       <nav class="atlas-nav" aria-label="Primary navigation">
-        <a class="atlas-brand" href="#top">Permit Route Pro</a>
-        <div class="atlas-links">
-          <a href="#route">Workflow</a>
-          <a href="#updates">Updates</a>
-          <a href="#coverage">States</a>
-          <a href="#screens">Screens</a>
-          <a href="#history">Changelog</a>
-          <a href="#install">Install</a>
+        <a class="atlas-brand" href="/">Permit Route Pro</a>
+        <button class="site-menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="site-menu"><span class="site-menu-icon" aria-hidden="true">☰</span> Menu</button>
+        <div class="site-menu" id="site-menu" hidden>
+            <a href="/" aria-current="page">Home</a>
+            <a href="/#coverage">State coverage</a>
+            <a href="/#updates">What’s new</a>
+            <a href="/permit-route-review">Route review guide</a>
+            <a href="/screenshots">App screenshots</a>
+            <a href="/changelog">Changelog</a>
+            <a href="/share-a-permit">Share a permit</a>
+            <a href="/#install">Install</a>
         </div>
-        <a class="atlas-nav-download route-button primary" data-download href="https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases">Download alpha</a>
       </nav>
     </header>
 
@@ -52,8 +54,8 @@
             record, and resume the verified trip for navigation.
           </p>
           <div class="atlas-actions">
-            <a class="route-button primary" data-download href="https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases">Download the Android alpha</a>
-            <a class="route-button secondary" href="#route">Trace the workflow</a>
+            <a class="route-button primary" href="#coverage">Check state coverage</a>
+            <a class="route-button secondary" href="#route">See how it works</a>
           </div>
         </div>
         <figure class="atlas-inset">
@@ -88,6 +90,27 @@
         </div>
       </section>
 
+      <section class="atlas-coverage" id="coverage">
+        <div class="atlas-wrap coverage-atlas-grid">
+          <header>
+            <p class="map-key">Routing coverage legend</p>
+            <h2>State coverage for oversize and overweight permit routing.</h2>
+            <p>Coverage labels describe the current permit-routing implementation, not whether a state permit is valid for travel.</p>
+          </header>
+          <table class="atlas-coverage-table">
+            <caption class="sr-only">Current state routing support</caption>
+            <tbody>
+              <tr class="atlas-ready"><th scope="row"><span></span>Full routing support</th><td>Colorado, Illinois, Indiana, Nevada, New Mexico, Texas, and Virginia</td></tr>
+              <tr class="atlas-partial"><th scope="row"><span></span>Partial support</th><td>Georgia, Idaho, Montana, Ohio, South Dakota, Utah, and Wyoming</td></tr>
+              <tr class="atlas-progress"><th scope="row"><span></span>In progress</th><td>Arizona, Arkansas, Louisiana, and Oklahoma</td></tr>
+              <tr class="atlas-unsupported"><th scope="row"><span></span>Routing not yet supported</th><td>Alabama, Alaska, California, Connecticut, Delaware, Florida, Hawaii, Iowa, Kansas, Kentucky, Maine, Maryland, Massachusetts, Michigan, Minnesota, Mississippi, Missouri, Nebraska, New Hampshire, New Jersey, New York, North Carolina, North Dakota, Oregon, Pennsylvania, Rhode Island, South Carolina, Tennessee, Vermont, Washington, West Virginia, and Wisconsin</td></tr>
+            </tbody>
+          </table>
+          <p class="atlas-coverage-note">Partial support varies by state and permit format; compare every route with the issued permit before travel. In-progress states have routing work under development. Routing is not yet available in the remaining states.</p>
+          <p class="coverage-more"><a href="/share-a-permit">Share a permit for routing research</a> to help expand and improve state coverage.</p>
+        </div>
+      </section>
+
       <section class="atlas-bulletin" id="updates">
         <div class="atlas-wrap bulletin-grid">
           <header>
@@ -98,6 +121,7 @@
               <div><dt>Version</dt><dd data-version>Checking…</dd></div>
               <div><dt>Published</dt><dd data-published>Checking…</dd></div>
             </dl>
+            <p class="download-coverage-reminder">Check the <a href="#coverage">state coverage legend above</a> before installing this alpha build.</p>
             <a class="route-button primary" data-download href="https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases">Download the current APK</a>
             <a class="route-button apk-universal-download" data-download-universal href="https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases">Download full universal APK</a>
             <p class="apk-update-notice"><strong>Smaller updates after your first install.</strong> The full APK includes support for several types of Android devices. Future updates download the smaller version made for your device, leaving out what it doesn’t need.</p>
@@ -113,71 +137,15 @@
         </div>
       </section>
 
-      <section class="atlas-coverage" id="coverage">
-        <div class="atlas-wrap coverage-atlas-grid">
-          <header>
-            <p class="map-key">Routing coverage legend</p>
-            <h2>State coverage for oversize and overweight permit routing.</h2>
-            <p>Coverage labels describe the current permit-routing implementation, not whether a state permit is valid for travel.</p>
-          </header>
-          <table class="atlas-coverage-table">
-            <caption class="sr-only">Current state routing support</caption>
-            <tbody>
-              <tr class="atlas-ready"><th scope="row"><span></span>Full routing support</th><td>Texas, Colorado, Virginia, Nevada, Illinois, and New Mexico</td></tr>
-              <tr class="atlas-partial"><th scope="row"><span></span>Partial support</th><td>Indiana, Ohio, South Dakota, and Utah</td></tr>
-              <tr class="atlas-progress"><th scope="row"><span></span>In progress</th><td>Arizona, Louisiana, Arkansas, and Oklahoma</td></tr>
-            </tbody>
-          </table>
-          <p class="atlas-coverage-note">Ohio support depends on the linked state permit route being available; provider errors stop route import. In-progress states include permit extraction and state-data routing integrations for active alpha testing, but are not yet classified as fully supported.</p>
-          <section class="permit-research-callout" aria-labelledby="permit-research-title">
-            <div class="permit-research-copy">
-              <p class="map-key">Help chart the next state</p>
-              <h3 id="permit-research-title">A real permit helps us build a better route.</h3>
-              <p>Every state writes and formats permits differently. Examples from real trips show us how a state describes roads, turns, restrictions, and special instructions. Permits from states we do not support help us start new coverage; additional examples from supported states help us catch more formats and make existing routing stronger.</p>
-              <p class="permit-privacy-note"><strong>Before you upload:</strong> remove or cover Social Security numbers, driver’s-license numbers, payment details, signatures, or other private information that is not needed to understand the route. Submit only files you have permission to share.</p>
-              <p class="permit-email-note">Submissions are sent privately to <a href="mailto:permitroutepro@gmail.com">permitroutepro@gmail.com</a>. They are used for routing research, not published, and are not requests to route an active trip.</p>
-            </div>
-            <form class="permit-research-form" data-permit-form>
-              <div class="permit-field-grid">
-                <label>Your name<input name="name" type="text" autocomplete="name" maxlength="120" required></label>
-                <label>Your email<input name="email" type="email" autocomplete="email" maxlength="254" required></label>
-              </div>
-              <label>State that issued the permit<input name="state" type="text" autocomplete="address-level1" maxlength="80" placeholder="For example: Utah" required></label>
-              <label>What should we know? <span>(optional)</span><textarea name="notes" rows="4" maxlength="4000" placeholder="Tell us about an unusual route format, a routing problem, or anything else that may help our research."></textarea></label>
-              <label class="permit-file-drop">
-                <span>Permit PDF or clear images</span>
-                <small>Choose up to 3 PDF, JPG, PNG, or WebP files. Maximum 3 MB each and 5 MB combined.</small>
-                <input name="permitFiles" type="file" accept=".pdf,.jpg,.jpeg,.png,.webp,application/pdf,image/jpeg,image/png,image/webp" multiple required data-permit-files>
-                <output data-permit-file-summary>No files selected.</output>
-              </label>
-              <label class="permit-consent"><input name="permissionConfirmed" type="checkbox" required><span>I have permission to share these files and understand they will be emailed to Permit Route Pro for routing research.</span></label>
-              <button class="route-button permit-submit" type="submit">Send permit for routing research</button>
-              <p class="permit-form-status" role="status" aria-live="polite" data-permit-status></p>
-            </form>
-          </section>
-        </div>
-      </section>
-
-      <section class="atlas-screens" id="screens">
-        <div class="atlas-wrap atlas-screens-heading">
-          <p class="map-key">App field views</p>
-          <h2>The complete route-review flow.</h2>
-          <p>Six views cover the first action, route verification, approved-map review, and off-route navigation.</p>
-        </div>
-        <div class="atlas-contact-sheet" role="group" aria-label="Permit Route Pro screenshots">
-          <figure><img src="assets/screenshots/launch.jpg" alt="Permit Route Pro landing page"><figcaption>Landing page</figcaption></figure>
-          <figure><img src="assets/screenshots/home-actions.jpg" alt="Permit Route Pro quick actions screen"><figcaption>Quick actions</figcaption></figure>
-          <figure><img src="assets/screenshots/route-verification.jpg" alt="Permit Route Pro route verification map preview"><figcaption>Route verification</figcaption></figure>
-          <figure><img src="assets/screenshots/route-map.jpg" alt="Permit Route Pro expanded approved route map"><figcaption>Approved route map</figcaption></figure>
-          <figure><img src="assets/screenshots/off-route-detail.jpg" alt="Permit Route Pro off-route warning near the driver location"><figcaption>Off-route warning</figcaption></figure>
-          <figure><img src="assets/screenshots/off-route-overview.jpg" alt="Permit Route Pro off-route navigation overview"><figcaption>Navigation overview</figcaption></figure>
-        </div>
-      </section>
-
-      <section class="atlas-log" id="history">
-        <div class="atlas-wrap atlas-log-grid">
-          <header><p class="map-key">Field log</p><h2>Full changelog.</h2><p>Select a version to review its changes. The newest release opens first.</p></header>
-          <div class="atlas-release-history" data-changelog aria-live="polite"><p>Loading the complete release history…</p></div>
+      <section class="atlas-explore" aria-labelledby="explore-title">
+        <div class="atlas-wrap">
+          <h2 id="explore-title">Explore Permit Route Pro.</h2>
+          <div class="atlas-explore-links">
+            <a href="/permit-route-review"><strong>Route review guide</strong><span>How a permit becomes a verified trip.</span></a>
+            <a href="/screenshots"><strong>App screenshots</strong><span>See the route review and navigation screens.</span></a>
+            <a href="/changelog"><strong>Full changelog</strong><span>Review changes across released builds.</span></a>
+            <a href="/share-a-permit"><strong>Share a permit</strong><span>Help improve state routing coverage.</span></a>
+          </div>
         </div>
       </section>
 
@@ -210,7 +178,7 @@
     </main>
 
     <footer class="atlas-wrap atlas-footer">For alpha testing and evaluation. Verify every route against the issued permit.</footer>
-    <script src="apk-downloads.js?v=0.4.28-alpha.21-13dd20d-33"></script>
-    <script src="concepts/concepts.js?v=0.4.28-alpha.21-13dd20d-33"></script>
+    <script src="apk-downloads.js?v=0.4.28-alpha.23-a766804-34"></script>
+    <script src="concepts/concepts.js?v=0.4.28-alpha.23-a766804-34"></script>
   </body>
 </html>

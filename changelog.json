@@ -2,6 +2,23 @@
   "generatedFrom": "mobile/CHANGELOG.md",
   "releases": [
     {
+      "version": "0.4.28-alpha.23+153",
+      "date": "2026-09-22",
+      "notes": [
+        "Fixed Ohio permits appearing as Hawaii in permit lists and trips by matching issuing agency codes exactly."
+      ]
+    },
+    {
+      "version": "0.4.28-alpha.22+152",
+      "date": "2026-09-22",
+      "notes": [
+        "Added Georgia and Idaho state-issued route lookup by printed permit number, and Montana and Wyoming saved-route retrieval through their permit QR portals. Missing or mismatched issued-route evidence stops import.",
+        "Switched Ohio route retrieval to the state OHPS saved trip and directions by permit number, with approximate mileage-based turn markers.",
+        "Added a full multi-permit trip overview, directed endpoint checks, state-line handoffs, and resume tied to each accepted route's audit record.",
+        "Clarified South Dakota's reconstructed route status and Illinois's approximate instruction markers."
+      ]
+    },
+    {
       "version": "0.4.28-alpha.21+151",
       "date": "2026-09-14",
       "notes": [
