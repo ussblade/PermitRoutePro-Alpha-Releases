@@ -1,34 +1,38 @@
 {
-  "latestVersionName": "0.4.28-alpha.23",
-  "latestVersionCode": 2153,
-  "minimumVersionCode": 2153,
+  "latestVersionName": "0.4.28-alpha.26",
+  "latestVersionCode": 2156,
+  "minimumVersionCode": 2156,
   "required": true,
-  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.23/permit-route-pro-v0.4.28-alpha.23.apk",
-  "apkSha256": "6954e8c1c496e5cb2f2bc5894e2325f555891ff6d0a9954a852ebeda790a65a1",
-  "apkSizeBytes": 65430093,
+  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.26/permit-route-pro-v0.4.28-alpha.26.apk",
+  "apkSha256": "c121101fd3356e2755d27ba8f278e2a3e8708298b29235c211f872b4836d8476",
+  "apkSizeBytes": 65619874,
   "apks": {
     "arm64-v8a": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.23/permit-route-pro-v0.4.28-alpha.23-arm64-v8a.apk",
-      "apkSha256": "cb4f34ee02cc33acb4fedf66499f2953fea6d42aef07b0ae70605ed1e08b06bb",
-      "apkSizeBytes": 33327311
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.26/permit-route-pro-v0.4.28-alpha.26-arm64-v8a.apk",
+      "apkSha256": "2dada3641233d5e21a070ba3a40ea732a400e8809c4fe0b42a0cff20e881f921",
+      "apkSizeBytes": 33445040
     },
     "armeabi-v7a": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.23/permit-route-pro-v0.4.28-alpha.23-armeabi-v7a.apk",
-      "apkSha256": "58a4ca3ff83d7fca4fcbbd1da93e070b6a43ed6a3572e3ebbf3f9e89821bed24",
-      "apkSizeBytes": 31960615
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.26/permit-route-pro-v0.4.28-alpha.26-armeabi-v7a.apk",
+      "apkSha256": "87d4714bdf4565b3bbf0f5e44f1caf207cc881e8d1f68c500f4ffae018419780",
+      "apkSizeBytes": 32077768
     },
     "x86_64": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.23/permit-route-pro-v0.4.28-alpha.23-x86_64.apk",
-      "apkSha256": "c7144f5135cc910448580246b00208c858eff2477ca578641e952bd67b136fac",
-      "apkSizeBytes": 33909295
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.26/permit-route-pro-v0.4.28-alpha.26-x86_64.apk",
+      "apkSha256": "fe46a7e105a24717229f41c11e8c8be3e113b0ad5ac43cc32168e35787f988c8",
+      "apkSizeBytes": 34020688
     }
   },
   "releaseNotes": [
-    "Fixed Ohio permits appearing as Hawaii in permit lists and trips. Issuing states now use exact agency codes instead of substring matches.",
-    "Georgia and Idaho state permits can retrieve their saved issued routes by permit number. Montana and Wyoming can retrieve their saved permit maps from the state QR link. Missing or conflicting state route evidence stops import for review.",
-    "Ohio now retrieves the saved OHPS trip and directions by printed permit number, including when its navigation QR service is unavailable. Mileage-based turn markers remain approximate.",
-    "Multi-state trips can show the complete sequence of accepted permit routes, validate connected state-line endpoints, and resume with a confirmed permit handoff. Each saved leg remains tied to its verified audit record.",
-    "South Dakota routes are identified as reconstructions from printed permit instructions and state road data. Illinois route guidance more clearly distinguishes saved geometry from approximate instruction markers."
+    "Fixed misplaced Ohio exit, merge, and road-change pins across the full reported route. Each instruction now requires a matching state road junction or complete ramp.",
+    "Saved Ohio trips use the checked guidance without changing the accepted audit or saved route. Missing or ambiguous turn locations no longer become estimated pins.",
+    "Fixed Ohio permits marked Issued prior being rejected during import. Saved state routes and identity checks are preserved.",
+    "Try again now reopens the saved permit after a reading or route-service failure, and repeated taps do not start duplicate processing.",
+    "Replaced remaining technical loading messages with plain language and clarified choosing another PDF.",
+    "Clearer trip planning with verification progress, a direct next step, and a full-trip review before navigation.",
+    "Added a quick-start guide, plain-language permit statuses, clearer page selection, and recovery actions for reading or camera problems.",
+    "Navigation shows complete instructions and named map controls. Help now offers Report a problem with optional attachments.",
+    "Trip planner route review now offers Verify and add another permit or Verify and return to trip planner, saving the verified route before continuing planning."
   ],
-  "publishedAt": "2026-09-23T01:20:48Z"
+  "publishedAt": "2026-09-26T21:34:37Z"
 }

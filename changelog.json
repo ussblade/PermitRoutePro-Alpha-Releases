@@ -2,6 +2,21 @@
   "generatedFrom": "mobile/CHANGELOG.md",
   "releases": [
     {
+      "version": "0.4.28-alpha.26+156",
+      "date": "2026-09-26",
+      "notes": [
+        "Fixed misplaced Ohio exit, merge, and road-change pins across the full reported route. Each instruction now requires a matching state road junction or complete ramp.",
+        "Saved Ohio trips use the checked guidance without changing the accepted audit or saved route. Missing or ambiguous turn locations no longer become estimated pins.",
+        "Fixed Ohio permits marked Issued prior being rejected during import. Saved state routes and identity checks are preserved.",
+        "Try again now reopens the saved permit after a reading or route-service failure, and repeated taps do not start duplicate processing.",
+        "Replaced remaining technical loading messages with plain language and clarified choosing another PDF.",
+        "Clearer trip planning with verification progress, a direct next step, and a full-trip review before navigation.",
+        "Added a quick-start guide, plain-language permit statuses, clearer page selection, and recovery actions for reading or camera problems.",
+        "Navigation shows complete instructions and named map controls. Help now offers Report a problem with optional attachments.",
+        "Trip planner route review now offers Verify and add another permit or Verify and return to trip planner, saving the verified route before continuing planning."
+      ]
+    },
+    {
       "version": "0.4.28-alpha.23+153",
       "date": "2026-09-22",
       "notes": [
