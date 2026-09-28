@@ -2,6 +2,15 @@
   "generatedFrom": "mobile/CHANGELOG.md",
   "releases": [
     {
+      "version": "0.4.28-alpha.29+159",
+      "date": "2026-09-28",
+      "notes": [
+        "Added partial Kentucky support: original permit PDFs load their saved KAPS route through the permit QR code, with matching printed identity and directions.",
+        "Fixed Kentucky exit, merge, and road-change pins using state ramp and road junctions. Saved reviews and trips receive corrected guidance while preserving the original route and accepted audit.",
+        "Fixed Kentucky imports on phones by opening the state website’s mobile route menu. Historical permits retain their original dates and remain available for review."
+      ]
+    },
+    {
       "version": "0.4.28-alpha.26+156",
       "date": "2026-09-26",
       "notes": [
