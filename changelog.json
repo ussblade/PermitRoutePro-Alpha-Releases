@@ -2,6 +2,14 @@
   "generatedFrom": "mobile/CHANGELOG.md",
   "releases": [
     {
+      "version": "0.4.28-alpha.30+160",
+      "date": "2026-10-03",
+      "notes": [
+        "Navigation keeps the vehicle in a stable screen position while the map follows movement and turns. Manual zoom and tilt stay consistent.",
+        "Smoothed the displayed vehicle movement and heading, including holding the indicator steady through small GPS drift while stopped."
+      ]
+    },
+    {
       "version": "0.4.28-alpha.29+159",
       "date": "2026-09-28",
       "notes": [

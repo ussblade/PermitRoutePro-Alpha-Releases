@@ -1,29 +1,31 @@
 {
-  "latestVersionName": "0.4.28-alpha.29",
-  "latestVersionCode": 2159,
-  "minimumVersionCode": 2159,
+  "latestVersionName": "0.4.28-alpha.30",
+  "latestVersionCode": 2160,
+  "minimumVersionCode": 2160,
   "required": true,
-  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.29/permit-route-pro-v0.4.28-alpha.29.apk",
-  "apkSha256": "7735b48eb17a1f1a81b79af52ecc28616c79d5d522ed6197e8fbf69ca2f79def",
-  "apkSizeBytes": 65812987,
+  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.30/permit-route-pro-v0.4.28-alpha.30.apk",
+  "apkSha256": "1520e36c349f59df343784a733fee10aaa000e2788074d0c2634cda352733657",
+  "apkSizeBytes": 65825715,
   "apks": {
     "arm64-v8a": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.29/permit-route-pro-v0.4.28-alpha.29-arm64-v8a.apk",
-      "apkSha256": "9838be26fecc21a06f02257c2749b740af3522921b77ad2645367c7860a80b0b",
-      "apkSizeBytes": 33568249
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.30/permit-route-pro-v0.4.28-alpha.30-arm64-v8a.apk",
+      "apkSha256": "4ee3f4d9da0b31fe62b1236847cdb091888e426cb2b5355cbd8e482dddfd9a58",
+      "apkSizeBytes": 33572389
     },
     "armeabi-v7a": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.29/permit-route-pro-v0.4.28-alpha.29-armeabi-v7a.apk",
-      "apkSha256": "dde0e1cc17831565a3e43b7f39c4833955281781d311575c01573433803fff59",
-      "apkSizeBytes": 32209001
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.30/permit-route-pro-v0.4.28-alpha.30-armeabi-v7a.apk",
+      "apkSha256": "d604777c2ef266182b9b46297f9da408b5df87a746a987c3e3389417eccc8f6d",
+      "apkSizeBytes": 32211629
     },
     "x86_64": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.29/permit-route-pro-v0.4.28-alpha.29-x86_64.apk",
-      "apkSha256": "770db52d1f2d0b279eb553b8faf8b7e69c92885c61fee454ad97cc38a8373073",
-      "apkSizeBytes": 34150117
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.30/permit-route-pro-v0.4.28-alpha.30-x86_64.apk",
+      "apkSha256": "9722261811197dd1526f8f68c32f5e990158d6f4b5694ee6a74484ef612e3b6f",
+      "apkSizeBytes": 34156081
     }
   },
   "releaseNotes": [
+    "Navigation keeps the vehicle in a stable screen position while the map follows movement and turns. Manual zoom and tilt stay consistent.",
+    "Smoothed the displayed vehicle movement and heading, including holding the indicator steady through small GPS drift while stopped.",
     "Fixed Kentucky imports on phones by opening the state website\u2019s mobile route menu. Historical permits retain their original dates and can be imported and reviewed.",
     "Kentucky permits now load their saved KAPS route through the original permit QR code and preserve it through review, audit storage, and trip resume.",
     "Kentucky exit, merge, and road-change pins now match state ramp and road junctions. Saved reviews and trips use the corrected guidance while preserving the original route and accepted audit.",
@@ -37,5 +39,5 @@
     "Navigation shows complete instructions and named map controls. Help now offers Report a problem with optional attachments.",
     "Trip planner route review now offers Verify and add another permit or Verify and return to trip planner, saving the verified route before continuing planning."
   ],
-  "publishedAt": "2026-09-28T23:06:49Z"
+  "publishedAt": "2026-10-03T22:33:40Z"
 }
