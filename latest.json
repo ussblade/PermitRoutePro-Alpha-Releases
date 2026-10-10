@@ -1,29 +1,38 @@
 {
-  "latestVersionName": "0.4.28-alpha.30",
-  "latestVersionCode": 2160,
-  "minimumVersionCode": 2160,
+  "latestVersionName": "0.4.28-alpha.34",
+  "latestVersionCode": 2164,
+  "minimumVersionCode": 2164,
   "required": true,
-  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.30/permit-route-pro-v0.4.28-alpha.30.apk",
-  "apkSha256": "1520e36c349f59df343784a733fee10aaa000e2788074d0c2634cda352733657",
-  "apkSizeBytes": 65825715,
+  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.34/permit-route-pro-v0.4.28-alpha.34.apk",
+  "apkSha256": "cc128b8cc409ed26f5c23c4222b4bfbd67421e3fc1d20454efa544c5035b9fef",
+  "apkSizeBytes": 66019919,
   "apks": {
     "arm64-v8a": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.30/permit-route-pro-v0.4.28-alpha.30-arm64-v8a.apk",
-      "apkSha256": "4ee3f4d9da0b31fe62b1236847cdb091888e426cb2b5355cbd8e482dddfd9a58",
-      "apkSizeBytes": 33572389
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.34/permit-route-pro-v0.4.28-alpha.34-arm64-v8a.apk",
+      "apkSha256": "56a2d325f05a04426ba553f6d034a55c5f1cd6c483d1d11ff360106896290f45",
+      "apkSizeBytes": 33674561
     },
     "armeabi-v7a": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.30/permit-route-pro-v0.4.28-alpha.30-armeabi-v7a.apk",
-      "apkSha256": "d604777c2ef266182b9b46297f9da408b5df87a746a987c3e3389417eccc8f6d",
-      "apkSizeBytes": 32211629
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.34/permit-route-pro-v0.4.28-alpha.34-armeabi-v7a.apk",
+      "apkSha256": "d53cdaef12ff5c6b7190484afd1dacdb903417d40af3b2d12a6d0cadec53937e",
+      "apkSizeBytes": 32319585
     },
     "x86_64": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.30/permit-route-pro-v0.4.28-alpha.30-x86_64.apk",
-      "apkSha256": "9722261811197dd1526f8f68c32f5e990158d6f4b5694ee6a74484ef612e3b6f",
-      "apkSizeBytes": 34156081
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.34/permit-route-pro-v0.4.28-alpha.34-x86_64.apk",
+      "apkSha256": "1c6e5c08ff93003107550e3cf6a58ae675f2b1da121939ccb284e69ab571f9d1",
+      "apkSizeBytes": 34257841
     }
   },
   "releaseNotes": [
+    "Improved online-status reporting when opening or resuming the app, and prevented stale background updates from leaving a resumed session offline.",
+    "User List shows Status unavailable when live status cannot be confirmed, keeps connection warnings visible after refresh, and preserves previously reported build and last-seen information.",
+    "Fixed vehicle placement and alignment with the off-route connection line. Your location stays just above the visible bottom information panel.",
+    "Off-route navigation shows a simple Off route message without mileage or a direction arrow. Map controls stay clear of the warning and remain reachable on smaller screens.",
+    "Retry can recover from a temporary secure-storage startup failure, with clearer account-opening messages and diagnostic logging.",
+    "Choose from five arrow and dot markers or a semi truck, pickup, van, and car, with ten saved colors and separate semi cab and trailer colors.",
+    "Navigation positions your location above the measured bottom information panel, adapting to screen size and larger text.",
+    "Start a trip without entering a name or dates. The trip is named from its verified route after all permits are reviewed.",
+    "Collect email PDF permits into the same saved trip, then review all permits together. Opening a permit from email also offers Start trip.",
     "Navigation keeps the vehicle in a stable screen position while the map follows movement and turns. Manual zoom and tilt stay consistent.",
     "Smoothed the displayed vehicle movement and heading, including holding the indicator steady through small GPS drift while stopped.",
     "Fixed Kentucky imports on phones by opening the state website\u2019s mobile route menu. Historical permits retain their original dates and can be imported and reviewed.",
@@ -39,5 +48,5 @@
     "Navigation shows complete instructions and named map controls. Help now offers Report a problem with optional attachments.",
     "Trip planner route review now offers Verify and add another permit or Verify and return to trip planner, saving the verified route before continuing planning."
   ],
-  "publishedAt": "2026-10-03T22:33:40Z"
+  "publishedAt": "2026-10-10T23:15:20Z"
 }

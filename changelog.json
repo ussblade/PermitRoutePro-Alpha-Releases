@@ -2,6 +2,20 @@
   "generatedFrom": "mobile/CHANGELOG.md",
   "releases": [
     {
+      "version": "0.4.28-alpha.34+164",
+      "date": "2026-10-10",
+      "notes": [
+        "Start a trip without entering a name or dates. Collect permits into the saved trip and name it from the verified route after reviewing all permits.",
+        "Opening an email PDF offers Start trip or Add to trip. Return to email to add more permits, then review the entire route together before navigation.",
+        "Choose from five arrow and dot markers, or a semi truck, pickup, van, and car. Save a color preference, with separate cab and trailer colors for the semi truck.",
+        "Navigation places your vehicle just above the measured bottom information panel, adapts to screen size and larger text, and aligns it with the off-route connection line.",
+        "Off-route navigation shows Off route in the green instruction area without mileage or a direction arrow. Map controls stay clear of the warning and remain accessible on smaller screens.",
+        "Improved online-status reporting when opening or resuming the app. Missing or disconnected status shows Status unavailable, and status warnings remain visible after refresh.",
+        "Retry can recover from a temporary secure-storage startup failure, with clearer account-opening messages and diagnostic logging.",
+        "Improved Ohio ramp and junction guidance, including voice prompts and physical road connections, while preserving the accepted route and audit record."
+      ]
+    },
+    {
       "version": "0.4.28-alpha.30+160",
       "date": "2026-10-03",
       "notes": [
