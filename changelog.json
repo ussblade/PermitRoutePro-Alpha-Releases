@@ -1,6 +1,39 @@
 {
   "generatedFrom": "mobile/CHANGELOG.md",
+  "schemaVersion": 2,
   "releases": [
+    {
+      "version": "0.4.28-alpha.38+168",
+      "date": "2026-10-12",
+      "notes": [
+        "Update notes now show only changes after your installed build, including any skipped updates, grouped by version.",
+        "Release notes are recorded separately for each build, with a check that prevents old notes accumulating in a new release."
+      ]
+    },
+    {
+      "version": "0.4.28-alpha.37+167",
+      "date": "2026-10-12",
+      "notes": [
+        "Navigation has larger wind, vehicle speed, remaining time, and remaining distance numbers. The wind card uses the smaller approved size, and accepted permit totals are available through Trip details.",
+        "Wind refresh timing now follows the last successful fetch, so cached readings do not delay the next scheduled update when navigation starts."
+      ]
+    },
+    {
+      "version": "0.4.28-alpha.36+166",
+      "date": "2026-10-12",
+      "notes": [
+        "Navigation now shows a small animated wind compass below the instructions at the upper left, with wind and gust speeds underneath. It shows actual wind travel direction when stopped and rotates relative to your driving heading while moving.",
+        "Wind compass rotation handles slow driving and turns across north, keeps missing directions unguessed, and shares existing weather readings without extra heading-update requests. Map gestures, alerts, and vehicle speed remain accessible."
+      ]
+    },
+    {
+      "version": "0.4.28-alpha.35+165",
+      "date": "2026-10-12",
+      "notes": [
+        "Added Wind & Weather to the main menu, with GPS wind and gust readings, wind direction, and online U.S. city search.",
+        "Navigation shows nearby wind observations and opens the full weather screen when tapped. Both views share free NWS data and a local cache, with station distance, observation time, and missing-data labels."
+      ]
+    },
     {
       "version": "0.4.28-alpha.34+164",
       "date": "2026-10-10",
@@ -509,6 +542,5 @@
         "Added local and shared route-data caching, debug reporting, theme development, and the initial Android dev-flavor build system."
       ]
     }
-  ],
-  "schemaVersion": 2
+  ]
 }

@@ -1,34 +1,65 @@
 {
-  "latestVersionName": "0.4.28-alpha.34",
-  "latestVersionCode": 2164,
-  "minimumVersionCode": 2164,
+  "latestVersionName": "0.4.28-alpha.38",
+  "latestVersionCode": 2168,
+  "minimumVersionCode": 2168,
   "required": true,
-  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.34/permit-route-pro-v0.4.28-alpha.34.apk",
-  "apkSha256": "cc128b8cc409ed26f5c23c4222b4bfbd67421e3fc1d20454efa544c5035b9fef",
-  "apkSizeBytes": 66019919,
+  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.38/permit-route-pro-v0.4.28-alpha.38.apk",
+  "apkSha256": "2b3c71c91c2b6c0322bc5199fea48da49c167ac478ddce59c8f77224631049e9",
+  "apkSizeBytes": 66209387,
   "apks": {
     "arm64-v8a": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.34/permit-route-pro-v0.4.28-alpha.34-arm64-v8a.apk",
-      "apkSha256": "56a2d325f05a04426ba553f6d034a55c5f1cd6c483d1d11ff360106896290f45",
-      "apkSizeBytes": 33674561
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.38/permit-route-pro-v0.4.28-alpha.38-arm64-v8a.apk",
+      "apkSha256": "08132c1517647dfa52a0562fc3bd45f2d14fd691002a388c5520cf9fb789790a",
+      "apkSizeBytes": 33795233
     },
     "armeabi-v7a": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.34/permit-route-pro-v0.4.28-alpha.34-armeabi-v7a.apk",
-      "apkSha256": "d53cdaef12ff5c6b7190484afd1dacdb903417d40af3b2d12a6d0cadec53937e",
-      "apkSizeBytes": 32319585
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.38/permit-route-pro-v0.4.28-alpha.38-armeabi-v7a.apk",
+      "apkSha256": "558adee999dc9dcfcd3b61563166979dabef1e5342df4f45f7b7d6747a9e14cc",
+      "apkSizeBytes": 32437621
     },
     "x86_64": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.34/permit-route-pro-v0.4.28-alpha.34-x86_64.apk",
-      "apkSha256": "1c6e5c08ff93003107550e3cf6a58ae675f2b1da121939ccb284e69ab571f9d1",
-      "apkSizeBytes": 34257841
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.38/permit-route-pro-v0.4.28-alpha.38-x86_64.apk",
+      "apkSha256": "342c77cb6a34a5308dd1043fca24f97c01766cb185e6ef05b156ca7472dc5fa4",
+      "apkSizeBytes": 34373065
     }
   },
   "releaseNotes": [
-    "Improved online-status reporting when opening or resuming the app, and prevented stale background updates from leaving a resumed session offline.",
-    "User List shows Status unavailable when live status cannot be confirmed, keeps connection warnings visible after refresh, and preserves previously reported build and last-seen information."
+    "Update notes now show only changes after your installed build, including any skipped updates, grouped by version.",
+    "Release notes are recorded separately for each build, with a check that prevents old notes accumulating in a new release."
   ],
-  "publishedAt": "2026-10-10T23:15:20Z",
   "releaseHistory": [
+    {
+      "versionName": "0.4.28-alpha.38",
+      "versionCode": 2168,
+      "notes": [
+        "Update notes now show only changes after your installed build, including any skipped updates, grouped by version.",
+        "Release notes are recorded separately for each build, with a check that prevents old notes accumulating in a new release."
+      ]
+    },
+    {
+      "versionName": "0.4.28-alpha.37",
+      "versionCode": 2167,
+      "notes": [
+        "Navigation has larger wind, vehicle speed, remaining time, and remaining distance numbers. The wind card uses the smaller approved size, and accepted permit totals are available through Trip details.",
+        "Wind refresh timing now follows the last successful fetch, so cached readings do not delay the next scheduled update when navigation starts."
+      ]
+    },
+    {
+      "versionName": "0.4.28-alpha.36",
+      "versionCode": 2166,
+      "notes": [
+        "Navigation now shows a small animated wind compass below the instructions at the upper left, with wind and gust speeds underneath. It shows actual wind travel direction when stopped and rotates relative to your driving heading while moving.",
+        "Wind compass rotation handles slow driving and turns across north, keeps missing directions unguessed, and shares existing weather readings without extra heading-update requests. Map gestures, alerts, and vehicle speed remain accessible."
+      ]
+    },
+    {
+      "versionName": "0.4.28-alpha.35",
+      "versionCode": 2165,
+      "notes": [
+        "Added Wind & Weather to the main menu, with GPS wind and gust readings, wind direction, and online U.S. city search.",
+        "Navigation shows nearby wind observations and opens the full weather screen when tapped. Both views share free NWS data and a local cache, with station distance, observation time, and missing-data labels."
+      ]
+    },
     {
       "versionName": "0.4.28-alpha.34",
       "versionCode": 2164,
@@ -527,5 +558,6 @@
         "Centralized app version metadata for build numbering and release notes."
       ]
     }
-  ]
+  ],
+  "publishedAt": "2026-10-13T03:12:05Z"
 }
