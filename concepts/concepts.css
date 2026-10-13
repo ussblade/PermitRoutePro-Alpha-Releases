@@ -1224,6 +1224,12 @@ a {
 .atlas .permit-research-copy h1,
 .atlas .atlas-screens-heading h1,
 .atlas .atlas-log-grid h1 { margin: 0; font: 400 clamp(2.7rem, 4.8vw, 5rem)/0.98 Palatino, "Book Antiqua", serif; letter-spacing: -0.04em; }
+.atlas .bulletin-grid h1,
+.atlas .atlas-install-intro h1 {
+  margin: 0 0 20px;
+  font: 400 clamp(2.4rem, 4.5vw, 4rem)/1.08 Palatino, "Book Antiqua", serif;
+  letter-spacing: -0.035em;
+}
 .atlas .permit-research-copy h1 { font-size: clamp(2.15rem, 4vw, 4.1rem); }
 
 .atlas .permit-research-callout {

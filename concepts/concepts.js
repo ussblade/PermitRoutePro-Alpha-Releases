@@ -16,6 +16,12 @@ const permitMaximumFileBytes = 3 * 1024 * 1024;
 const permitMaximumTotalBytes = 5 * 1024 * 1024;
 const permittedFileExtensions = new Set(["pdf", "jpg", "jpeg", "png", "webp"]);
 
+if (typeof window !== "undefined" && window.location.pathname === "/") {
+  const legacyPages = { "#updates": "/updates", "#install": "/install" };
+  const page = legacyPages[window.location.hash];
+  if (page) window.location.replace(page);
+}
+
 function formatDate(value) {
   if (!value) return "Date unavailable";
   const date = new Date(value);
@@ -30,7 +36,11 @@ function formatDate(value) {
 async function loadJson(sources) {
   for (const source of sources) {
     try {
-      const response = await fetch(source, { cache: "no-store" });
+      const response = await fetch(source, {
+        cache: "no-store",
+        ...(typeof AbortSignal !== "undefined" && typeof AbortSignal.timeout === "function"
+          ? { signal: AbortSignal.timeout(8000) } : {}),
+      });
       if (!response.ok) continue;
       return await response.json();
     } catch (_) {
@@ -38,6 +48,40 @@ async function loadJson(sources) {
     }
   }
   return null;
+}
+
+async function loadBestJson(sources, rank) {
+  const payloads = await Promise.all(sources.map((source) => loadJson([source])));
+  return payloads.reduce((best, payload) => {
+    if (!payload) return best;
+    if (!best) return payload;
+    const candidate = rank(payload);
+    const current = rank(best);
+    for (let i = 0; i < candidate.length; i++) {
+      if (candidate[i] !== current[i]) {
+        return candidate[i] > current[i] ? payload : best;
+      }
+    }
+    return best;
+  }, null);
+}
+
+function manifestRank(manifest) {
+  const current = Array.isArray(manifest?.releaseHistory) &&
+    manifest.releaseHistory.some((release) =>
+      release?.versionCode === manifest.latestVersionCode &&
+      release?.versionName === manifest.latestVersionName &&
+      Array.isArray(release?.notes) && release.notes.length > 0);
+  return [Number(manifest?.latestVersionCode) || 0, current ? 1 : 0];
+}
+
+function changelogRank(payload) {
+  const releases = Array.isArray(payload?.releases) ? payload.releases : [];
+  const newest = releases.reduce((build, release) => {
+    const match = /\+(\d+)$/.exec(release?.version || "");
+    return Math.max(build, match ? Number(match[1]) : 0);
+  }, 0);
+  return [newest, Number(payload?.schemaVersion) || 0];
 }
 
 function replaceList(target, notes) {
@@ -199,8 +243,12 @@ function renderChangelog(payload) {
   });
 }
 
-loadJson(manifestSources).then(applyManifest);
-loadJson(changelogSources).then(renderChangelog);
+if (document.querySelector("[data-version], [data-download], [data-release-note], [data-release-list]")) {
+  loadBestJson(manifestSources, manifestRank).then(applyManifest);
+}
+if (document.querySelector("[data-changelog]")) {
+  loadBestJson(changelogSources, changelogRank).then(renderChangelog);
+}
 
 document.querySelectorAll("[data-menu-button]").forEach((button) => {
   const menu = document.getElementById(button.getAttribute("aria-controls"));

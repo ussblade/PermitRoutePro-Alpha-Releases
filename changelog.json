@@ -509,5 +509,6 @@
         "Added local and shared route-data caching, debug reporting, theme development, and the initial Android dev-flavor build system."
       ]
     }
-  ]
+  ],
+  "schemaVersion": 2
 }
