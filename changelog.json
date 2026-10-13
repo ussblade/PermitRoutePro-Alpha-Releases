@@ -3,6 +3,14 @@
   "schemaVersion": 2,
   "releases": [
     {
+      "version": "0.4.28-alpha.39+169",
+      "date": "2026-10-13",
+      "notes": [
+        "Sunrise, sunset, and twilight now use the selected location’s actual time zone and daylight saving rules, correcting the one-hour error in Eastern Indiana.",
+        "The sun-times screen shows the location’s time-zone abbreviation and UTC offset, with a retry option if the online lookup is unavailable."
+      ]
+    },
+    {
       "version": "0.4.28-alpha.38+168",
       "date": "2026-10-12",
       "notes": [

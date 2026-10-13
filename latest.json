@@ -1,33 +1,41 @@
 {
-  "latestVersionName": "0.4.28-alpha.38",
-  "latestVersionCode": 2168,
-  "minimumVersionCode": 2168,
+  "latestVersionName": "0.4.28-alpha.39",
+  "latestVersionCode": 2169,
+  "minimumVersionCode": 2169,
   "required": true,
-  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.38/permit-route-pro-v0.4.28-alpha.38.apk",
-  "apkSha256": "2b3c71c91c2b6c0322bc5199fea48da49c167ac478ddce59c8f77224631049e9",
-  "apkSizeBytes": 66209387,
+  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.39/permit-route-pro-v0.4.28-alpha.39.apk",
+  "apkSha256": "b95befb6fa142de3409a35e8281632870f45a3e1b288a74070af40e30eeb577f",
+  "apkSizeBytes": 66223175,
   "apks": {
     "arm64-v8a": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.38/permit-route-pro-v0.4.28-alpha.38-arm64-v8a.apk",
-      "apkSha256": "08132c1517647dfa52a0562fc3bd45f2d14fd691002a388c5520cf9fb789790a",
-      "apkSizeBytes": 33795233
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.39/permit-route-pro-v0.4.28-alpha.39-arm64-v8a.apk",
+      "apkSha256": "88b1594a2c3edd14de7899ac717aca9a9d5723c1d6753041164a157ae3fd1730",
+      "apkSizeBytes": 33801257
     },
     "armeabi-v7a": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.38/permit-route-pro-v0.4.28-alpha.38-armeabi-v7a.apk",
-      "apkSha256": "558adee999dc9dcfcd3b61563166979dabef1e5342df4f45f7b7d6747a9e14cc",
-      "apkSizeBytes": 32437621
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.39/permit-route-pro-v0.4.28-alpha.39-armeabi-v7a.apk",
+      "apkSha256": "d72e7ddcc08d86aec60d599aa5033a88cabbd6f79c60b5316dc8a34f3621ad5e",
+      "apkSizeBytes": 32442937
     },
     "x86_64": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.38/permit-route-pro-v0.4.28-alpha.38-x86_64.apk",
-      "apkSha256": "342c77cb6a34a5308dd1043fca24f97c01766cb185e6ef05b156ca7472dc5fa4",
-      "apkSizeBytes": 34373065
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.39/permit-route-pro-v0.4.28-alpha.39-x86_64.apk",
+      "apkSha256": "4827a6224d95210b2843d72f0474bb2b5a6a954a9c42a948b15ffc591aa86530",
+      "apkSizeBytes": 34376533
     }
   },
   "releaseNotes": [
-    "Update notes now show only changes after your installed build, including any skipped updates, grouped by version.",
-    "Release notes are recorded separately for each build, with a check that prevents old notes accumulating in a new release."
+    "Sunrise, sunset, and twilight now use the selected location\u2019s actual time zone and daylight saving rules, correcting the one-hour error in Eastern Indiana.",
+    "The sun-times screen shows the location\u2019s time-zone abbreviation and UTC offset, with a retry option if the online lookup is unavailable."
   ],
   "releaseHistory": [
+    {
+      "versionName": "0.4.28-alpha.39",
+      "versionCode": 2169,
+      "notes": [
+        "Sunrise, sunset, and twilight now use the selected location\u2019s actual time zone and daylight saving rules, correcting the one-hour error in Eastern Indiana.",
+        "The sun-times screen shows the location\u2019s time-zone abbreviation and UTC offset, with a retry option if the online lookup is unavailable."
+      ]
+    },
     {
       "versionName": "0.4.28-alpha.38",
       "versionCode": 2168,
@@ -559,5 +567,5 @@
       ]
     }
   ],
-  "publishedAt": "2026-10-13T03:12:05Z"
+  "publishedAt": "2026-10-13T12:29:20Z"
 }
