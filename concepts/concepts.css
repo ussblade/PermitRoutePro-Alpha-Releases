@@ -1556,6 +1556,44 @@ a {
   font-weight: 400;
 }
 
+.history-release-version {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.history-release-meta {
+  display: grid;
+  gap: 5px;
+  text-align: right;
+}
+
+.history-release-count {
+  color: #5b655f;
+  font-family: Verdana, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 400;
+}
+
+.history-release summary:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+@media (max-width: 760px) {
+  .atlas .history-release summary,
+  .clear .history-release summary {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+  }
+
+  .history-release-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    text-align: left;
+  }
+}
+
 .atlas .history-release-notes {
   display: grid;
   gap: 12px;

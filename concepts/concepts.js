@@ -70,15 +70,21 @@ function applyManifest(manifest) {
   // never delays release notes or leaves download buttons disabled.
   configureDownloads(manifest);
 
-  const note = Array.isArray(manifest?.releaseNotes)
-    ? manifest.releaseNotes[0]
+  const currentRelease = Array.isArray(manifest?.releaseHistory)
+    ? manifest.releaseHistory.find((release) =>
+        release?.versionCode === manifest.latestVersionCode &&
+        release?.versionName === manifest.latestVersionName)
     : null;
+  const currentNotes = Array.isArray(currentRelease?.notes) && currentRelease.notes.length
+    ? currentRelease.notes
+    : manifest?.releaseNotes;
+  const note = Array.isArray(currentNotes) ? currentNotes[0] : null;
   document.querySelectorAll("[data-release-note]").forEach((element) => {
     element.textContent = note || "Open the release page for current build notes.";
   });
 
-  const notes = Array.isArray(manifest?.releaseNotes) && manifest.releaseNotes.length
-    ? manifest.releaseNotes
+  const notes = Array.isArray(currentNotes) && currentNotes.length
+    ? currentNotes
     : ["Open the release page for current build notes."];
   document.querySelectorAll("[data-release-list]").forEach((list) => {
     replaceList(list, notes);
@@ -149,21 +155,24 @@ function renderChangelog(payload) {
       return;
     }
 
-    releases.forEach((release, index) => {
+    releases.forEach((release) => {
       const details = document.createElement("details");
       details.className = "history-release";
-      details.open = index === 0;
+      details.open = false;
 
       const summary = document.createElement("summary");
       const version = document.createElement("span");
+      version.className = "history-release-version";
       version.textContent = release.version || "Unknown version";
       summary.appendChild(version);
 
+      const metadata = document.createElement("span");
+      metadata.className = "history-release-meta";
       if (release.date) {
         const date = document.createElement("span");
         date.className = "history-release-date";
         date.textContent = release.date;
-        summary.appendChild(date);
+        metadata.appendChild(date);
       }
 
       const notes = document.createElement("ul");
@@ -171,6 +180,13 @@ function renderChangelog(payload) {
       const releaseNotes = Array.isArray(release.notes) && release.notes.length
         ? release.notes
         : ["No release notes were provided."];
+      if (Array.isArray(release.notes) && release.notes.length) {
+        const count = document.createElement("span");
+        count.className = "history-release-count";
+        count.textContent = `${release.notes.length} ${release.notes.length === 1 ? "change" : "changes"}`;
+        metadata.appendChild(count);
+      }
+      summary.appendChild(metadata);
       releaseNotes.forEach((note) => {
         const item = document.createElement("li");
         item.textContent = note;

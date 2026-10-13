@@ -25,28 +25,507 @@
   },
   "releaseNotes": [
     "Improved online-status reporting when opening or resuming the app, and prevented stale background updates from leaving a resumed session offline.",
-    "User List shows Status unavailable when live status cannot be confirmed, keeps connection warnings visible after refresh, and preserves previously reported build and last-seen information.",
-    "Fixed vehicle placement and alignment with the off-route connection line. Your location stays just above the visible bottom information panel.",
-    "Off-route navigation shows a simple Off route message without mileage or a direction arrow. Map controls stay clear of the warning and remain reachable on smaller screens.",
-    "Retry can recover from a temporary secure-storage startup failure, with clearer account-opening messages and diagnostic logging.",
-    "Choose from five arrow and dot markers or a semi truck, pickup, van, and car, with ten saved colors and separate semi cab and trailer colors.",
-    "Navigation positions your location above the measured bottom information panel, adapting to screen size and larger text.",
-    "Start a trip without entering a name or dates. The trip is named from its verified route after all permits are reviewed.",
-    "Collect email PDF permits into the same saved trip, then review all permits together. Opening a permit from email also offers Start trip.",
-    "Navigation keeps the vehicle in a stable screen position while the map follows movement and turns. Manual zoom and tilt stay consistent.",
-    "Smoothed the displayed vehicle movement and heading, including holding the indicator steady through small GPS drift while stopped.",
-    "Fixed Kentucky imports on phones by opening the state website\u2019s mobile route menu. Historical permits retain their original dates and can be imported and reviewed.",
-    "Kentucky permits now load their saved KAPS route through the original permit QR code and preserve it through review, audit storage, and trip resume.",
-    "Kentucky exit, merge, and road-change pins now match state ramp and road junctions. Saved reviews and trips use the corrected guidance while preserving the original route and accepted audit.",
-    "Fixed misplaced Ohio exit, merge, and road-change pins across the full reported route. Each instruction now requires a matching state road junction or complete ramp.",
-    "Saved Ohio trips use the checked guidance without changing the accepted audit or saved route. Missing or ambiguous turn locations no longer become estimated pins.",
-    "Fixed Ohio permits marked Issued prior being rejected during import. Saved state routes and identity checks are preserved.",
-    "Try again now reopens the saved permit after a reading or route-service failure, and repeated taps do not start duplicate processing.",
-    "Replaced remaining technical loading messages with plain language and clarified choosing another PDF.",
-    "Clearer trip planning with verification progress, a direct next step, and a full-trip review before navigation.",
-    "Added a quick-start guide, plain-language permit statuses, clearer page selection, and recovery actions for reading or camera problems.",
-    "Navigation shows complete instructions and named map controls. Help now offers Report a problem with optional attachments.",
-    "Trip planner route review now offers Verify and add another permit or Verify and return to trip planner, saving the verified route before continuing planning."
+    "User List shows Status unavailable when live status cannot be confirmed, keeps connection warnings visible after refresh, and preserves previously reported build and last-seen information."
   ],
-  "publishedAt": "2026-10-10T23:15:20Z"
+  "publishedAt": "2026-10-10T23:15:20Z",
+  "releaseHistory": [
+    {
+      "versionName": "0.4.28-alpha.34",
+      "versionCode": 2164,
+      "notes": [
+        "Improved online-status reporting when opening or resuming the app, and prevented stale background updates from leaving a resumed session offline.",
+        "User List shows Status unavailable when live status cannot be confirmed, keeps connection warnings visible after refresh, and preserves previously reported build and last-seen information."
+      ]
+    },
+    {
+      "versionName": "0.4.28-alpha.33",
+      "versionCode": 2163,
+      "notes": [
+        "Fixed vehicle placement and alignment with the off-route connection line. Your location stays just above the visible bottom information panel.",
+        "Off-route navigation shows a simple Off route message without mileage or a direction arrow. Map controls stay clear of the warning and remain reachable on smaller screens.",
+        "Retry can recover from a temporary secure-storage startup failure, with clearer account-opening messages and diagnostic logging."
+      ]
+    },
+    {
+      "versionName": "0.4.28-alpha.32",
+      "versionCode": 2162,
+      "notes": [
+        "Choose from five arrow and dot markers or a semi truck, pickup, van, and car, with ten saved colors and separate semi cab and trailer colors.",
+        "Navigation positions your location above the measured bottom information panel, adapting to screen size and larger text."
+      ]
+    },
+    {
+      "versionName": "0.4.28-alpha.31",
+      "versionCode": 2161,
+      "notes": [
+        "Start a trip without entering a name or dates. The trip is named from its verified route after all permits are reviewed.",
+        "Collect email PDF permits into the same saved trip, then review all permits together. Opening a permit from email also offers Start trip."
+      ]
+    },
+    {
+      "versionName": "0.4.28-alpha.30",
+      "versionCode": 2160,
+      "notes": [
+        "Navigation keeps the vehicle in a stable screen position while the map follows movement and turns. Manual zoom and tilt stay consistent.",
+        "Smoothed the displayed vehicle movement and heading, including holding the indicator steady through small GPS drift while stopped."
+      ]
+    },
+    {
+      "versionName": "0.4.28-alpha.29",
+      "versionCode": 2159,
+      "notes": [
+        "Kentucky exit, merge, and road-change pins now match state ramp and road junctions. Saved reviews and trips use the corrected guidance while preserving the original route and accepted audit."
+      ]
+    },
+    {
+      "versionName": "0.4.28-alpha.28",
+      "versionCode": 2158,
+      "notes": [
+        "Fixed Kentucky imports on phones by opening the state website\u2019s mobile route menu. Historical permits retain their original dates and can be imported and reviewed.",
+        "Kentucky turn locations are clearly marked approximate. Incomplete, mismatched, or unavailable route evidence cannot be accepted."
+      ]
+    },
+    {
+      "versionName": "0.4.28-alpha.27",
+      "versionCode": 2157,
+      "notes": [
+        "Kentucky permits now load their saved KAPS route through the original permit QR code and preserve it through review, audit storage, and trip resume.",
+        "Kentucky turn locations are clearly marked approximate. Incomplete, mismatched, unavailable, or expired permit routes cannot start navigation."
+      ]
+    },
+    {
+      "versionName": "0.4.28-alpha.26",
+      "versionCode": 2156,
+      "notes": [
+        "Fixed misplaced Ohio exit, merge, and road-change pins across the full reported route. Each instruction now requires a matching state road junction or complete ramp.",
+        "Saved Ohio trips use the checked guidance without changing the accepted audit or saved route. Missing or ambiguous turn locations no longer become estimated pins."
+      ]
+    },
+    {
+      "versionName": "0.4.28-alpha.25",
+      "versionCode": 2155,
+      "notes": [
+        "Fixed Ohio permits marked Issued prior being rejected during import. Saved state routes and identity checks are preserved.",
+        "Try again now reopens the saved permit after a reading or route-service failure, and repeated taps do not start duplicate processing.",
+        "Replaced remaining technical loading messages with plain language and clarified choosing another PDF."
+      ]
+    },
+    {
+      "versionName": "0.4.28-alpha.24",
+      "versionCode": 2154,
+      "notes": [
+        "Clearer trip planning with verification progress, a direct next step, and a full-trip review before navigation.",
+        "Added a quick-start guide, plain-language permit statuses, clearer page selection, and recovery actions for reading or camera problems.",
+        "Navigation shows complete instructions and named map controls. Help now offers Report a problem with optional attachments.",
+        "Trip planner route review now offers Verify and add another permit or Verify and return to trip planner, saving the verified route before continuing planning.",
+        "Corrected Ohio turn pins that stayed ahead after completed turns. Clear left/right turns and ramp departures now align with compatible corners of the issued route.",
+        "Resumed Ohio trips use the corrected guidance while preserving the accepted audit record and permit-approved path.",
+        "Turn arrows, map pins, and direction progress use the same corrected anchors. Cues without clear turn geometry remain mileage estimates."
+      ]
+    },
+    {
+      "versionName": "0.4.28-alpha.23",
+      "versionCode": 2153,
+      "notes": [
+        "Fixed Ohio permits appearing as Hawaii in permit lists and trips. Issuing states now use exact agency codes instead of substring matches."
+      ]
+    },
+    {
+      "versionName": "0.4.28-alpha.22",
+      "versionCode": 2152,
+      "notes": [
+        "Georgia and Idaho state permits can retrieve their saved issued routes by permit number. Montana and Wyoming can retrieve their saved permit maps from the state QR link. Missing or conflicting state route evidence stops import for review.",
+        "Ohio now retrieves the saved OHPS trip and directions by printed permit number, including when its navigation QR service is unavailable. Mileage-based turn markers remain approximate.",
+        "Multi-state trips can show the complete sequence of accepted permit routes, validate connected state-line endpoints, and resume with a confirmed permit handoff. Each saved leg remains tied to its verified audit record.",
+        "South Dakota routes are identified as reconstructions from printed permit instructions and state road data. Illinois route guidance more clearly distinguishes saved geometry from approximate instruction markers."
+      ]
+    },
+    {
+      "versionName": "0.4.28-alpha.21",
+      "versionCode": 2151,
+      "notes": [
+        "Fixed Indiana permit routes that leave a connector early for another interstate, including the I-80 Exit 12 connection to I-65. Verified routes and turn instructions remain available for offline resume.",
+        "Ohio permits now report a navigation-provider server error clearly when their linked route cannot be retrieved."
+      ]
+    },
+    {
+      "versionName": "0.4.28-alpha.20",
+      "versionCode": 2150,
+      "notes": [
+        "Fixed older Utah permits with required ramp bypasses and shared highway names. Unknown road names now use neighboring instructions, state road geometry, travel direction and printed mileage to identify a single matching connection. Ambiguous or incomplete routes stop for review."
+      ]
+    },
+    {
+      "versionName": "0.4.28-alpha.19",
+      "versionCode": 2149,
+      "notes": [
+        "Fixed Utah route distances when scanning reads a decimal point as a comma or the digit 1 as a letter. All numbered steps and route mileage still require validation."
+      ]
+    },
+    {
+      "versionName": "0.4.28-alpha.18",
+      "versionCode": 2148,
+      "notes": [
+        "Added closer scanning of small Utah route text and improved recognition of Interstate labels. PDF parsing failures now show an error instead of opening an empty verification map, with better details in debug reports."
+      ]
+    },
+    {
+      "versionName": "0.4.28-alpha.17",
+      "versionCode": 2147,
+      "notes": [
+        "Fixed Utah permit step extraction, short distances in feet, and state-border endpoints. Supported Utah routes follow the printed itinerary using state road and ramp geometry, including Exit 87A, and preserve the reviewed path for offline resume. Incomplete or unsupported routes stop for review."
+      ]
+    },
+    {
+      "versionName": "0.4.28-alpha.16",
+      "versionCode": 2146,
+      "notes": [
+        "Fixed South Dakota route parsing when phone OCR joins county names, milepost numbers, or road labels, wraps county names across lines, or reads I-29 as 1-29. Required route anchors remain checked before routing."
+      ]
+    },
+    {
+      "versionName": "0.4.28-alpha.15",
+      "versionCode": 2145,
+      "notes": [
+        "Fixed South Dakota receipt recognition and small-text PDF scanning. Routes retain US-16B and use state road geometry across counties, preserving the reviewed path for offline resume. Incomplete routes now stop with an error."
+      ]
+    },
+    {
+      "versionName": "0.4.28-alpha.14",
+      "versionCode": 2144,
+      "notes": [
+        "Simplified Ohio permit route labels, loading messages, and errors."
+      ]
+    },
+    {
+      "versionName": "0.4.28-alpha.13",
+      "versionCode": 2143,
+      "notes": [
+        "Fixed Ohio state permit QR scanning by locating the Audible Route Guidance section on later PDF pages and scanning a focused image. Unreadable QR errors now explain the scan failure correctly."
+      ]
+    },
+    {
+      "versionName": "0.4.28-alpha.12",
+      "versionCode": 2142,
+      "notes": [
+        "Fixed missing gallery photos by adding selected-photo access management and refreshing the gallery after app resumes. Debug screenshots now use the same saved cloud-photo setting as permit imports."
+      ]
+    },
+    {
+      "versionName": "0.4.28-alpha.11",
+      "versionCode": 2141,
+      "notes": [
+        "Indiana routing now supports connected ramp bypasses and named connectors, preserving required bridge slowdowns in navigation and saved route records.",
+        "Ohio state permits now use their linked permit route, with checks that keep township permits and conflicting permit identities from being treated as the state-approved route."
+      ]
+    },
+    {
+      "versionName": "0.4.28-alpha.10",
+      "versionCode": 2140,
+      "notes": [
+        "Smaller APK downloads through compressed native libraries and removal of duplicate artwork and unused packages. Offline scanning, road data, and themes remain available.",
+        "Android now manages update downloads in the background so progress can be recovered after screen lock or app recreation. Updates are verified before installation and remain deferred during active navigation.",
+        "Pages and dialogs now stay above the persistent system navigation bar, allowing the final content to scroll fully into view across themes."
+      ]
+    },
+    {
+      "versionName": "0.4.28-alpha.9",
+      "versionCode": 2139,
+      "notes": [
+        "Update checks, required-update screens, and update-check errors are deferred throughout active permit navigation, including app resumes and checks already in progress when navigation starts.",
+        "Added an Allow cloud photos toggle to the permit gallery and additional permit pages. Your choice stays saved across app restarts until you change it."
+      ]
+    },
+    {
+      "versionName": "0.4.28-alpha.7",
+      "versionCode": 2137,
+      "notes": [
+        "Fixed cramped action buttons across account, permit, fleet, and trip screens; buttons stack when needed and grow for larger text settings.",
+        "Added searchable notification recipients and a refresh control, including legacy registered accounts while preserving denied access.",
+        "Published a full universal APK and smaller ARM64, ARM32, and x86-64 APKs, with a dedicated universal download on the website."
+      ]
+    },
+    {
+      "versionName": "0.4.28-alpha.6",
+      "versionCode": 2136,
+      "notes": [
+        "Replaced Illinois ProMiles routing with authenticated ITAP retrieval of the issued permit route and preserved official-source evidence in accepted-route audits.",
+        "Fixed Illinois permit-number recognition and kept map markers at turns, ramps, forks, road changes, and route endpoints while removing repeated continuation markers.",
+        "Added Indiana official permit-route retrieval and improved Oklahoma original-PDF recovery and ordered road reconstruction with explicit review of unresolved geometry.",
+        "Kept Permit Route Pro in its own Android task when opened from another app, including PDF imports and launches that expect a result.",
+        "Added live trial and subscription status on every home theme, plus administrator shortcuts and an updated User List.",
+        "Added six home appearances, font and navigation display choices, and improved access to accepted-route audit records.",
+        "Updated website download controls and Android icons, with verified device-specific APK selection when matching release assets are available and a universal fallback."
+      ]
+    },
+    {
+      "versionName": "0.4.28-alpha.5",
+      "versionCode": 2135,
+      "notes": [
+        "Automated Utah permit routing by extracting the UTCVIEW permit number, printed origin and destination GPS coordinates, and every printed route leg for review.",
+        "Added secure New Mexico official-route retrieval by permit number, including state-source response hashing and immutable audit provenance.",
+        "Preserved disconnected official route sections across map preview and navigation, with clear section-complete guidance instead of routing across gaps.",
+        "Added each user\u2019s installed app version and build number to the administrator directory.",
+        "Redesigned the public download website with the live APK link, complete changelog, and a secure permit-research submission form."
+      ]
+    },
+    {
+      "versionName": "0.4.28-alpha.3",
+      "versionCode": 2133,
+      "notes": [
+        "Fixed closed-app push delivery with a dedicated high-importance Android channel, maximum-priority FCM presentation, lock-screen visibility, sound, vibration, and persistent system notifications that remain until the user closes them."
+      ]
+    },
+    {
+      "versionName": "0.4.28-alpha.2",
+      "versionCode": 2132,
+      "notes": [
+        "Added a secure administrator action to extend a user trial by a chosen number of days, continuing active trials from their current end date and restarting expired trials from the extension date.",
+        "Added secure administrator push-notification composition and made new registrations approved by default.",
+        "Made received push notifications prominent, centered, and persistent until the user explicitly closes them.",
+        "Changed Android PDF opening so files shared from Gmail or another app return to the existing Permit Route Pro task instead of creating a second, source-owned app instance.",
+        "Replaced cloud-capable photo pickers with an on-device-only gallery for permit pages and debug screenshots; cloud-only media is filtered before thumbnails or files are read.",
+        "Added Android Gallery-style long-press multi-selection and batch deletion to every Permit History route status, with confirmation and immutable accepted-route audit retention.",
+        "Made permit effective and expiration dates informational so routes remain available for advance review and later reference.",
+        "Fixed permit attachment from Trip Details and added an explicit accepted-route chooser for trips containing multiple permits.",
+        "Added secure recovery for interrupted registration and missing user profiles.",
+        "Enforced denied and suspended accounts immediately without spending an additional Firebase document read for every access check.",
+        "Changed account denial to cancel every manageable Stripe subscription and expire open subscription checkouts before revoking access.",
+        "Hardened court-safe audit uploads with active-access checks, exact schema validation, idempotency, size limits, and per-user quotas.",
+        "Made Stripe webhook processing recoverable after an interrupted worker without double-processing completed events.",
+        "Added complete pagination to the administrator user and push-notification recipient directory.",
+        "Improved administrator presence handling so user records remain available, collapsed cards show Last seen, and live-status failures are identified instead of being reported as reliable presence data.",
+        "Bounded the numbered map-marker cache and updated compatible mobile dependencies, including a staged secure-storage migration.",
+        "Added manual and configurable age-based removal of accepted routes from Permit History without deleting permit data, trip references, or immutable audit records.",
+        "Securely upgraded legacy HTTP QR links from allowlisted state permit providers to HTTPS before route retrieval.",
+        "Connected stay-on-route waypoint settings to newly processed routes and corrected trip-state updates.",
+        "Strengthened mandatory-update enforcement, secure PDF import, cache cleanup, and startup failure handling for the single-build alpha policy.",
+        "Permanently removed the ramp-warning disclaimer and internal test-permit injection code from production.",
+        "Added temporary, community-reported Permit Route Alerts with route-ahead map markers, voice warnings, confirmations, automatic expiration, and server-side abuse controls.",
+        "Kept community alerts advisory-only so they never modify an accepted permit route or its immutable audit record.",
+        "Rebuilt all 50 state escort-rule profiles from official sources.",
+        "Added escort thresholds and positioning, vehicle requirements, sign and flag placement, installed and carried equipment, insurance, certification and reciprocity, operating rules, police escorts, and explicit source gaps.",
+        "Added one canonical profile per state, deterministic catalog compilation, source-ID validation, and scheduled checks that reject incomplete or stale state-rule data.",
+        "Added daily official-source change ingestion, a claim-protected human review and publication API, immutable escort-rule delivery packages, independent verified mobile refresh/caching, and escort-package audit provenance.",
+        "Added an owner-only local review inbox with automatic pending-change alerts; its implementation is excluded from source control and all GitHub APK builds."
+      ]
+    },
+    {
+      "versionName": "0.4.27-alpha.1",
+      "versionCode": 2130,
+      "notes": [
+        "Clarified that Georgia escort vehicles still require a top-mounted amber warning light while Georgia no longer requires the former amber-light permit or windshield sticker."
+      ]
+    },
+    {
+      "versionName": "0.4.26-alpha.1",
+      "versionCode": 2129,
+      "notes": [
+        "Added temporary route-condition reports for vehicles on the shoulder and roadway obstructions, including detailed report categories.",
+        "Moved route reporting into the navigation control stack and kept it available while off route for alpha field testing.",
+        "Rechecked all 50 state escort profiles and removed truck-only requirements from escort-vehicle guidance.",
+        "Added clear bumper-mount and roof-mount sign status above each state's escort requirements."
+      ]
+    },
+    {
+      "versionName": "0.4.25-alpha.1",
+      "versionCode": 2128,
+      "notes": [
+        "Prevented stationary GPS noise and stale readings from displaying false driving speeds.",
+        "Kept navigation zoom anchored on the truck with the location marker visible.",
+        "Removed downloaded update APKs after Android confirmed that the new version was installed and launched."
+      ]
+    },
+    {
+      "versionName": "0.4.24-alpha.1",
+      "versionCode": 2127,
+      "notes": [
+        "Improved navigation behavior.",
+        "Secured direct PDF imports so permit processing waits for onboarding, sign-in, email verification, and access checks."
+      ]
+    },
+    {
+      "versionName": "0.4.23-alpha.1",
+      "versionCode": 2126,
+      "notes": [
+        "Added in-app APK downloads with visible byte and percentage progress.",
+        "Added an Install Update action that securely hands the downloaded APK to Android's package installer.",
+        "Added APK size and SHA-256 verification to reject incomplete or altered update downloads.",
+        "Added release-manifest generation for APK checksums and exact file sizes.",
+        "Added Forgot Password to send Firebase password-reset emails from the sign-in screen without exposing whether an account exists."
+      ]
+    },
+    {
+      "versionName": "0.4.22-alpha.1",
+      "versionCode": 2125,
+      "notes": [
+        "Moved debug-report email delivery to Firebase so SMTP credentials are no longer packaged in the Android app.",
+        "Added server-enforced single-device sessions and automatic sign-out after another device claims the account.",
+        "Added online, offline, last-seen, and last-login status to the admin user directory.",
+        "Improved the navigation camera, voice-prompt thresholds, and maneuver progression near turns.",
+        "Improved TxDOT official-mileage mapping and road-change placement on the authoritative GPS route."
+      ]
+    },
+    {
+      "versionName": "0.4.21-alpha.1",
+      "versionCode": 2124,
+      "notes": [
+        "Added in-progress permit routing for Arizona, Louisiana, Arkansas, and Oklahoma using state permit data and public state GIS sources.",
+        "Added Arizona permit extraction, route/milepost resolution, and route-service tests.",
+        "Added Louisiana LaGeaux QR/deep-link parsing, official route loading, PDF text extraction, and route tests.",
+        "Added Arkansas ARDOT route-inventory geometry, mile-marker routing, state-route aliases, and integration tests.",
+        "Added Oklahoma roadway, turnpike, ramp, frontage-road, business-route, segment-mileage, and full-route audit handling.",
+        "Added a 50-state pilot-car catalog covering escort triggers, roof/bumper sign and banner placement, flags, warning equipment, cones, triangles, certification programs, and reciprocity guidance.",
+        "Added a versioned official state-rule source registry, scheduled change monitoring, validation tools, reviewed-package caching, and fail-closed publication rules.",
+        "Added immutable state-rule package version and hash snapshots to accepted-trip audit records.",
+        "Removed the legacy hard-coded state-rule and escort-equipment fallback tables.",
+        "Added Android PDF permit import from email, downloads, and document providers.",
+        "Improved OCR and QR recovery for photographed permits and TxDOT portal Permit IDs.",
+        "Improved route geometry continuity, mileage walking, detour instructions, ramp/frontage-road transitions, disconnected-leg rejection, and generic state-GIS routing.",
+        "Improved navigation with navigation-audio voice guidance, live MPH display, map-lock settings, larger guidance text, and a light-map default.",
+        "Refreshed the Android launcher and splash branding with the new adaptive app icon.",
+        "Kept the Android status and navigation bars persistently visible using edge-to-edge system UI handling.",
+        "Improved public app sharing through native email and the Android share sheet, and fixed the Text action to prefill the message and install-page link."
+      ]
+    },
+    {
+      "versionName": "0.4.20-alpha.2",
+      "versionCode": 2123,
+      "notes": [
+        "Removed legacy Google and GitHub routing fallbacks so permit routing uses state-authoritative sources.",
+        "Fixed Virginia EZ-Haul QR permits to load complete official route geometry with readable road-change waypoints.",
+        "Preserved QR routing for Texas, Colorado, Nevada, Virginia, and Illinois.",
+        "Improved session handling so temporary Firestore listener failures do not sign out approved users.",
+        "Updated the public alpha download site and in-app release flow.",
+        "Increased GitHub release-build memory after the first `0.4.20` build failed."
+      ]
+    },
+    {
+      "versionName": "0.4.19-alpha.1",
+      "versionCode": 2121,
+      "notes": [
+        "Fixed required-update detection for stale or mismatched alpha builds.",
+        "Changed About to display the installed Android package version and build number."
+      ]
+    },
+    {
+      "versionName": "0.4.18-alpha.1",
+      "versionCode": 2120,
+      "notes": [
+        "Added Stripe subscription checkout and email verification.",
+        "Updated trial and subscription access gates so expired trials must subscribe before continuing.",
+        "Replaced referral-code sharing with direct text and email sharing of the public download page.",
+        "Kept the Android status bar visible while preserving the navigation layout."
+      ]
+    },
+    {
+      "versionName": "0.4.17-alpha.1",
+      "versionCode": 2119,
+      "notes": [
+        "Added a one-time alpha access notice after update checks."
+      ]
+    },
+    {
+      "versionName": "0.4.16-alpha.1",
+      "versionCode": 2118,
+      "notes": [
+        "Fixed the update screen so the APK download remains reachable while release notes scroll.",
+        "Shortened update-manifest notes for compatibility with older builds."
+      ]
+    },
+    {
+      "versionName": "0.4.15-alpha.1",
+      "versionCode": 2117,
+      "notes": [
+        "Removed the tutorial and replay controls.",
+        "Opened accepted routes directly in the in-app navigator instead of showing an extra intermediate screen.",
+        "Corrected sunrise, sunset, twilight, and solar-noon calculations for US time zones and daylight saving time.",
+        "Added keep-awake behavior and simplified the About page.",
+        "Added release details to the in-app update screen."
+      ]
+    },
+    {
+      "versionName": "0.4.14-alpha.1",
+      "versionCode": 2116,
+      "notes": [
+        "Snapped official instruction waypoints to nearby route vertices so map pins and navigation prompts align with turns.",
+        "Added user debug reports with identity, screenshots, and permit attachments.",
+        "Added attachment review before sending a debug report."
+      ]
+    },
+    {
+      "versionName": "0.4.13-alpha.1",
+      "versionCode": 2115,
+      "notes": [
+        "Improved navigation follow-camera behavior with a forward-looking tilted view that keeps the driver marker lower on screen.",
+        "Suppressed non-decision route prompts so Nevada navigation focuses on actual turns, merges, bears, exits, and roundabouts.",
+        "Added manual update checking from My Account.",
+        "Improved User Directory handling after temporary network loss on device unlock.",
+        "Enabled Dart symbol obfuscation for GitHub release APK builds."
+      ]
+    },
+    {
+      "versionName": "0.4.12-alpha.1",
+      "versionCode": 2114,
+      "notes": [
+        "Fixed the GitHub Actions signing key path so public release APKs are signed with the same release key as local builds.",
+        "Supersedes the failed `v0.4.11-alpha.1` release attempt."
+      ]
+    },
+    {
+      "versionName": "0.4.11-dev",
+      "versionCode": 2113,
+      "notes": [
+        "Updated GitHub release builds to use the app release signing key from Actions secrets.",
+        "Future public APKs will be signed consistently so Android can install them as updates."
+      ]
+    },
+    {
+      "versionName": "0.4.10-alpha.1",
+      "versionCode": 2112,
+      "notes": [
+        "Added hard sign-out enforcement for Firestore `revoked` and `suspended` user statuses.",
+        "Reduced profile polling interval so account revocations and device takeovers are detected faster."
+      ]
+    },
+    {
+      "versionName": "0.4.9-dev",
+      "versionCode": 2111,
+      "notes": [
+        "Added startup update checks against the public GitHub release manifest.",
+        "Added a required-update screen that opens the latest public APK download.",
+        "Updated release automation to publish `latest.json` for in-app update checks."
+      ]
+    },
+    {
+      "versionName": "0.4.8-alpha.1",
+      "versionCode": 2110,
+      "notes": [
+        "Fixed second-device sign-in so the new device claims the Firestore session before profile refresh.",
+        "Old devices now see the changed `activeDeviceId` and are forced out instead of remaining logged in."
+      ]
+    },
+    {
+      "versionName": "0.4.7-alpha.1",
+      "versionCode": 2109,
+      "notes": [
+        "Fixed the dev flavor using a stale Firebase project config.",
+        "Switched alpha email/password auth to Firebase Auth REST so signup/sign-in work in-app without the Android reCAPTCHA blocker.",
+        "Kept Firestore-backed user profiles, admin bootstrap, and single-device enforcement on top of the new auth flow.",
+        "Added GitHub Actions release workflow support for building and publishing the Android APK on tag push."
+      ]
+    },
+    {
+      "versionName": "0.4.6-dev",
+      "versionCode": 2108,
+      "notes": [
+        "Added in-app Firebase email/password authentication for alpha testers.",
+        "Added Firestore-backed user profiles storing real name, email, phone, role, and access status.",
+        "Added single-device session enforcement so a second login signs out the first device automatically.",
+        "Added an auth gate so users must authenticate in-app before reaching protected screens.",
+        "Removed test-oriented local admin creation from the normal app flow.",
+        "Centralized app version metadata for build numbering and release notes."
+      ]
+    }
+  ]
 }

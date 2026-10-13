@@ -5,14 +5,33 @@
       "version": "0.4.28-alpha.34+164",
       "date": "2026-10-10",
       "notes": [
-        "Start a trip without entering a name or dates. Collect permits into the saved trip and name it from the verified route after reviewing all permits.",
-        "Opening an email PDF offers Start trip or Add to trip. Return to email to add more permits, then review the entire route together before navigation.",
-        "Choose from five arrow and dot markers, or a semi truck, pickup, van, and car. Save a color preference, with separate cab and trailer colors for the semi truck.",
-        "Navigation places your vehicle just above the measured bottom information panel, adapts to screen size and larger text, and aligns it with the off-route connection line.",
-        "Off-route navigation shows Off route in the green instruction area without mileage or a direction arrow. Map controls stay clear of the warning and remain accessible on smaller screens.",
-        "Improved online-status reporting when opening or resuming the app. Missing or disconnected status shows Status unavailable, and status warnings remain visible after refresh.",
-        "Retry can recover from a temporary secure-storage startup failure, with clearer account-opening messages and diagnostic logging.",
-        "Improved Ohio ramp and junction guidance, including voice prompts and physical road connections, while preserving the accepted route and audit record."
+        "Improved online-status reporting when opening or resuming the app, and prevented stale background updates from leaving a resumed session offline.",
+        "User List shows Status unavailable when live status cannot be confirmed, keeps connection warnings visible after refresh, and preserves previously reported build and last-seen information."
+      ]
+    },
+    {
+      "version": "0.4.28-alpha.33+163",
+      "date": "2026-10-10",
+      "notes": [
+        "Fixed vehicle placement and alignment with the off-route connection line. Your location stays just above the visible bottom information panel.",
+        "Off-route navigation shows a simple Off route message without mileage or a direction arrow. Map controls stay clear of the warning and remain reachable on smaller screens.",
+        "Retry can recover from a temporary secure-storage startup failure, with clearer account-opening messages and diagnostic logging."
+      ]
+    },
+    {
+      "version": "0.4.28-alpha.32+162",
+      "date": "2026-10-10",
+      "notes": [
+        "Choose from five arrow and dot markers or a semi truck, pickup, van, and car, with ten saved colors and separate semi cab and trailer colors.",
+        "Navigation positions your location above the measured bottom information panel, adapting to screen size and larger text."
+      ]
+    },
+    {
+      "version": "0.4.28-alpha.31+161",
+      "date": "2026-10-10",
+      "notes": [
+        "Start a trip without entering a name or dates. The trip is named from its verified route after all permits are reviewed.",
+        "Collect email PDF permits into the same saved trip, then review all permits together. Opening a permit from email also offers Start trip."
       ]
     },
     {
@@ -27,9 +46,23 @@
       "version": "0.4.28-alpha.29+159",
       "date": "2026-09-28",
       "notes": [
-        "Added partial Kentucky support: original permit PDFs load their saved KAPS route through the permit QR code, with matching printed identity and directions.",
-        "Fixed Kentucky exit, merge, and road-change pins using state ramp and road junctions. Saved reviews and trips receive corrected guidance while preserving the original route and accepted audit.",
-        "Fixed Kentucky imports on phones by opening the state website’s mobile route menu. Historical permits retain their original dates and remain available for review."
+        "Kentucky exit, merge, and road-change pins now match state ramp and road junctions. Saved reviews and trips use the corrected guidance while preserving the original route and accepted audit."
+      ]
+    },
+    {
+      "version": "0.4.28-alpha.28+158",
+      "date": null,
+      "notes": [
+        "Fixed Kentucky imports on phones by opening the state website’s mobile route menu. Historical permits retain their original dates and can be imported and reviewed.",
+        "Kentucky turn locations are clearly marked approximate. Incomplete, mismatched, or unavailable route evidence cannot be accepted."
+      ]
+    },
+    {
+      "version": "0.4.28-alpha.27+157",
+      "date": null,
+      "notes": [
+        "Kentucky permits now load their saved KAPS route through the original permit QR code and preserve it through review, audit storage, and trip resume.",
+        "Kentucky turn locations are clearly marked approximate. Incomplete, mismatched, unavailable, or expired permit routes cannot start navigation."
       ]
     },
     {
@@ -37,31 +70,46 @@
       "date": "2026-09-26",
       "notes": [
         "Fixed misplaced Ohio exit, merge, and road-change pins across the full reported route. Each instruction now requires a matching state road junction or complete ramp.",
-        "Saved Ohio trips use the checked guidance without changing the accepted audit or saved route. Missing or ambiguous turn locations no longer become estimated pins.",
+        "Saved Ohio trips use the checked guidance without changing the accepted audit or saved route. Missing or ambiguous turn locations no longer become estimated pins."
+      ]
+    },
+    {
+      "version": "0.4.28-alpha.25+155",
+      "date": null,
+      "notes": [
         "Fixed Ohio permits marked Issued prior being rejected during import. Saved state routes and identity checks are preserved.",
         "Try again now reopens the saved permit after a reading or route-service failure, and repeated taps do not start duplicate processing.",
-        "Replaced remaining technical loading messages with plain language and clarified choosing another PDF.",
+        "Replaced remaining technical loading messages with plain language and clarified choosing another PDF."
+      ]
+    },
+    {
+      "version": "0.4.28-alpha.24+154",
+      "date": null,
+      "notes": [
         "Clearer trip planning with verification progress, a direct next step, and a full-trip review before navigation.",
         "Added a quick-start guide, plain-language permit statuses, clearer page selection, and recovery actions for reading or camera problems.",
         "Navigation shows complete instructions and named map controls. Help now offers Report a problem with optional attachments.",
-        "Trip planner route review now offers Verify and add another permit or Verify and return to trip planner, saving the verified route before continuing planning."
+        "Trip planner route review now offers Verify and add another permit or Verify and return to trip planner, saving the verified route before continuing planning.",
+        "Corrected Ohio turn pins that stayed ahead after completed turns. Clear left/right turns and ramp departures now align with compatible corners of the issued route.",
+        "Resumed Ohio trips use the corrected guidance while preserving the accepted audit record and permit-approved path.",
+        "Turn arrows, map pins, and direction progress use the same corrected anchors. Cues without clear turn geometry remain mileage estimates."
       ]
     },
     {
       "version": "0.4.28-alpha.23+153",
       "date": "2026-09-22",
       "notes": [
-        "Fixed Ohio permits appearing as Hawaii in permit lists and trips by matching issuing agency codes exactly."
+        "Fixed Ohio permits appearing as Hawaii in permit lists and trips. Issuing states now use exact agency codes instead of substring matches."
       ]
     },
     {
       "version": "0.4.28-alpha.22+152",
       "date": "2026-09-22",
       "notes": [
-        "Added Georgia and Idaho state-issued route lookup by printed permit number, and Montana and Wyoming saved-route retrieval through their permit QR portals. Missing or mismatched issued-route evidence stops import.",
-        "Switched Ohio route retrieval to the state OHPS saved trip and directions by permit number, with approximate mileage-based turn markers.",
-        "Added a full multi-permit trip overview, directed endpoint checks, state-line handoffs, and resume tied to each accepted route's audit record.",
-        "Clarified South Dakota's reconstructed route status and Illinois's approximate instruction markers."
+        "Georgia and Idaho state permits can retrieve their saved issued routes by permit number. Montana and Wyoming can retrieve their saved permit maps from the state QR link. Missing or conflicting state route evidence stops import for review.",
+        "Ohio now retrieves the saved OHPS trip and directions by printed permit number, including when its navigation QR service is unavailable. Mileage-based turn markers remain approximate.",
+        "Multi-state trips can show the complete sequence of accepted permit routes, validate connected state-line endpoints, and resume with a confirmed permit handoff. Each saved leg remains tied to its verified audit record.",
+        "South Dakota routes are identified as reconstructions from printed permit instructions and state road data. Illinois route guidance more clearly distinguishes saved geometry from approximate instruction markers."
       ]
     },
     {
@@ -69,18 +117,84 @@
       "date": "2026-09-14",
       "notes": [
         "Fixed Indiana permit routes that leave a connector early for another interstate, including the I-80 Exit 12 connection to I-65. Verified routes and turn instructions remain available for offline resume.",
-        "Ohio permits now report a navigation-provider server error clearly when their linked route cannot be retrieved.",
-        "Fixed older Utah permits with required ramp bypasses and shared highway names. Unknown road names now use neighboring instructions, state road geometry, travel direction and printed mileage to identify a single matching connection. Ambiguous or incomplete routes stop for review.",
-        "Fixed Utah route distances when scanning reads a decimal point as a comma or the digit 1 as a letter. All numbered steps and route mileage still require validation.",
-        "Added closer scanning of small Utah route text and improved recognition of Interstate labels. PDF parsing failures now show an error instead of opening an empty verification map, with better details in debug reports.",
-        "Fixed Utah permit step extraction, short distances in feet, and state-border endpoints. Supported Utah routes follow the printed itinerary using state road and ramp geometry, including Exit 87A, and preserve the reviewed path for offline resume. Incomplete or unsupported routes stop for review.",
-        "Fixed South Dakota route parsing when phone OCR joins county names, milepost numbers, or road labels, wraps county names across lines, or reads I-29 as 1-29. Required route anchors remain checked before routing.",
-        "Fixed South Dakota receipt recognition and small-text PDF scanning. Routes retain US-16B and use state road geometry across counties, preserving the reviewed path for offline resume. Incomplete routes now stop with an error.",
-        "Simplified Ohio permit route labels, loading messages, and errors.",
-        "Fixed Ohio state permit QR scanning by locating the Audible Route Guidance section on later PDF pages and scanning a focused image. Unreadable QR errors now explain the scan failure correctly.",
-        "Fixed missing gallery photos by adding selected-photo access management and refreshing the gallery after app resumes. Debug screenshots now use the same saved cloud-photo setting as permit imports.",
+        "Ohio permits now report a navigation-provider server error clearly when their linked route cannot be retrieved."
+      ]
+    },
+    {
+      "version": "0.4.28-alpha.20+150",
+      "date": null,
+      "notes": [
+        "Fixed older Utah permits with required ramp bypasses and shared highway names. Unknown road names now use neighboring instructions, state road geometry, travel direction and printed mileage to identify a single matching connection. Ambiguous or incomplete routes stop for review."
+      ]
+    },
+    {
+      "version": "0.4.28-alpha.19+149",
+      "date": null,
+      "notes": [
+        "Fixed Utah route distances when scanning reads a decimal point as a comma or the digit 1 as a letter. All numbered steps and route mileage still require validation."
+      ]
+    },
+    {
+      "version": "0.4.28-alpha.18+148",
+      "date": null,
+      "notes": [
+        "Added closer scanning of small Utah route text and improved recognition of Interstate labels. PDF parsing failures now show an error instead of opening an empty verification map, with better details in debug reports."
+      ]
+    },
+    {
+      "version": "0.4.28-alpha.17+147",
+      "date": null,
+      "notes": [
+        "Fixed Utah permit step extraction, short distances in feet, and state-border endpoints. Supported Utah routes follow the printed itinerary using state road and ramp geometry, including Exit 87A, and preserve the reviewed path for offline resume. Incomplete or unsupported routes stop for review."
+      ]
+    },
+    {
+      "version": "0.4.28-alpha.16+146",
+      "date": null,
+      "notes": [
+        "Fixed South Dakota route parsing when phone OCR joins county names, milepost numbers, or road labels, wraps county names across lines, or reads I-29 as 1-29. Required route anchors remain checked before routing."
+      ]
+    },
+    {
+      "version": "0.4.28-alpha.15+145",
+      "date": null,
+      "notes": [
+        "Fixed South Dakota receipt recognition and small-text PDF scanning. Routes retain US-16B and use state road geometry across counties, preserving the reviewed path for offline resume. Incomplete routes now stop with an error."
+      ]
+    },
+    {
+      "version": "0.4.28-alpha.14+144",
+      "date": null,
+      "notes": [
+        "Simplified Ohio permit route labels, loading messages, and errors."
+      ]
+    },
+    {
+      "version": "0.4.28-alpha.13+143",
+      "date": null,
+      "notes": [
+        "Fixed Ohio state permit QR scanning by locating the Audible Route Guidance section on later PDF pages and scanning a focused image. Unreadable QR errors now explain the scan failure correctly."
+      ]
+    },
+    {
+      "version": "0.4.28-alpha.12+142",
+      "date": null,
+      "notes": [
+        "Fixed missing gallery photos by adding selected-photo access management and refreshing the gallery after app resumes. Debug screenshots now use the same saved cloud-photo setting as permit imports."
+      ]
+    },
+    {
+      "version": "0.4.28-alpha.11+141",
+      "date": null,
+      "notes": [
         "Indiana routing now supports connected ramp bypasses and named connectors, preserving required bridge slowdowns in navigation and saved route records.",
-        "Ohio state permits now use their linked permit route, with checks that keep township permits and conflicting permit identities from being treated as the state-approved route.",
+        "Ohio state permits now use their linked permit route, with checks that keep township permits and conflicting permit identities from being treated as the state-approved route."
+      ]
+    },
+    {
+      "version": "0.4.28-alpha.10+140",
+      "date": null,
+      "notes": [
         "Smaller APK downloads through compressed native libraries and removal of duplicate artwork and unused packages. Offline scanning, road data, and themes remain available.",
         "Android now manages update downloads in the background so progress can be recovered after screen lock or app recreation. Updates are verified before installation and remain deferred during active navigation.",
         "Pages and dialogs now stay above the persistent system navigation bar, allowing the final content to scroll fully into view across themes."
@@ -90,10 +204,8 @@
       "version": "0.4.28-alpha.9+139",
       "date": "2026-09-09",
       "notes": [
-        "Deferred update checks, mandatory-update screens, update-check errors, and APK installation throughout active permit navigation, including app resumes, navigation overlays, and pauses between permit segments.",
-        "Discarded update results and errors from checks already in progress when navigation starts. Update checks become available again after navigation ends.",
-        "Added an Allow cloud photos toggle for new permits and additional permit pages. It defaults to off and remembers the user's choice across app restarts until changed.",
-        "Navigation update protection takes effect after installing this version; older installed versions retain their previous update behavior."
+        "Update checks, required-update screens, and update-check errors are deferred throughout active permit navigation, including app resumes and checks already in progress when navigation starts.",
+        "Added an Allow cloud photos toggle to the permit gallery and additional permit pages. Your choice stays saved across app restarts until you change it."
       ]
     },
     {

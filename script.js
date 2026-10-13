@@ -44,10 +44,10 @@ function renderChangelogHistory(payload) {
   }
 
   elements.changelogHistory.replaceChildren();
-  releases.forEach((release, index) => {
+  releases.forEach((release) => {
     const details = document.createElement("details");
     details.className = "changelog-version";
-    details.open = index === 0;
+    details.open = false;
 
     const summary = document.createElement("summary");
     const version = document.createElement("span");
@@ -117,9 +117,16 @@ function renderManifest(manifest) {
     enableDownload(manifest.apkUrl);
   }
 
+  const currentRelease = Array.isArray(manifest.releaseHistory)
+    ? manifest.releaseHistory.find((release) =>
+        release?.versionCode === manifest.latestVersionCode &&
+        release?.versionName === manifest.latestVersionName)
+    : null;
+  const currentNotes = Array.isArray(currentRelease?.notes) && currentRelease.notes.length
+    ? currentRelease.notes : manifest.releaseNotes;
   const notes =
-    Array.isArray(manifest.releaseNotes) && manifest.releaseNotes.length > 0
-      ? manifest.releaseNotes
+    Array.isArray(currentNotes) && currentNotes.length > 0
+      ? currentNotes
       : ["Release notes are not available for this build."];
   renderReleaseNotes(elements.releaseNotes, notes);
   renderReleaseNotes(elements.changesList, notes);
