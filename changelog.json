@@ -3,6 +3,22 @@
   "schemaVersion": 2,
   "releases": [
     {
+      "version": "0.4.28-alpha.41+171",
+      "date": "2026-10-13",
+      "notes": [
+        "Minimized navigation wind speeds now stay on one line with the app’s fonts and larger text settings, fixing split digits such as 13 appearing as 1 over 3."
+      ]
+    },
+    {
+      "version": "0.4.28-alpha.40+170",
+      "date": "2026-10-13",
+      "notes": [
+        "Wind readings now compare nearby stations for fresher and more complete reports, with older observations clearly highlighted.",
+        "Free NWS location forecasts provide wind and gust estimates when station reports are older or incomplete, with forecasts clearly labeled.",
+        "Navigation wind can switch between the full compass and a minimized speed-and-arrow display, and remembers your choice between trips."
+      ]
+    },
+    {
       "version": "0.4.28-alpha.39+169",
       "date": "2026-10-13",
       "notes": [

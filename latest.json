@@ -1,33 +1,48 @@
 {
-  "latestVersionName": "0.4.28-alpha.39",
-  "latestVersionCode": 2169,
-  "minimumVersionCode": 2169,
+  "latestVersionName": "0.4.28-alpha.41",
+  "latestVersionCode": 2171,
+  "minimumVersionCode": 2171,
   "required": true,
-  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.39/permit-route-pro-v0.4.28-alpha.39.apk",
-  "apkSha256": "b95befb6fa142de3409a35e8281632870f45a3e1b288a74070af40e30eeb577f",
-  "apkSizeBytes": 66223175,
+  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.41/permit-route-pro-v0.4.28-alpha.41.apk",
+  "apkSha256": "e2364de05b8fe2593f3938a3947e3f52fc27c544cbcd53fea2903f86774bd85c",
+  "apkSizeBytes": 66254671,
   "apks": {
     "arm64-v8a": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.39/permit-route-pro-v0.4.28-alpha.39-arm64-v8a.apk",
-      "apkSha256": "88b1594a2c3edd14de7899ac717aca9a9d5723c1d6753041164a157ae3fd1730",
-      "apkSizeBytes": 33801257
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.41/permit-route-pro-v0.4.28-alpha.41-arm64-v8a.apk",
+      "apkSha256": "442a7033241370378ae5a1ab8b4c334a406e923fcd8a36baff1e9e9e0aa34e7c",
+      "apkSizeBytes": 33809477
     },
     "armeabi-v7a": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.39/permit-route-pro-v0.4.28-alpha.39-armeabi-v7a.apk",
-      "apkSha256": "d72e7ddcc08d86aec60d599aa5033a88cabbd6f79c60b5316dc8a34f3621ad5e",
-      "apkSizeBytes": 32442937
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.41/permit-route-pro-v0.4.28-alpha.41-armeabi-v7a.apk",
+      "apkSha256": "010da5378d2e8ad40e8d72085eb83f84cf4cddc20a2126f899650471fb132199",
+      "apkSizeBytes": 32454053
     },
     "x86_64": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.39/permit-route-pro-v0.4.28-alpha.39-x86_64.apk",
-      "apkSha256": "4827a6224d95210b2843d72f0474bb2b5a6a954a9c42a948b15ffc591aa86530",
-      "apkSizeBytes": 34376533
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.41/permit-route-pro-v0.4.28-alpha.41-x86_64.apk",
+      "apkSha256": "e2a47aa27ddda82b211f065e278ad158e592a6ef3b72ce62890d967e67a2d367",
+      "apkSizeBytes": 34388861
     }
   },
   "releaseNotes": [
-    "Sunrise, sunset, and twilight now use the selected location\u2019s actual time zone and daylight saving rules, correcting the one-hour error in Eastern Indiana.",
-    "The sun-times screen shows the location\u2019s time-zone abbreviation and UTC offset, with a retry option if the online lookup is unavailable."
+    "Minimized navigation wind speeds now stay on one line with the app\u2019s fonts and larger text settings, fixing split digits such as 13 appearing as 1 over 3."
   ],
   "releaseHistory": [
+    {
+      "versionName": "0.4.28-alpha.41",
+      "versionCode": 2171,
+      "notes": [
+        "Minimized navigation wind speeds now stay on one line with the app\u2019s fonts and larger text settings, fixing split digits such as 13 appearing as 1 over 3."
+      ]
+    },
+    {
+      "versionName": "0.4.28-alpha.40",
+      "versionCode": 2170,
+      "notes": [
+        "Wind readings now compare nearby stations for fresher and more complete reports, with older observations clearly highlighted.",
+        "Free NWS location forecasts provide wind and gust estimates when station reports are older or incomplete, with forecasts clearly labeled.",
+        "Navigation wind can switch between the full compass and a minimized speed-and-arrow display, and remembers your choice between trips."
+      ]
+    },
     {
       "versionName": "0.4.28-alpha.39",
       "versionCode": 2169,
@@ -567,5 +582,5 @@
       ]
     }
   ],
-  "publishedAt": "2026-10-13T12:29:20Z"
+  "publishedAt": "2026-10-13T14:06:51Z"
 }
