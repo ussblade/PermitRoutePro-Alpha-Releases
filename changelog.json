@@ -3,6 +3,14 @@
   "schemaVersion": 2,
   "releases": [
     {
+      "version": "0.4.28-alpha.42+172",
+      "date": "2026-10-24",
+      "notes": [
+        "Internal cleanup removed about 25,000 lines of duplicate and unused code while keeping permit reading, routing, navigation, and audit records the same.",
+        "The home screen Trips count now matches your saved trips instead of counting verified permits."
+      ]
+    },
+    {
       "version": "0.4.28-alpha.41+171",
       "date": "2026-10-13",
       "notes": [

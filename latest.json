@@ -1,32 +1,41 @@
 {
-  "latestVersionName": "0.4.28-alpha.41",
-  "latestVersionCode": 2171,
-  "minimumVersionCode": 2171,
+  "latestVersionName": "0.4.28-alpha.42",
+  "latestVersionCode": 2172,
+  "minimumVersionCode": 2172,
   "required": true,
-  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.41/permit-route-pro-v0.4.28-alpha.41.apk",
-  "apkSha256": "e2364de05b8fe2593f3938a3947e3f52fc27c544cbcd53fea2903f86774bd85c",
-  "apkSizeBytes": 66254671,
+  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.42/permit-route-pro-v0.4.28-alpha.42.apk",
+  "apkSha256": "d4661f4fd68c615d290862e322e114cf04cec7094ddd657ef542392b2cfc4398",
+  "apkSizeBytes": 66080911,
   "apks": {
     "arm64-v8a": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.41/permit-route-pro-v0.4.28-alpha.41-arm64-v8a.apk",
-      "apkSha256": "442a7033241370378ae5a1ab8b4c334a406e923fcd8a36baff1e9e9e0aa34e7c",
-      "apkSizeBytes": 33809477
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.42/permit-route-pro-v0.4.28-alpha.42-arm64-v8a.apk",
+      "apkSha256": "49aa569b930ce6b10e93c3682b696cba941f557e1e7828df75eb3c0625cd8c3f",
+      "apkSizeBytes": 33755353
     },
     "armeabi-v7a": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.41/permit-route-pro-v0.4.28-alpha.41-armeabi-v7a.apk",
-      "apkSha256": "010da5378d2e8ad40e8d72085eb83f84cf4cddc20a2126f899650471fb132199",
-      "apkSizeBytes": 32454053
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.42/permit-route-pro-v0.4.28-alpha.42-armeabi-v7a.apk",
+      "apkSha256": "486d4049f285f2a7618db2044a997fb00dfacc4ca0d471d35bf3666510e03034",
+      "apkSizeBytes": 32390925
     },
     "x86_64": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.41/permit-route-pro-v0.4.28-alpha.41-x86_64.apk",
-      "apkSha256": "e2a47aa27ddda82b211f065e278ad158e592a6ef3b72ce62890d967e67a2d367",
-      "apkSizeBytes": 34388861
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.42/permit-route-pro-v0.4.28-alpha.42-x86_64.apk",
+      "apkSha256": "d0db9b77bb3bb68caccbcadce4e91cd2aa1d8032b0df2c84d8ce180ab71db864",
+      "apkSizeBytes": 34332357
     }
   },
   "releaseNotes": [
-    "Minimized navigation wind speeds now stay on one line with the app\u2019s fonts and larger text settings, fixing split digits such as 13 appearing as 1 over 3."
+    "Internal cleanup removed about 25,000 lines of duplicate and unused code while keeping permit reading, routing, navigation, and audit records the same.",
+    "The home screen Trips count now matches your saved trips instead of counting verified permits."
   ],
   "releaseHistory": [
+    {
+      "versionName": "0.4.28-alpha.42",
+      "versionCode": 2172,
+      "notes": [
+        "Internal cleanup removed about 25,000 lines of duplicate and unused code while keeping permit reading, routing, navigation, and audit records the same.",
+        "The home screen Trips count now matches your saved trips instead of counting verified permits."
+      ]
+    },
     {
       "versionName": "0.4.28-alpha.41",
       "versionCode": 2171,
@@ -582,5 +591,5 @@
       ]
     }
   ],
-  "publishedAt": "2026-10-13T14:06:51Z"
+  "publishedAt": "2026-10-24T20:15:55Z"
 }
