@@ -3,6 +3,16 @@
   "schemaVersion": 2,
   "releases": [
     {
+      "version": "0.4.28-alpha.43+173",
+      "date": "2026-10-26",
+      "notes": [
+        "Added an optional screenshot tutorial covering permit import, verification, navigation, the compass, and other app features including themes.",
+        "Added background update downloads and automatic installation on supported Android devices while the app is closed and no trip is running, with a choice of Wi-Fi only or mobile data.",
+        "The navigation compass now responds immediately when switching map direction and explains its current mode on press and hold.",
+        "Route point editing now clearly states that corrections apply to the current permit only."
+      ]
+    },
+    {
       "version": "0.4.28-alpha.42+172",
       "date": "2026-10-24",
       "notes": [
