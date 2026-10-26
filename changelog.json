@@ -3,6 +3,13 @@
   "schemaVersion": 2,
   "releases": [
     {
+      "version": "0.4.28-alpha.44+174",
+      "date": "2026-10-26",
+      "notes": [
+        "On trips that cross state lines, tap the miles left during navigation to switch between the whole trip and the current state. Trip details now show both."
+      ]
+    },
+    {
       "version": "0.4.28-alpha.43+173",
       "date": "2026-10-26",
       "notes": [
