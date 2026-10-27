@@ -1,32 +1,43 @@
 {
-  "latestVersionName": "0.4.28-alpha.44",
-  "latestVersionCode": 2174,
-  "minimumVersionCode": 2174,
+  "latestVersionName": "0.4.28-alpha.45",
+  "latestVersionCode": 2175,
+  "minimumVersionCode": 2175,
   "required": true,
-  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.44/permit-route-pro-v0.4.28-alpha.44.apk",
-  "apkSha256": "96962dfdf643d842c83e2b0db9b3452465b2f08357fd4971d7b5ed308befc956",
-  "apkSizeBytes": 66871720,
+  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.45/permit-route-pro-v0.4.28-alpha.45.apk",
+  "apkSha256": "7fb122788c89de374ff137cfcbb8219b3311ffabecb2cfa1bf19779cd37586e2",
+  "apkSizeBytes": 66573236,
   "apks": {
     "arm64-v8a": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.44/permit-route-pro-v0.4.28-alpha.44-arm64-v8a.apk",
-      "apkSha256": "f7c576af8b9d5c48a837844e5bc8bd7ec8a90fe972a29e208f9405d88dbdae7f",
-      "apkSizeBytes": 34511714
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.45/permit-route-pro-v0.4.28-alpha.45-arm64-v8a.apk",
+      "apkSha256": "6651e82b2794c758e2a0533645de41a2be3587e8a3d95b80b8e3a7e19a127e85",
+      "apkSizeBytes": 34413050
     },
     "armeabi-v7a": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.44/permit-route-pro-v0.4.28-alpha.44-armeabi-v7a.apk",
-      "apkSha256": "f45185da2b8b3e578d86f92b0a637f103b7c3f45950fc36f7199aa08f5d64f8a",
-      "apkSizeBytes": 33149450
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.45/permit-route-pro-v0.4.28-alpha.45-armeabi-v7a.apk",
+      "apkSha256": "e2739dfa0c77531c221e31e69bead6e1d5114a2d39087db1d206259eaf2d6585",
+      "apkSizeBytes": 33040078
     },
     "x86_64": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.44/permit-route-pro-v0.4.28-alpha.44-x86_64.apk",
-      "apkSha256": "bd810aa87d636628960a7ae4d135368b3cfaf2fc2cae6e5620646f5832deb231",
-      "apkSizeBytes": 35088310
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.45/permit-route-pro-v0.4.28-alpha.45-x86_64.apk",
+      "apkSha256": "9e323e04303a0ffc1d18245ffcb3349c17a5d27306b980d59831eb0f2c812fec",
+      "apkSizeBytes": 34993126
     }
   },
   "releaseNotes": [
-    "On trips that cross state lines, tap the miles left during navigation to switch between the whole trip and the current state. Trip details now show both."
+    "Internal cleanup removed about 13,500 more lines of duplicate and unused code while keeping permit reading, routing, navigation, and audit records the same.",
+    "Older themes were retired. If you used one, the app switches you to the closest of the six current themes.",
+    "Removed the fleet tools, which only saved data on this phone, the Downloaded map data screen, and the developer log panel on route review."
   ],
   "releaseHistory": [
+    {
+      "versionName": "0.4.28-alpha.45",
+      "versionCode": 2175,
+      "notes": [
+        "Internal cleanup removed about 13,500 more lines of duplicate and unused code while keeping permit reading, routing, navigation, and audit records the same.",
+        "Older themes were retired. If you used one, the app switches you to the closest of the six current themes.",
+        "Removed the fleet tools, which only saved data on this phone, the Downloaded map data screen, and the developer log panel on route review."
+      ]
+    },
     {
       "versionName": "0.4.28-alpha.44",
       "versionCode": 2174,
@@ -607,5 +618,5 @@
       ]
     }
   ],
-  "publishedAt": "2026-10-26T21:49:02Z"
+  "publishedAt": "2026-10-27T05:20:25Z"
 }

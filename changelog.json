@@ -3,6 +3,15 @@
   "schemaVersion": 2,
   "releases": [
     {
+      "version": "0.4.28-alpha.45+175",
+      "date": "2026-10-26",
+      "notes": [
+        "Internal cleanup removed about 13,500 more lines of duplicate and unused code while keeping permit reading, routing, navigation, and audit records the same.",
+        "Older themes were retired. If you used one, the app switches you to the closest of the six current themes.",
+        "Removed the fleet tools, which only saved data on this phone, the Downloaded map data screen, and the developer log panel on route review."
+      ]
+    },
+    {
       "version": "0.4.28-alpha.44+174",
       "date": "2026-10-26",
       "notes": [
