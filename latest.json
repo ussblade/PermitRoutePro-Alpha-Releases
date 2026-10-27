@@ -1,34 +1,41 @@
 {
-  "latestVersionName": "0.4.28-alpha.45",
-  "latestVersionCode": 2175,
-  "minimumVersionCode": 2175,
+  "latestVersionName": "0.4.28-alpha.46",
+  "latestVersionCode": 2176,
+  "minimumVersionCode": 2176,
   "required": true,
-  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.45/permit-route-pro-v0.4.28-alpha.45.apk",
-  "apkSha256": "7fb122788c89de374ff137cfcbb8219b3311ffabecb2cfa1bf19779cd37586e2",
-  "apkSizeBytes": 66573236,
+  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.46/permit-route-pro-v0.4.28-alpha.46.apk",
+  "apkSha256": "534c1beda82aab9b23441d58b2934891428c706ecb0bd2a80b0ee1c35e388166",
+  "apkSizeBytes": 66563736,
   "apks": {
     "arm64-v8a": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.45/permit-route-pro-v0.4.28-alpha.45-arm64-v8a.apk",
-      "apkSha256": "6651e82b2794c758e2a0533645de41a2be3587e8a3d95b80b8e3a7e19a127e85",
-      "apkSizeBytes": 34413050
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.46/permit-route-pro-v0.4.28-alpha.46-arm64-v8a.apk",
+      "apkSha256": "370c6f76143d1f67933b6fb47e119ffc5bcf46e66d03ec8ac7628fc42910f84a",
+      "apkSizeBytes": 34410510
     },
     "armeabi-v7a": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.45/permit-route-pro-v0.4.28-alpha.45-armeabi-v7a.apk",
-      "apkSha256": "e2739dfa0c77531c221e31e69bead6e1d5114a2d39087db1d206259eaf2d6585",
-      "apkSizeBytes": 33040078
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.46/permit-route-pro-v0.4.28-alpha.46-armeabi-v7a.apk",
+      "apkSha256": "bd5c67d7ed0acd1886aa903269b1bc23799d6a2025b50af7fdae6205e50bc2db",
+      "apkSizeBytes": 33036310
     },
     "x86_64": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.45/permit-route-pro-v0.4.28-alpha.45-x86_64.apk",
-      "apkSha256": "9e323e04303a0ffc1d18245ffcb3349c17a5d27306b980d59831eb0f2c812fec",
-      "apkSizeBytes": 34993126
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.46/permit-route-pro-v0.4.28-alpha.46-x86_64.apk",
+      "apkSha256": "fdac9f331c415bccbcf56be9a0e3a35331dec487e32fefc6b6753af0f495daa7",
+      "apkSizeBytes": 34990750
     }
   },
   "releaseNotes": [
-    "Internal cleanup removed about 13,500 more lines of duplicate and unused code while keeping permit reading, routing, navigation, and audit records the same.",
-    "Older themes were retired. If you used one, the app switches you to the closest of the six current themes.",
-    "Removed the fleet tools, which only saved data on this phone, the Downloaded map data screen, and the developer log panel on route review."
+    "Automatic update downloads no longer restart or undo each other when the update screen opens with an older update notice.",
+    "Opening the update screen no longer keeps retrying a failed download; scheduled checks and the Retry button still can. Updates may download during a trip but still install only after navigation ends."
   ],
   "releaseHistory": [
+    {
+      "versionName": "0.4.28-alpha.46",
+      "versionCode": 2176,
+      "notes": [
+        "Automatic update downloads no longer restart or undo each other when the update screen opens with an older update notice.",
+        "Opening the update screen no longer keeps retrying a failed download; scheduled checks and the Retry button still can. Updates may download during a trip but still install only after navigation ends."
+      ]
+    },
     {
       "versionName": "0.4.28-alpha.45",
       "versionCode": 2175,
@@ -618,5 +625,5 @@
       ]
     }
   ],
-  "publishedAt": "2026-10-27T05:20:25Z"
+  "publishedAt": "2026-10-27T05:53:49Z"
 }

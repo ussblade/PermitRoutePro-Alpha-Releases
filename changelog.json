@@ -3,6 +3,14 @@
   "schemaVersion": 2,
   "releases": [
     {
+      "version": "0.4.28-alpha.46+176",
+      "date": "2026-10-27",
+      "notes": [
+        "Automatic update downloads no longer restart or undo each other when the update screen opens with an older update notice.",
+        "Opening the update screen no longer keeps retrying a failed download; scheduled checks and the Retry button still can. Updates may download during a trip but still install only after navigation ends."
+      ]
+    },
+    {
       "version": "0.4.28-alpha.45+175",
       "date": "2026-10-26",
       "notes": [
