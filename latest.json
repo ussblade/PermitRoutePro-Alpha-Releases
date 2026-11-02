@@ -1,33 +1,69 @@
 {
-  "latestVersionName": "0.4.28-alpha.46",
-  "latestVersionCode": 2176,
-  "minimumVersionCode": 2176,
+  "latestVersionName": "0.4.28-alpha.50",
+  "latestVersionCode": 2180,
+  "minimumVersionCode": 2180,
   "required": true,
-  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.46/permit-route-pro-v0.4.28-alpha.46.apk",
-  "apkSha256": "534c1beda82aab9b23441d58b2934891428c706ecb0bd2a80b0ee1c35e388166",
-  "apkSizeBytes": 66563736,
+  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.50/permit-route-pro-v0.4.28-alpha.50.apk",
+  "apkSha256": "3078e74fd2e015b3d7cfac88fd9d7f111c0d99640d4c36cf89add75752a5f6fc",
+  "apkSizeBytes": 66639256,
   "apks": {
     "arm64-v8a": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.46/permit-route-pro-v0.4.28-alpha.46-arm64-v8a.apk",
-      "apkSha256": "370c6f76143d1f67933b6fb47e119ffc5bcf46e66d03ec8ac7628fc42910f84a",
-      "apkSizeBytes": 34410510
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.50/permit-route-pro-v0.4.28-alpha.50-arm64-v8a.apk",
+      "apkSha256": "6ebbc2f6d01a9d61e586a75c6021640c03d213c8317eb231c3a5b5b074e09937",
+      "apkSizeBytes": 34432606
     },
     "armeabi-v7a": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.46/permit-route-pro-v0.4.28-alpha.46-armeabi-v7a.apk",
-      "apkSha256": "bd5c67d7ed0acd1886aa903269b1bc23799d6a2025b50af7fdae6205e50bc2db",
-      "apkSizeBytes": 33036310
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.50/permit-route-pro-v0.4.28-alpha.50-armeabi-v7a.apk",
+      "apkSha256": "d4a10f72d9eb53f90b5fca316edc1b2ab39fe0d6603432061983bfd4fced4ed5",
+      "apkSizeBytes": 33066686
     },
     "x86_64": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.46/permit-route-pro-v0.4.28-alpha.46-x86_64.apk",
-      "apkSha256": "fdac9f331c415bccbcf56be9a0e3a35331dec487e32fefc6b6753af0f495daa7",
-      "apkSizeBytes": 34990750
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.50/permit-route-pro-v0.4.28-alpha.50-x86_64.apk",
+      "apkSha256": "48a27200e03a5d3486b2314dd94e3b5d25bd2568e56210202742ceeb8fd576bc",
+      "apkSizeBytes": 35013894
     }
   },
   "releaseNotes": [
-    "Automatic update downloads no longer restart or undo each other when the update screen opens with an older update notice.",
-    "Opening the update screen no longer keeps retrying a failed download; scheduled checks and the Retry button still can. Updates may download during a trip but still install only after navigation ends."
+    "The app starts faster: the required update check now runs during a shorter splash screen instead of after it.",
+    "Navigation is smoother on long routes: the map redraws only the stretch just ahead each second, and road alerts and route opening take a fraction of the time.",
+    "Scanning permit photos and PDFs for QR codes is about three times faster and no longer freezes the screen.",
+    "Permit history, route review, the home screen, and the trip list load and scroll faster, with no loading flash on refresh."
   ],
   "releaseHistory": [
+    {
+      "versionName": "0.4.28-alpha.50",
+      "versionCode": 2180,
+      "notes": [
+        "The app starts faster: the required update check now runs during a shorter splash screen instead of after it.",
+        "Navigation is smoother on long routes: the map redraws only the stretch just ahead each second, and road alerts and route opening take a fraction of the time.",
+        "Scanning permit photos and PDFs for QR codes is about three times faster and no longer freezes the screen.",
+        "Permit history, route review, the home screen, and the trip list load and scroll faster, with no loading flash on refresh."
+      ]
+    },
+    {
+      "versionName": "0.4.28-alpha.49",
+      "versionCode": 2179,
+      "notes": [
+        "The app starts faster: the required update check now runs during a shorter splash screen instead of after it.",
+        "Navigation is smoother on long routes: the map redraws only the stretch just ahead each second, and road alerts and route opening take a fraction of the time.",
+        "Scanning permit photos and PDFs for QR codes is about three times faster and no longer freezes the screen.",
+        "Permit history, route review, the home screen, and the trip list load and scroll faster, with no loading flash on refresh."
+      ]
+    },
+    {
+      "versionName": "0.4.28-alpha.48",
+      "versionCode": 2178,
+      "notes": [
+        "Admin test navigation now follows the vehicle and shows live speed while driving without a route."
+      ]
+    },
+    {
+      "versionName": "0.4.28-alpha.47",
+      "versionCode": 2177,
+      "notes": [
+        "Admins using the Afterhours theme have a Navigation button on the home screen that opens navigation without a route, for testing GPS, speed, the map, and controls."
+      ]
+    },
     {
       "versionName": "0.4.28-alpha.46",
       "versionCode": 2176,
@@ -625,5 +661,5 @@
       ]
     }
   ],
-  "publishedAt": "2026-10-27T05:53:49Z"
+  "publishedAt": "2026-11-02T17:13:48Z"
 }
