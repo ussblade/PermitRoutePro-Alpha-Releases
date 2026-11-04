@@ -1,35 +1,83 @@
 {
-  "latestVersionName": "0.4.28-alpha.50",
-  "latestVersionCode": 2180,
-  "minimumVersionCode": 2180,
+  "latestVersionName": "0.4.28-alpha.54",
+  "latestVersionCode": 2184,
+  "minimumVersionCode": 2184,
   "required": true,
-  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.50/permit-route-pro-v0.4.28-alpha.50.apk",
-  "apkSha256": "3078e74fd2e015b3d7cfac88fd9d7f111c0d99640d4c36cf89add75752a5f6fc",
-  "apkSizeBytes": 66639256,
+  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.54/permit-route-pro-v0.4.28-alpha.54.apk",
+  "apkSha256": "f9a3fd975dcb4568aff27b9988a620384e64b331dfaa0a99a0f29ee8b32dcbac",
+  "apkSizeBytes": 66944729,
   "apks": {
     "arm64-v8a": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.50/permit-route-pro-v0.4.28-alpha.50-arm64-v8a.apk",
-      "apkSha256": "6ebbc2f6d01a9d61e586a75c6021640c03d213c8317eb231c3a5b5b074e09937",
-      "apkSizeBytes": 34432606
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.54/permit-route-pro-v0.4.28-alpha.54-arm64-v8a.apk",
+      "apkSha256": "4f3716a74c4aa65e41e91e6f61d79d188714197eee6239595958ce382847ef38",
+      "apkSizeBytes": 34749915
     },
     "armeabi-v7a": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.50/permit-route-pro-v0.4.28-alpha.50-armeabi-v7a.apk",
-      "apkSha256": "d4a10f72d9eb53f90b5fca316edc1b2ab39fe0d6603432061983bfd4fced4ed5",
-      "apkSizeBytes": 33066686
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.54/permit-route-pro-v0.4.28-alpha.54-armeabi-v7a.apk",
+      "apkSha256": "2df73a13049f2611a5974fa03c0797cc7a8cce449c9aa8ed80877e861576fe31",
+      "apkSizeBytes": 33380527
     },
     "x86_64": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.50/permit-route-pro-v0.4.28-alpha.50-x86_64.apk",
-      "apkSha256": "48a27200e03a5d3486b2314dd94e3b5d25bd2568e56210202742ceeb8fd576bc",
-      "apkSizeBytes": 35013894
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.54/permit-route-pro-v0.4.28-alpha.54-x86_64.apk",
+      "apkSha256": "78ff17abacc2bc0688edf9fc04e87cec82d0d2f330d6a05ff2e35af6df01effa",
+      "apkSizeBytes": 35326523
     }
   },
   "releaseNotes": [
-    "The app starts faster: the required update check now runs during a shorter splash screen instead of after it.",
-    "Navigation is smoother on long routes: the map redraws only the stretch just ahead each second, and road alerts and route opening take a fraction of the time.",
-    "Scanning permit photos and PDFs for QR codes is about three times faster and no longer freezes the screen.",
-    "Permit history, route review, the home screen, and the trip list load and scroll faster, with no loading flash on refresh."
+    "The whole app has a new look: clearer screens, real font weights and one consistent design across all six themes.",
+    "Status colors now mean one thing everywhere. Green means verified, amber means it needs your review, and red means an active alarm.",
+    "Route verification puts the map first, with clear start and end markers, so you can compare it with your permit.",
+    "Navigation keeps its familiar size and compass, adds labels on the map buttons and a landscape layout, and shows off route as one small red warning. Light or dark navigation is always your choice.",
+    "Permit numbers now use a slashed zero, so 0 can't be mistaken for the letter O.",
+    "Everything is easier to read with large text and in bright light.",
+    "The tutorial has new screenshots and steps for the new look."
   ],
   "releaseHistory": [
+    {
+      "versionName": "0.4.28-alpha.54",
+      "versionCode": 2184,
+      "notes": [
+        "The whole app has a new look: clearer screens, real font weights and one consistent design across all six themes.",
+        "Status colors now mean one thing everywhere. Green means verified, amber means it needs your review, and red means an active alarm.",
+        "Route verification puts the map first, with clear start and end markers, so you can compare it with your permit.",
+        "Navigation keeps its familiar size and compass, adds labels on the map buttons and a landscape layout, and shows off route as one small red warning. Light or dark navigation is always your choice.",
+        "Permit numbers now use a slashed zero, so 0 can't be mistaken for the letter O.",
+        "Everything is easier to read with large text and in bright light.",
+        "The tutorial has new screenshots and steps for the new look."
+      ]
+    },
+    {
+      "versionName": "0.4.28-alpha.53",
+      "versionCode": 2183,
+      "notes": [
+        "The whole app has a new look: clearer screens, real font weights and one consistent design across all six themes.",
+        "Status colors now mean one thing everywhere. Green means verified, amber means it needs your review, and red means an active alarm.",
+        "Route verification puts the map first, with clear start and end markers, so you can compare it with your permit.",
+        "Navigation keeps its familiar size and compass, adds labels on the map buttons and a landscape layout, and shows off route as one small red warning. Light or dark navigation is always your choice.",
+        "Permit numbers now use a slashed zero, so 0 can't be mistaken for the letter O.",
+        "Everything is easier to read with large text and in bright light."
+      ]
+    },
+    {
+      "versionName": "0.4.28-alpha.52",
+      "versionCode": 2182,
+      "notes": [
+        "The whole app has a new look: clearer screens, real font weights and one consistent design across all six themes.",
+        "Status colors now mean one thing everywhere. Green means verified, amber means it needs your review, and red means an active alarm.",
+        "Route verification puts the map first, with clear start and end markers, so you can compare it with your permit.",
+        "Navigation has larger turn directions, one clear off-route alarm, labelled map buttons and a landscape layout. Light or dark navigation is always your choice.",
+        "Permit numbers now use a slashed zero, so 0 can't be mistaken for the letter O.",
+        "Everything is easier to read with large text and in bright light."
+      ]
+    },
+    {
+      "versionName": "0.4.28-alpha.51",
+      "versionCode": 2181,
+      "notes": [
+        "On trips, crossing into the next state now just says \"Proceed with\" and the full state name, with no permit number shown or spoken.",
+        "Spoken directions now say abbreviations in full, such as Fort for Ft, Ohio for OH, State Route for SR, and Interstate for I."
+      ]
+    },
     {
       "versionName": "0.4.28-alpha.50",
       "versionCode": 2180,
@@ -661,5 +709,5 @@
       ]
     }
   ],
-  "publishedAt": "2026-11-02T17:13:48Z"
+  "publishedAt": "2026-11-04T15:52:17Z"
 }

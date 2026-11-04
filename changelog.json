@@ -3,6 +3,51 @@
   "schemaVersion": 2,
   "releases": [
     {
+      "version": "0.4.28-alpha.54+184",
+      "date": "2026-11-04",
+      "notes": [
+        "The whole app has a new look: clearer screens, real font weights and one consistent design across all six themes.",
+        "Status colors now mean one thing everywhere. Green means verified, amber means it needs your review, and red means an active alarm.",
+        "Route verification puts the map first, with clear start and end markers, so you can compare it with your permit.",
+        "Navigation keeps its familiar size and compass, adds labels on the map buttons and a landscape layout, and shows off route as one small red warning. Light or dark navigation is always your choice.",
+        "Permit numbers now use a slashed zero, so 0 can't be mistaken for the letter O.",
+        "Everything is easier to read with large text and in bright light.",
+        "The tutorial has new screenshots and steps for the new look."
+      ]
+    },
+    {
+      "version": "0.4.28-alpha.53+183",
+      "date": "2026-11-03",
+      "notes": [
+        "The whole app has a new look: clearer screens, real font weights and one consistent design across all six themes.",
+        "Status colors now mean one thing everywhere. Green means verified, amber means it needs your review, and red means an active alarm.",
+        "Route verification puts the map first, with clear start and end markers, so you can compare it with your permit.",
+        "Navigation keeps its familiar size and compass, adds labels on the map buttons and a landscape layout, and shows off route as one small red warning. Light or dark navigation is always your choice.",
+        "Permit numbers now use a slashed zero, so 0 can't be mistaken for the letter O.",
+        "Everything is easier to read with large text and in bright light."
+      ]
+    },
+    {
+      "version": "0.4.28-alpha.52+182",
+      "date": "2026-11-03",
+      "notes": [
+        "The whole app has a new look: clearer screens, real font weights and one consistent design across all six themes.",
+        "Status colors now mean one thing everywhere. Green means verified, amber means it needs your review, and red means an active alarm.",
+        "Route verification puts the map first, with clear start and end markers, so you can compare it with your permit.",
+        "Navigation has larger turn directions, one clear off-route alarm, labelled map buttons and a landscape layout. Light or dark navigation is always your choice.",
+        "Permit numbers now use a slashed zero, so 0 can't be mistaken for the letter O.",
+        "Everything is easier to read with large text and in bright light."
+      ]
+    },
+    {
+      "version": "0.4.28-alpha.51+181",
+      "date": "2026-11-03",
+      "notes": [
+        "On trips, crossing into the next state now just says \"Proceed with\" and the full state name, with no permit number shown or spoken.",
+        "Spoken directions now say abbreviations in full, such as Fort for Ft, Ohio for OH, State Route for SR, and Interstate for I."
+      ]
+    },
+    {
       "version": "0.4.28-alpha.50+180",
       "date": "2026-11-02",
       "notes": [
