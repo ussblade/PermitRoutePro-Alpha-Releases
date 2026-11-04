@@ -1,38 +1,41 @@
 {
-  "latestVersionName": "0.4.28-alpha.54",
-  "latestVersionCode": 2184,
-  "minimumVersionCode": 2184,
+  "latestVersionName": "0.4.28-alpha.55",
+  "latestVersionCode": 2185,
+  "minimumVersionCode": 2185,
   "required": true,
-  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.54/permit-route-pro-v0.4.28-alpha.54.apk",
-  "apkSha256": "f9a3fd975dcb4568aff27b9988a620384e64b331dfaa0a99a0f29ee8b32dcbac",
-  "apkSizeBytes": 66944729,
+  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.55/permit-route-pro-v0.4.28-alpha.55.apk",
+  "apkSha256": "173fd47a912f88e4f57aa5edb71e13f23d9ece81efd4dc4bd7f99ce1c5b8462b",
+  "apkSizeBytes": 66947177,
   "apks": {
     "arm64-v8a": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.54/permit-route-pro-v0.4.28-alpha.54-arm64-v8a.apk",
-      "apkSha256": "4f3716a74c4aa65e41e91e6f61d79d188714197eee6239595958ce382847ef38",
-      "apkSizeBytes": 34749915
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.55/permit-route-pro-v0.4.28-alpha.55-arm64-v8a.apk",
+      "apkSha256": "b04b5ef9e38a2f57a2b7c9d4f5c0015bb4be0ce1d10453c3b43fef6872e57187",
+      "apkSizeBytes": 34750699
     },
     "armeabi-v7a": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.54/permit-route-pro-v0.4.28-alpha.54-armeabi-v7a.apk",
-      "apkSha256": "2df73a13049f2611a5974fa03c0797cc7a8cce449c9aa8ed80877e861576fe31",
-      "apkSizeBytes": 33380527
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.55/permit-route-pro-v0.4.28-alpha.55-armeabi-v7a.apk",
+      "apkSha256": "e1d03b5a50583f9f566d95012bc758bef07c9c41b144975412f787e0b5198b91",
+      "apkSizeBytes": 33382071
     },
     "x86_64": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.54/permit-route-pro-v0.4.28-alpha.54-x86_64.apk",
-      "apkSha256": "78ff17abacc2bc0688edf9fc04e87cec82d0d2f330d6a05ff2e35af6df01effa",
-      "apkSizeBytes": 35326523
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.55/permit-route-pro-v0.4.28-alpha.55-x86_64.apk",
+      "apkSha256": "e4659a133d2ae9929420db60790cdbb4225011bfdbecc067cb5e748ac90d9e68",
+      "apkSizeBytes": 35326643
     }
   },
   "releaseNotes": [
-    "The whole app has a new look: clearer screens, real font weights and one consistent design across all six themes.",
-    "Status colors now mean one thing everywhere. Green means verified, amber means it needs your review, and red means an active alarm.",
-    "Route verification puts the map first, with clear start and end markers, so you can compare it with your permit.",
-    "Navigation keeps its familiar size and compass, adds labels on the map buttons and a landscape layout, and shows off route as one small red warning. Light or dark navigation is always your choice.",
-    "Permit numbers now use a slashed zero, so 0 can't be mistaken for the letter O.",
-    "Everything is easier to read with large text and in bright light.",
-    "The tutorial has new screenshots and steps for the new look."
+    "Spoken directions now say road and town names as words instead of spelling out names printed in capitals, such as Domersville.",
+    "Slashes and brackets in permit directions are now spoken as a short pause."
   ],
   "releaseHistory": [
+    {
+      "versionName": "0.4.28-alpha.55",
+      "versionCode": 2185,
+      "notes": [
+        "Spoken directions now say road and town names as words instead of spelling out names printed in capitals, such as Domersville.",
+        "Slashes and brackets in permit directions are now spoken as a short pause."
+      ]
+    },
     {
       "versionName": "0.4.28-alpha.54",
       "versionCode": 2184,
@@ -709,5 +712,5 @@
       ]
     }
   ],
-  "publishedAt": "2026-11-04T15:52:17Z"
+  "publishedAt": "2026-11-04T16:47:21Z"
 }

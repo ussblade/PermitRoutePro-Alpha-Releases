@@ -3,6 +3,14 @@
   "schemaVersion": 2,
   "releases": [
     {
+      "version": "0.4.28-alpha.55+185",
+      "date": "2026-11-04",
+      "notes": [
+        "Spoken directions now say road and town names as words instead of spelling out names printed in capitals, such as Domersville.",
+        "Slashes and brackets in permit directions are now spoken as a short pause."
+      ]
+    },
+    {
       "version": "0.4.28-alpha.54+184",
       "date": "2026-11-04",
       "notes": [
