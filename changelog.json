@@ -3,6 +3,13 @@
   "schemaVersion": 2,
   "releases": [
     {
+      "version": "0.4.28-alpha.57+187",
+      "date": "2026-11-05",
+      "notes": [
+        "The app now opens right away, even with a long permit history. Your saved permits and audit records load while the splash screen shows."
+      ]
+    },
+    {
       "version": "0.4.28-alpha.56+186",
       "date": "2026-11-05",
       "notes": [
