@@ -1,33 +1,39 @@
 {
-  "latestVersionName": "0.4.28-alpha.55",
-  "latestVersionCode": 2185,
-  "minimumVersionCode": 2185,
+  "latestVersionName": "0.4.28-alpha.56",
+  "latestVersionCode": 2186,
+  "minimumVersionCode": 2186,
   "required": true,
-  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.55/permit-route-pro-v0.4.28-alpha.55.apk",
-  "apkSha256": "173fd47a912f88e4f57aa5edb71e13f23d9ece81efd4dc4bd7f99ce1c5b8462b",
-  "apkSizeBytes": 66947177,
+  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.56/permit-route-pro-v0.4.28-alpha.56.apk",
+  "apkSha256": "4d10bbdf812bdd29924098c2028cea635502ca4e9ba98d41b4190087680882de",
+  "apkSizeBytes": 66953781,
   "apks": {
     "arm64-v8a": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.55/permit-route-pro-v0.4.28-alpha.55-arm64-v8a.apk",
-      "apkSha256": "b04b5ef9e38a2f57a2b7c9d4f5c0015bb4be0ce1d10453c3b43fef6872e57187",
-      "apkSizeBytes": 34750699
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.56/permit-route-pro-v0.4.28-alpha.56-arm64-v8a.apk",
+      "apkSha256": "f3c5dc9af8a8c84bd4273c25280b00f79be04f6c6900338e104e5bc0175cfb75",
+      "apkSizeBytes": 34752351
     },
     "armeabi-v7a": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.55/permit-route-pro-v0.4.28-alpha.55-armeabi-v7a.apk",
-      "apkSha256": "e1d03b5a50583f9f566d95012bc758bef07c9c41b144975412f787e0b5198b91",
-      "apkSizeBytes": 33382071
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.56/permit-route-pro-v0.4.28-alpha.56-armeabi-v7a.apk",
+      "apkSha256": "265416c1646c2db27b9ba7aeebfe9561c119f401b83a85a39f8b3c13cfb56d11",
+      "apkSizeBytes": 33384547
     },
     "x86_64": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.55/permit-route-pro-v0.4.28-alpha.55-x86_64.apk",
-      "apkSha256": "e4659a133d2ae9929420db60790cdbb4225011bfdbecc067cb5e748ac90d9e68",
-      "apkSizeBytes": 35326643
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.56/permit-route-pro-v0.4.28-alpha.56-x86_64.apk",
+      "apkSha256": "a07664f480041d6ecc63e3b1667ca807cb1bef20b6b74974c8763b774b524041",
+      "apkSizeBytes": 35329423
     }
   },
   "releaseNotes": [
-    "Spoken directions now say road and town names as words instead of spelling out names printed in capitals, such as Domersville.",
-    "Slashes and brackets in permit directions are now spoken as a short pause."
+    "A What's new popup now appears before the main menu, listing every change since you last opened the app, even when several updates installed automatically."
   ],
   "releaseHistory": [
+    {
+      "versionName": "0.4.28-alpha.56",
+      "versionCode": 2186,
+      "notes": [
+        "A What's new popup now appears before the main menu, listing every change since you last opened the app, even when several updates installed automatically."
+      ]
+    },
     {
       "versionName": "0.4.28-alpha.55",
       "versionCode": 2185,
@@ -712,5 +718,5 @@
       ]
     }
   ],
-  "publishedAt": "2026-11-04T16:47:21Z"
+  "publishedAt": "2026-11-05T15:06:14Z"
 }
