@@ -6,15 +6,31 @@
     <meta name="description" content="Share a permitted trip example privately to help improve oversize and overweight permit routing coverage.">
     <link rel="canonical" href="https://permit-route-pro.com/share-a-permit">
     <title>Share a Permit for Routing Research | Permit Route Pro</title>
-    <link rel="stylesheet" href="concepts/concepts.css?v=0.4.28-alpha.57-15f8b0a-54">
+    <meta name="theme-color" content="#000000">
+    <meta name="color-scheme" content="dark">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Permit Route Pro">
+    <meta property="og:title" content="Share a Permit for Routing Research | Permit Route Pro">
+    <meta property="og:description" content="Share a permitted trip example privately to help improve oversize and overweight permit routing coverage.">
+    <meta property="og:url" content="https://permit-route-pro.com/share-a-permit">
+    <meta property="og:image" content="https://permit-route-pro.com/assets/og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/icons/favicon-48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/icon-192.png">
+    <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+    <link rel="preload" href="/fonts/dm-sans-variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/site.css?v=0.4.28-alpha.58-cdb2f9b-56">
   </head>
-  <body class="atlas">
+  <body class="page-share">
     <a class="skip-link" href="#main">Skip to content</a>
-    <header class="atlas-wrap site-header">
-      <nav class="atlas-nav" aria-label="Primary navigation">
-        <a class="atlas-brand" href="/">Permit Route Pro</a>
-        <button class="site-menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="site-menu"><span class="site-menu-icon" aria-hidden="true">☰</span> Menu</button>
-        <div class="site-menu" id="site-menu" hidden>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="/"><img class="brand-mark" src="/assets/icons/app-icon-96.webp" alt="" width="32" height="32"><span>Permit Route Pro</span></a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <button class="site-menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="site-menu"><span class="menu-icon" aria-hidden="true"></span><span class="menu-label">Menu</span></button>
+          <div class="site-menu" id="site-menu" hidden>
             <a href="/">Home</a>
             <a href="/#coverage">State coverage</a>
             <a href="/updates">What’s new</a>
@@ -24,20 +40,20 @@
             <a href="/changelog">Changelog</a>
             <a href="/share-a-permit" aria-current="page">Share a permit</a>
             <a href="/install">Install</a>
-        </div>
-      </nav>
+          </div>
+        </nav>
+        <a class="button button-small header-install" href="/install">Get the app</a>
+      </div>
     </header>
     <main id="main">
-      <section class="atlas-share" aria-labelledby="permit-research-title">
-        <div class="atlas-wrap">
-          <section class="permit-research-callout" aria-labelledby="permit-research-title">
-            <div class="permit-research-copy">
-              <p class="map-key">Help chart the next state</p>
-              <h1 id="permit-research-title">A real permit helps us build a better route.</h1>
-              <p>Every state writes and formats permits differently. Examples from real trips show us how a state describes roads, turns, restrictions, and special instructions. Permits from states we do not support help us start new coverage; additional examples from supported states help us catch more formats and make existing routing stronger.</p>
-              <p class="permit-privacy-note"><strong>Before you upload:</strong> remove or cover Social Security numbers, driver’s-license numbers, payment details, signatures, or other private information that is not needed to understand the route. Submit only files you have permission to share.</p>
-              <p class="permit-email-note">Submissions are sent privately to <a href="mailto:permitroutepro@gmail.com">permitroutepro@gmail.com</a>. They are used for routing research, not published, and are not requests to route an active trip.</p>
-            </div>
+      <section class="share" aria-labelledby="permit-research-title">
+        <div class="wrap share-grid">
+          <div class="share-copy">
+            <h1 id="permit-research-title">A real permit helps us build a better route.</h1>
+            <p>Every state writes and formats permits differently. Examples from real trips show us how a state describes roads, turns, restrictions, and special instructions. Permits from states we do not support help us start new coverage; additional examples from supported states help us catch more formats and make existing routing stronger.</p>
+            <p class="permit-privacy-note"><strong>Before you upload:</strong> remove or cover Social Security numbers, driver’s-license numbers, payment details, signatures, or other private information that is not needed to understand the route. Submit only files you have permission to share.</p>
+            <p class="permit-email-note">Submissions are sent privately to <a href="mailto:permitroutepro@gmail.com">permitroutepro@gmail.com</a>. They are used for routing research, not published, and are not requests to route an active trip.</p>
+          </div>
             <form class="permit-research-form" data-permit-form>
               <div class="permit-field-grid">
                 <label>Your name<input name="name" type="text" autocomplete="name" maxlength="120" required></label>
@@ -52,15 +68,52 @@
                 <output data-permit-file-summary>No files selected.</output>
               </label>
               <label class="permit-consent"><input name="permissionConfirmed" type="checkbox" required><span>I have permission to share these files and understand they will be emailed to Permit Route Pro for routing research.</span></label>
-              <button class="route-button permit-submit" type="submit">Send permit for routing research</button>
+              <button class="button button-primary permit-submit" type="submit">Send permit for routing research</button>
               <p class="permit-form-status" role="status" aria-live="polite" data-permit-status></p>
             </form>
-          </section>
         </div>
       </section>
     </main>
-    <footer class="atlas-wrap atlas-footer">For alpha testing and evaluation. Verify every route against the issued permit.</footer>
-    <script src="apk-downloads.js?v=0.4.28-alpha.57-15f8b0a-54"></script>
-    <script src="concepts/concepts.js?v=0.4.28-alpha.57-15f8b0a-54"></script>
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <div class="footer-about">
+          <a class="brand" href="/"><img class="brand-mark" src="/assets/icons/app-icon-96.webp" alt="" width="32" height="32" loading="lazy"><span>Permit Route Pro</span></a>
+          <p>For alpha testing and evaluation. Verify every route against the issued permit.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer">
+          <div>
+            <h2>The app</h2>
+            <ul>
+              <li><a href="/install">Install</a></li>
+              <li><a href="/#coverage">State coverage</a></li>
+              <li><a href="/screenshots">App screenshots</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Learn</h2>
+            <ul>
+              <li><a href="/tutorial">App tutorial</a></li>
+              <li><a href="/permit-route-review">Route review guide</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Releases</h2>
+            <ul>
+              <li><a href="/updates">What’s new</a></li>
+              <li><a href="/changelog">Changelog</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Contact</h2>
+            <ul>
+              <li><a href="/share-a-permit">Share a permit</a></li>
+              <li><a href="mailto:permitroutepro@gmail.com">permitroutepro@gmail.com</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </footer>
+    <script src="/apk-downloads.js?v=0.4.28-alpha.58-cdb2f9b-56"></script>
+    <script src="/site.js?v=0.4.28-alpha.58-cdb2f9b-56"></script>
   </body>
 </html>

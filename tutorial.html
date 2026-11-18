@@ -6,32 +6,31 @@
     <meta name="description" content="Step-by-step Permit Route Pro tutorial with screenshots: add a permit from email or PDF, verify the route, navigate, use the compass, and every other feature.">
     <link rel="canonical" href="https://permit-route-pro.com/tutorial">
     <title>App Tutorial | Permit Route Pro</title>
-    <link rel="stylesheet" href="concepts/concepts.css?v=0.4.28-alpha.57-15f8b0a-54">
-    <style>
-      .tutorial-page .atlas-nav { flex-wrap: wrap; padding-block: 16px; }
-      .tutorial { max-width: 900px; padding-block: 48px 64px; line-height: 1.7; }
-      .tutorial h1 { font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.12; }
-      .tutorial h2 { margin-top: 3rem; line-height: 1.3; scroll-margin-top: 16px; }
-      .tutorial h3 { margin: 0 0 0.5rem; line-height: 1.3; }
-      .tutorial a { text-underline-offset: 3px; }
-      .tutorial-jump { display: flex; flex-wrap: wrap; gap: 12px; }
-      .tutorial-step { margin-top: 1.5rem; padding: 20px 22px; background: #fffaf0; border: 1px solid #a89f87; }
-      .tutorial-step ul { margin: 0; padding-left: 1.2rem; }
-      .tutorial-shots { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; margin-top: 18px; }
-      .tutorial-shots figure { margin: 0; width: min(260px, calc(50% - 8px)); text-align: center; }
-      .tutorial-shots.small figure { width: min(150px, calc(33% - 11px)); }
-      .tutorial-shots img { display: block; width: 100%; height: auto; border-radius: 12px; border: 1px solid #a89f87; }
-      .tutorial-shots figcaption { padding-top: 6px; font-size: 0.85rem; }
-      .tutorial .route-button { margin-top: 1rem; }
-    </style>
+    <meta name="theme-color" content="#000000">
+    <meta name="color-scheme" content="dark">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Permit Route Pro">
+    <meta property="og:title" content="App Tutorial | Permit Route Pro">
+    <meta property="og:description" content="Step-by-step Permit Route Pro tutorial with screenshots: add a permit from email or PDF, verify the route, navigate, use the compass, and every other feature.">
+    <meta property="og:url" content="https://permit-route-pro.com/tutorial">
+    <meta property="og:image" content="https://permit-route-pro.com/assets/og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/icons/favicon-48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/icon-192.png">
+    <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+    <link rel="preload" href="/fonts/dm-sans-variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/site.css?v=0.4.28-alpha.58-cdb2f9b-56">
   </head>
-  <body class="atlas tutorial-page">
+  <body class="page-tutorial">
     <a class="skip-link" href="#main">Skip to content</a>
-    <header class="atlas-wrap site-header">
-      <nav class="atlas-nav" aria-label="Primary navigation">
-        <a class="atlas-brand" href="/">Permit Route Pro</a>
-        <button class="site-menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="site-menu"><span class="site-menu-icon" aria-hidden="true">☰</span> Menu</button>
-        <div class="site-menu" id="site-menu" hidden>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="/"><img class="brand-mark" src="/assets/icons/app-icon-96.webp" alt="" width="32" height="32"><span>Permit Route Pro</span></a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <button class="site-menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="site-menu"><span class="menu-icon" aria-hidden="true"></span><span class="menu-label">Menu</span></button>
+          <div class="site-menu" id="site-menu" hidden>
             <a href="/">Home</a>
             <a href="/#coverage">State coverage</a>
             <a href="/updates">What’s new</a>
@@ -41,310 +40,395 @@
             <a href="/changelog">Changelog</a>
             <a href="/share-a-permit">Share a permit</a>
             <a href="/install">Install</a>
-        </div>
-      </nav>
+          </div>
+        </nav>
+        <a class="button button-small header-install" href="/install">Get the app</a>
+      </div>
     </header>
-    <main id="main" class="atlas-wrap tutorial">
-      <article>
-        <p class="map-key">Permit Route Pro tutorial</p>
-        <h1>Learn the app, one step at a time.</h1>
-        <p>Start with the basics: add a permit, check the route, and drive it. The rest of the app is explained after that. Select any picture to see it full size. The same tutorial is in the app under My Account → Help &amp; Support → App tutorial.</p>
-        <p>The app is in alpha. Check the <a href="/#coverage">current state coverage</a>, and always follow your issued permit if it differs from the app.</p>
-        <div class="tutorial-jump">
-          <a class="route-button primary" href="#basics">Part 1: The basics</a>
-          <a class="route-button secondary" href="#more">Part 2: Everything else</a>
+    <main id="main">
+      <article class="wrap tutorial">
+        <header class="tutorial-head">
+          <h1>Learn the app, one step at a time.</h1>
+          <p>Start with the basics: add a permit, check the route, and drive it. The rest of the app is explained after that. Select any picture to see it full size. The same tutorial is in the app under My Account → Help &amp; Support → App tutorial.</p>
+          <p>The app is in alpha. Check the <a href="/#coverage">current state coverage</a>, and always follow your issued permit if it differs from the app.</p>
+        </header>
+        <div class="tutorial-layout">
+          <nav class="tutorial-toc" aria-label="Tutorial contents">
+            <details>
+              <summary>Contents</summary>
+              <div>
+                <h2><a href="#basics">Part 1: The basics</a></h2>
+                <ol>
+                  <li><a href="#add-your-permit">Add your permit</a></li>
+                  <li><a href="#or-open-the-permit-from-your-email">Or open the permit from your email</a></li>
+                  <li><a href="#let-the-app-read-the-permit">Let the app read the permit</a></li>
+                  <li><a href="#check-the-route-against-your-permit">Check the route against your permit</a></li>
+                  <li><a href="#fix-anything-that-is-wrong">Fix anything that is wrong</a></li>
+                  <li><a href="#confirm-and-accept-the-route">Confirm and accept the route</a></li>
+                  <li><a href="#drive-with-navigation">Drive with navigation</a></li>
+                  <li><a href="#the-compass-made-simple">The compass, made simple</a></li>
+                  <li><a href="#the-wind-dial">The wind dial</a></li>
+                  <li><a href="#if-you-leave-the-route">If you leave the route</a></li>
+                </ol>
+              </div>
+              <div>
+                <h2><a href="#more">Part 2: Everything else</a></h2>
+                <ul>
+                  <li><a href="#trips-with-more-than-one-permit">Trips with more than one permit</a></li>
+                  <li><a href="#your-trips">Your trips</a></li>
+                  <li><a href="#navigation-settings">Navigation settings</a></li>
+                  <li><a href="#report-a-road-problem">Report a road problem</a></li>
+                  <li><a href="#permit-history">Permit history</a></li>
+                  <li><a href="#audit-records">Audit records</a></li>
+                  <li><a href="#state-rules">State rules</a></li>
+                  <li><a href="#sunrise-sunset">Sunrise &amp; sunset</a></li>
+                  <li><a href="#wind-weather">Wind &amp; weather</a></li>
+                  <li><a href="#themes">Themes</a></li>
+                  <li><a href="#my-account">My account</a></li>
+                  <li><a href="#share-the-app">Share the app</a></li>
+                  <li><a href="#report-a-problem">Report a problem</a></li>
+                  <li><a href="#updates-and-about">Updates and about</a></li>
+                </ul>
+              </div>
+            </details>
+          </nav>
+          <div class="tutorial-body">
+            <h2 id="basics">Part 1: The basics</h2>
+            <p>Add a permit, check its route, and drive it.</p>
+            <section class="tutorial-step" id="add-your-permit">
+              <h3>1. Add your permit</h3>
+              <ul>
+                <li>On Home, tap Upload PDF and pick your permit. The original PDF works best because its text is clearer than a photo.</li>
+                <li>Scan permit takes photos with your camera. From gallery uses photos you already took.</li>
+                <li>Add every page of the same permit. Add a different permit separately (see Trips with more than one permit).</li>
+              </ul>
+              <div class="tutorial-shots">
+                <figure><a href="/assets/tutorial/home.webp"><img src="/assets/tutorial/home.webp" width="720" height="1516" decoding="async" alt="Home: Upload PDF, Scan permit, From gallery" loading="lazy"></a><figcaption>Home: Upload PDF, Scan permit, From gallery</figcaption></figure>
+              </div>
+            </section>
+            <section class="tutorial-step" id="or-open-the-permit-from-your-email">
+              <h3>2. Or open the permit from your email</h3>
+              <ul>
+                <li>In your email, tap the permit PDF attachment.</li>
+                <li>When Android asks which app to open it with, tap Permit Route Pro, then Just once or Always.</li>
+                <li>Choose Start a trip to collect several permits for one trip, pick a trip you already started, or Open as a single permit.</li>
+              </ul>
+              <div class="tutorial-shots">
+                <figure><a href="/assets/tutorial/email_open_with.webp"><img src="/assets/tutorial/email_open_with.webp" width="720" height="1392" decoding="async" alt="Open with → Permit Route Pro" loading="lazy"></a><figcaption>Open with → Permit Route Pro</figcaption></figure>
+                <figure><a href="/assets/tutorial/email_add_choice.webp"><img src="/assets/tutorial/email_add_choice.webp" width="720" height="1516" decoding="async" alt="Choose where the permit goes" loading="lazy"></a><figcaption>Choose where the permit goes</figcaption></figure>
+              </div>
+            </section>
+            <section class="tutorial-step" id="let-the-app-read-the-permit">
+              <h3>3. Let the app read the permit</h3>
+              <ul>
+                <li>The app reads the permit and finds the route. This can take a minute.</li>
+                <li>The screen may look frozen while it works. That is normal.</li>
+                <li>If reading fails, tap Try again or choose another PDF.</li>
+              </ul>
+              <div class="tutorial-shots">
+                <figure><a href="/assets/tutorial/reading.webp"><img src="/assets/tutorial/reading.webp" width="720" height="1516" decoding="async" alt="Reading your permit" loading="lazy"></a><figcaption>Reading your permit</figcaption></figure>
+              </div>
+            </section>
+            <section class="tutorial-step" id="check-the-route-against-your-permit">
+              <h3>4. Check the route against your permit</h3>
+              <ul>
+                <li>Verify route shows your original permit at the top and the route on a map below it.</li>
+                <li>On the map, S is the start and E is the end. The dots are the route points, and amber means they still need your review. Zoom in to see each point&#x27;s number.</li>
+                <li>Tap Full on the map to make it full screen, and Fit to see the whole route again. Pinch to zoom in.</li>
+                <li>Compare every road, turn, and the order with your permit. If they differ, your permit is right.</li>
+              </ul>
+              <div class="tutorial-shots">
+                <figure><a href="/assets/tutorial/verify_top.webp"><img src="/assets/tutorial/verify_top.webp" width="720" height="1516" decoding="async" alt="Verify route" loading="lazy"></a><figcaption>Verify route</figcaption></figure>
+                <figure><a href="/assets/tutorial/verify_map.webp"><img src="/assets/tutorial/verify_map.webp" width="720" height="1516" decoding="async" alt="Full-screen route map" loading="lazy"></a><figcaption>Full-screen route map</figcaption></figure>
+              </div>
+            </section>
+            <section class="tutorial-step" id="fix-anything-that-is-wrong">
+              <h3>5. Fix anything that is wrong</h3>
+              <ul>
+                <li>Route review lists each point in order. Tap the pencil to fix a point: type the exact words from your permit, then tap Save &amp; Re-geocode.</li>
+                <li>Tap the trash can to remove a point, or Add to add a missing one. You can also drag a pin on the map, then tap Rebuild route.</li>
+                <li>Permit text shows the words the app read. Tap ? for help.</li>
+                <li>Some states send an official route. Those routes are locked and cannot be edited.</li>
+              </ul>
+              <div class="tutorial-shots">
+                <figure><a href="/assets/tutorial/verify_points.webp"><img src="/assets/tutorial/verify_points.webp" width="720" height="1516" decoding="async" alt="Route review list" loading="lazy"></a><figcaption>Route review list</figcaption></figure>
+                <figure><a href="/assets/tutorial/edit_point.webp"><img src="/assets/tutorial/edit_point.webp" width="720" height="1516" decoding="async" alt="Edit route point" loading="lazy"></a><figcaption>Edit route point</figcaption></figure>
+              </div>
+            </section>
+            <section class="tutorial-step" id="confirm-and-accept-the-route">
+              <h3>6. Confirm and accept the route</h3>
+              <ul>
+                <li>When the route matches your permit, tick the box that says you verified the route.</li>
+                <li>Tap Accept route &amp; navigate. The app saves an audit record (a locked copy of the route you accepted and when), then starts navigation.</li>
+                <li>Inside a trip the button says Verify permit instead. You start driving later from the trip.</li>
+              </ul>
+              <div class="tutorial-shots">
+                <figure><a href="/assets/tutorial/confirm.webp"><img src="/assets/tutorial/confirm.webp" width="720" height="1516" decoding="async" alt="Tick the box, then accept" loading="lazy"></a><figcaption>Tick the box, then accept</figcaption></figure>
+              </div>
+            </section>
+            <section class="tutorial-step" id="drive-with-navigation">
+              <h3>7. Drive with navigation</h3>
+              <ul>
+                <li>Top: your next turn and how far away it is.</li>
+                <li>Bottom: time and miles left. Tap Details for more about the trip. Tap End to stop navigating.</li>
+                <li>Bottom left: your speed.</li>
+                <li>Right side, top to bottom: the compass, Report, Voice (it says Muted when off), Center, and More for zoom, Lock and Settings.</li>
+                <li>Lock keeps the map on your truck. Unlock it to look around, then tap Center to come back.</li>
+              </ul>
+              <div class="tutorial-shots">
+                <figure><a href="/assets/tutorial/navigation.webp"><img src="/assets/tutorial/navigation.webp" width="720" height="1516" decoding="async" alt="Navigation screen" loading="lazy"></a><figcaption>Navigation screen</figcaption></figure>
+              </div>
+            </section>
+            <section class="tutorial-step" id="the-compass-made-simple">
+              <h3>8. The compass, made simple</h3>
+              <ul>
+                <li>The compass is the round button with the red arrow, at the top right of the map.</li>
+                <li>The red arrow always points to north. That is all it shows.</li>
+                <li>Tap the compass to switch how the map turns:</li>
+                <li>Heading up (the normal setting): the road ahead is always at the top of the screen. The map turns as you turn, and the arrow moves to keep pointing north.</li>
+                <li>North up: north is always at the top, like a paper map. The arrow points straight up.</li>
+                <li>Example: in the right picture the truck is driving east, so north is on the left and the arrow points left.</li>
+                <li>Tapping the compass also puts the map back on your truck.</li>
+              </ul>
+              <div class="tutorial-shots small">
+                <figure><a href="/assets/tutorial/compass_north.webp"><img src="/assets/tutorial/compass_north.webp" width="240" height="240" decoding="async" alt="Arrow up: north is at the top" loading="lazy"></a><figcaption>Arrow up: north is at the top</figcaption></figure>
+                <figure><a href="/assets/tutorial/compass_east.webp"><img src="/assets/tutorial/compass_east.webp" width="240" height="240" decoding="async" alt="Arrow left: north is to your left" loading="lazy"></a><figcaption>Arrow left: north is to your left</figcaption></figure>
+              </div>
+            </section>
+            <section class="tutorial-step" id="the-wind-dial">
+              <h3>9. The wind dial</h3>
+              <ul>
+                <li>The small box at the top left shows wind and gust speeds. Tap its arrows to open the round dial. Wind never changes the map.</li>
+                <li>The arrow points the way the wind is blowing.</li>
+                <li>While you drive, the dial says Travel up: the top of the dial is the way your truck is going. Arrow pointing down means wind in your face. Arrow pointing up means wind pushing you from behind. Arrow pointing left or right means a crosswind.</li>
+                <li>When you are stopped it says North up: the top of the dial is north.</li>
+                <li>The numbers are wind and gust speeds in mph. Tap the dial for Wind &amp; weather. Tap the arrows again to shrink it.</li>
+              </ul>
+              <div class="tutorial-shots small">
+                <figure><a href="/assets/tutorial/wind_dial.webp"><img src="/assets/tutorial/wind_dial.webp" width="290" height="525" decoding="async" alt="Wind dial" loading="lazy"></a><figcaption>Wind dial</figcaption></figure>
+              </div>
+            </section>
+            <section class="tutorial-step" id="if-you-leave-the-route">
+              <h3>10. If you leave the route</h3>
+              <ul>
+                <li>A small red warning at the top says Off route, and the voice says &quot;Off route. Return to the permitted route.&quot;</li>
+                <li>A straight orange line points from your truck to the nearest part of your permitted route. It is not driving directions; find a safe, legal way back to the route.</li>
+                <li>When you are back on the route, the voice tells you.</li>
+              </ul>
+              <div class="tutorial-shots">
+                <figure><a href="/assets/tutorial/off_route.webp"><img src="/assets/tutorial/off_route.webp" width="720" height="1516" decoding="async" alt="Off route warning" loading="lazy"></a><figcaption>Off route warning</figcaption></figure>
+              </div>
+            </section>
+            <h2 id="more">Part 2: Everything else</h2>
+            <p>Trips, tools, settings, and themes.</p>
+            <section class="tutorial-step" id="trips-with-more-than-one-permit">
+              <h3>Trips with more than one permit</h3>
+              <ul>
+                <li>Open Trips and tap + to create a trip. You do not need a name; the app names it from the route.</li>
+                <li>Tap Add permit: Scan new permit, From gallery, Upload PDF, or Add existing permit. Or open each PDF from email and add it to the trip.</li>
+                <li>Tap Verify next permit and check each one the same way as in Part 1. Review all permits shows them together.</li>
+                <li>When every permit is verified, tap Review full trip. Each colored line is one permit&#x27;s route.</li>
+                <li>Tap Start entire trip. At a state line, the banner offers to switch to the next state&#x27;s permit.</li>
+              </ul>
+              <div class="tutorial-shots">
+                <figure><a href="/assets/tutorial/trip_detail.webp"><img src="/assets/tutorial/trip_detail.webp" width="720" height="1516" decoding="async" alt="Your trip" loading="lazy"></a><figcaption>Your trip</figcaption></figure>
+                <figure><a href="/assets/tutorial/add_permit_sheet.webp"><img src="/assets/tutorial/add_permit_sheet.webp" width="720" height="1516" decoding="async" alt="Add permit" loading="lazy"></a><figcaption>Add permit</figcaption></figure>
+                <figure><a href="/assets/tutorial/review_all.webp"><img src="/assets/tutorial/review_all.webp" width="720" height="1516" decoding="async" alt="Review all permits" loading="lazy"></a><figcaption>Review all permits</figcaption></figure>
+                <figure><a href="/assets/tutorial/trip_overview.webp"><img src="/assets/tutorial/trip_overview.webp" width="720" height="1516" decoding="async" alt="Start entire trip" loading="lazy"></a><figcaption>Start entire trip</figcaption></figure>
+              </div>
+            </section>
+            <section class="tutorial-step" id="your-trips">
+              <h3>Your trips</h3>
+              <ul>
+                <li>Trips lists your active and past trips. Tap a trip to continue.</li>
+                <li>A trip that already started shows Resume entire trip.</li>
+                <li>To delete a trip, open its ... menu or swipe it away. The app asks first, and the permits stay saved.</li>
+              </ul>
+              <div class="tutorial-shots">
+                <figure><a href="/assets/tutorial/trips.webp"><img src="/assets/tutorial/trips.webp" width="720" height="1516" decoding="async" alt="Trips" loading="lazy"></a><figcaption>Trips</figcaption></figure>
+              </div>
+            </section>
+            <section class="tutorial-step" id="navigation-settings">
+              <h3>Navigation settings</h3>
+              <ul>
+                <li>Tap More, then Settings during navigation to change voice, lock, map mode (Dark or Light), camera distance, automatic turn zoom, your truck icon and colors, and the route line.</li>
+                <li>My account → Navigation display has the truck icon and color, camera distance, automatic turn zoom, voice, lock, and North-up map. Map mode and the route line are only in Settings during navigation.</li>
+              </ul>
+              <div class="tutorial-shots">
+                <figure><a href="/assets/tutorial/nav_settings.webp"><img src="/assets/tutorial/nav_settings.webp" width="720" height="1516" decoding="async" alt="Navigation settings" loading="lazy"></a><figcaption>Navigation settings</figcaption></figure>
+                <figure><a href="/assets/tutorial/account_navigation.webp"><img src="/assets/tutorial/account_navigation.webp" width="720" height="1516" decoding="async" alt="My account settings" loading="lazy"></a><figcaption>My account settings</figcaption></figure>
+              </div>
+            </section>
+            <section class="tutorial-step" id="report-a-road-problem">
+              <h3>Report a road problem</h3>
+              <ul>
+                <li>Tap Report during navigation and pick what you see, such as Route blocked, Lane restricted, or Work zone.</li>
+                <li>Your report warns other permitted-load drivers. It does not change anyone&#x27;s approved route.</li>
+                <li>Near a report, the app asks if it is still there: tap Cleared or Still there.</li>
+                <li>Only touch the phone when it is safe and legal.</li>
+              </ul>
+              <div class="tutorial-shots">
+                <figure><a href="/assets/tutorial/report_condition.webp"><img src="/assets/tutorial/report_condition.webp" width="720" height="1516" decoding="async" alt="Report route condition" loading="lazy"></a><figcaption>Report route condition</figcaption></figure>
+              </div>
+            </section>
+            <section class="tutorial-step" id="permit-history">
+              <h3>Permit history</h3>
+              <ul>
+                <li>Every permit you added, grouped by state. Tap one to see details and resume navigation.</li>
+                <li>Use the ⋯ button to delete a route. Choose History settings in the ⋮ menu to remove old routes automatically. Audit records are always kept.</li>
+              </ul>
+              <div class="tutorial-shots">
+                <figure><a href="/assets/tutorial/history.webp"><img src="/assets/tutorial/history.webp" width="720" height="1516" decoding="async" alt="Permit history" loading="lazy"></a><figcaption>Permit history</figcaption></figure>
+              </div>
+            </section>
+            <section class="tutorial-step" id="audit-records">
+              <h3>Audit records</h3>
+              <ul>
+                <li>One saved record for each route you accepted: the permit, the time, your device, and the route.</li>
+                <li>Each record includes fingerprints (hashes) of the permit text and image, which tie the record to the original permit. Tap a record to view it.</li>
+              </ul>
+              <div class="tutorial-shots">
+                <figure><a href="/assets/tutorial/audit.webp"><img src="/assets/tutorial/audit.webp" width="720" height="1516" decoding="async" alt="Audit records" loading="lazy"></a><figcaption>Audit records</figcaption></figure>
+              </div>
+            </section>
+            <section class="tutorial-step" id="state-rules">
+              <h3>State rules</h3>
+              <ul>
+                <li>Escort and pilot-car rules for every state: when an escort is needed, signs and flags, equipment, insurance, and certifications.</li>
+                <li>Search for a state or agency. Always confirm with your permit and the state.</li>
+              </ul>
+              <div class="tutorial-shots">
+                <figure><a href="/assets/tutorial/state_rules.webp"><img src="/assets/tutorial/state_rules.webp" width="720" height="1516" decoding="async" alt="State rules" loading="lazy"></a><figcaption>State rules</figcaption></figure>
+              </div>
+            </section>
+            <section class="tutorial-step" id="sunrise-sunset">
+              <h3>Sunrise &amp; sunset</h3>
+              <ul>
+                <li>Sunrise, sunset, and twilight times for any date and place. Tap Use my location or Change city.</li>
+                <li>Useful for daylight-only travel rules.</li>
+              </ul>
+              <div class="tutorial-shots">
+                <figure><a href="/assets/tutorial/sunrise.webp"><img src="/assets/tutorial/sunrise.webp" width="720" height="1516" decoding="async" alt="Sunrise &amp; sunset" loading="lazy"></a><figcaption>Sunrise &amp; sunset</figcaption></figure>
+              </div>
+            </section>
+            <section class="tutorial-step" id="wind-weather">
+              <h3>Wind &amp; weather</h3>
+              <ul>
+                <li>Wind speed, gusts, and direction from the National Weather Service for where you are. Tap Change city for any U.S. city.</li>
+                <li>Readings refresh about every 10 minutes while the screen is open.</li>
+              </ul>
+              <div class="tutorial-shots">
+                <figure><a href="/assets/tutorial/wind.webp"><img src="/assets/tutorial/wind.webp" width="720" height="1516" decoding="async" alt="Wind &amp; weather" loading="lazy"></a><figcaption>Wind &amp; weather</figcaption></figure>
+              </div>
+            </section>
+            <section class="tutorial-step" id="themes">
+              <h3>Themes</h3>
+              <ul>
+                <li>Tap Appearance in the tools on Home, or go to My account → Appearance.</li>
+                <li>Tap a theme to select it, then tap Use and the theme name.</li>
+                <li>Themes: Original, Roadbook, Afterhours, Horizon, Field Notes, and Wayfinder.</li>
+                <li>A theme changes the colors and the Home layout. Your choice stays after app updates.</li>
+              </ul>
+              <div class="tutorial-shots">
+                <figure><a href="/assets/tutorial/themes.webp"><img src="/assets/tutorial/themes.webp" width="720" height="1516" decoding="async" alt="Appearance" loading="lazy"></a><figcaption>Appearance</figcaption></figure>
+                <figure><a href="/assets/tutorial/theme_roadbook.webp"><img src="/assets/tutorial/theme_roadbook.webp" width="720" height="1516" decoding="async" alt="Roadbook" loading="lazy"></a><figcaption>Roadbook</figcaption></figure>
+                <figure><a href="/assets/tutorial/theme_afterhours.webp"><img src="/assets/tutorial/theme_afterhours.webp" width="720" height="1516" decoding="async" alt="Afterhours" loading="lazy"></a><figcaption>Afterhours</figcaption></figure>
+              </div>
+            </section>
+            <section class="tutorial-step" id="my-account">
+              <h3>My account</h3>
+              <ul>
+                <li>Your profile, subscription, Appearance, Navigation display, Check for updates, Share app, Help &amp; support, and Sign out.</li>
+                <li>Subscriptions are handled through Stripe: Subscribe, Manage subscription, or Refresh access.</li>
+                <li>One phone per account: signing in on a new phone signs out the old one.</li>
+              </ul>
+              <div class="tutorial-shots">
+                <figure><a href="/assets/tutorial/account.webp"><img src="/assets/tutorial/account.webp" width="720" height="1516" decoding="async" alt="My account" loading="lazy"></a><figcaption>My account</figcaption></figure>
+              </div>
+            </section>
+            <section class="tutorial-step" id="share-the-app">
+              <h3>Share the app</h3>
+              <ul>
+                <li>Show the QR code to another driver, or send the install link by text or email.</li>
+              </ul>
+              <div class="tutorial-shots">
+                <figure><a href="/assets/tutorial/share.webp"><img src="/assets/tutorial/share.webp" width="720" height="1516" decoding="async" alt="Share app" loading="lazy"></a><figcaption>Share app</figcaption></figure>
+              </div>
+            </section>
+            <section class="tutorial-step" id="report-a-problem">
+              <h3>Report a problem</h3>
+              <ul>
+                <li>My account → Help &amp; support → Report a problem.</li>
+                <li>Say what went wrong, add screenshots or the permit, and tap Send report.</li>
+              </ul>
+              <div class="tutorial-shots">
+                <figure><a href="/assets/tutorial/report_problem.webp"><img src="/assets/tutorial/report_problem.webp" width="720" height="1516" decoding="async" alt="Report a problem" loading="lazy"></a><figcaption>Report a problem</figcaption></figure>
+              </div>
+            </section>
+            <section class="tutorial-step" id="updates-and-about">
+              <h3>Updates and about</h3>
+              <ul>
+                <li>Updates download and install by themselves while the app is closed, never during navigation. My account → App updates chooses Wi-Fi only or mobile data too; Check for updates gets one right away.</li>
+                <li>About shows your version and has Contact support.</li>
+              </ul>
+              <div class="tutorial-shots">
+                <figure><a href="/assets/tutorial/about.webp"><img src="/assets/tutorial/about.webp" width="720" height="1516" decoding="async" alt="About" loading="lazy"></a><figcaption>About</figcaption></figure>
+              </div>
+            </section>
+            <div class="tutorial-end">
+              <h2>Ready to try it?</h2>
+              <p>Permit Route Pro is distributed as an Android APK during alpha. Follow the <a href="/install">installation instructions</a> and begin with a test permit.</p>
+              <a class="button button-primary" href="/install">Install Permit Route Pro for Android</a>
+            </div>
+          </div>
         </div>
-
-        <h2 id="basics">Part 1: The basics</h2>
-        <p>Add a permit, check its route, and drive it.</p>
-        <section class="tutorial-step">
-          <h3>1. Add your permit</h3>
-          <ul>
-            <li>On Home, tap Upload PDF and pick your permit. The original PDF works best because its text is clearer than a photo.</li>
-            <li>Scan permit takes photos with your camera. From gallery uses photos you already took.</li>
-            <li>Add every page of the same permit. Add a different permit separately (see Trips with more than one permit).</li>
-          </ul>
-          <div class="tutorial-shots">
-            <figure><a href="assets/tutorial/home.webp"><img src="assets/tutorial/home.webp" alt="Home: Upload PDF, Scan permit, From gallery" loading="lazy"></a><figcaption>Home: Upload PDF, Scan permit, From gallery</figcaption></figure>
-          </div>
-        </section>
-        <section class="tutorial-step">
-          <h3>2. Or open the permit from your email</h3>
-          <ul>
-            <li>In your email, tap the permit PDF attachment.</li>
-            <li>When Android asks which app to open it with, tap Permit Route Pro, then Just once or Always.</li>
-            <li>Choose Start a trip to collect several permits for one trip, pick a trip you already started, or Open as a single permit.</li>
-          </ul>
-          <div class="tutorial-shots">
-            <figure><a href="assets/tutorial/email_open_with.webp"><img src="assets/tutorial/email_open_with.webp" alt="Open with → Permit Route Pro" loading="lazy"></a><figcaption>Open with → Permit Route Pro</figcaption></figure>
-            <figure><a href="assets/tutorial/email_add_choice.webp"><img src="assets/tutorial/email_add_choice.webp" alt="Choose where the permit goes" loading="lazy"></a><figcaption>Choose where the permit goes</figcaption></figure>
-          </div>
-        </section>
-        <section class="tutorial-step">
-          <h3>3. Let the app read the permit</h3>
-          <ul>
-            <li>The app reads the permit and finds the route. This can take a minute.</li>
-            <li>The screen may look frozen while it works. That is normal.</li>
-            <li>If reading fails, tap Try again or choose another PDF.</li>
-          </ul>
-          <div class="tutorial-shots">
-            <figure><a href="assets/tutorial/reading.webp"><img src="assets/tutorial/reading.webp" alt="Reading your permit" loading="lazy"></a><figcaption>Reading your permit</figcaption></figure>
-          </div>
-        </section>
-        <section class="tutorial-step">
-          <h3>4. Check the route against your permit</h3>
-          <ul>
-            <li>Verify route shows your original permit at the top and the route on a map below it.</li>
-            <li>On the map, S is the start and E is the end. The dots are the route points, and amber means they still need your review. Zoom in to see each point&#x27;s number.</li>
-            <li>Tap Full on the map to make it full screen, and Fit to see the whole route again. Pinch to zoom in.</li>
-            <li>Compare every road, turn, and the order with your permit. If they differ, your permit is right.</li>
-          </ul>
-          <div class="tutorial-shots">
-            <figure><a href="assets/tutorial/verify_top.webp"><img src="assets/tutorial/verify_top.webp" alt="Verify route" loading="lazy"></a><figcaption>Verify route</figcaption></figure>
-            <figure><a href="assets/tutorial/verify_map.webp"><img src="assets/tutorial/verify_map.webp" alt="Full-screen route map" loading="lazy"></a><figcaption>Full-screen route map</figcaption></figure>
-          </div>
-        </section>
-        <section class="tutorial-step">
-          <h3>5. Fix anything that is wrong</h3>
-          <ul>
-            <li>Route review lists each point in order. Tap the pencil to fix a point: type the exact words from your permit, then tap Save &amp; Re-geocode.</li>
-            <li>Tap the trash can to remove a point, or Add to add a missing one. You can also drag a pin on the map, then tap Rebuild route.</li>
-            <li>Permit text shows the words the app read. Tap ? for help.</li>
-            <li>Some states send an official route. Those routes are locked and cannot be edited.</li>
-          </ul>
-          <div class="tutorial-shots">
-            <figure><a href="assets/tutorial/verify_points.webp"><img src="assets/tutorial/verify_points.webp" alt="Route review list" loading="lazy"></a><figcaption>Route review list</figcaption></figure>
-            <figure><a href="assets/tutorial/edit_point.webp"><img src="assets/tutorial/edit_point.webp" alt="Edit route point" loading="lazy"></a><figcaption>Edit route point</figcaption></figure>
-          </div>
-        </section>
-        <section class="tutorial-step">
-          <h3>6. Confirm and accept the route</h3>
-          <ul>
-            <li>When the route matches your permit, tick the box that says you verified the route.</li>
-            <li>Tap Accept route &amp; navigate. The app saves an audit record (a locked copy of the route you accepted and when), then starts navigation.</li>
-            <li>Inside a trip the button says Verify permit instead. You start driving later from the trip.</li>
-          </ul>
-          <div class="tutorial-shots">
-            <figure><a href="assets/tutorial/confirm.webp"><img src="assets/tutorial/confirm.webp" alt="Tick the box, then accept" loading="lazy"></a><figcaption>Tick the box, then accept</figcaption></figure>
-          </div>
-        </section>
-        <section class="tutorial-step">
-          <h3>7. Drive with navigation</h3>
-          <ul>
-            <li>Top: your next turn and how far away it is.</li>
-            <li>Bottom: time and miles left. Tap Details for more about the trip. Tap End to stop navigating.</li>
-            <li>Bottom left: your speed.</li>
-            <li>Right side, top to bottom: the compass, Report, Voice (it says Muted when off), Center, and More for zoom, Lock and Settings.</li>
-            <li>Lock keeps the map on your truck. Unlock it to look around, then tap Center to come back.</li>
-          </ul>
-          <div class="tutorial-shots">
-            <figure><a href="assets/tutorial/navigation.webp"><img src="assets/tutorial/navigation.webp" alt="Navigation screen" loading="lazy"></a><figcaption>Navigation screen</figcaption></figure>
-          </div>
-        </section>
-        <section class="tutorial-step">
-          <h3>8. The compass, made simple</h3>
-          <ul>
-            <li>The compass is the round button with the red arrow, at the top right of the map.</li>
-            <li>The red arrow always points to north. That is all it shows.</li>
-            <li>Tap the compass to switch how the map turns:</li>
-            <li>Heading up (the normal setting): the road ahead is always at the top of the screen. The map turns as you turn, and the arrow moves to keep pointing north.</li>
-            <li>North up: north is always at the top, like a paper map. The arrow points straight up.</li>
-            <li>Example: in the right picture the truck is driving east, so north is on the left and the arrow points left.</li>
-            <li>Tapping the compass also puts the map back on your truck.</li>
-          </ul>
-          <div class="tutorial-shots small">
-            <figure><a href="assets/tutorial/compass_north.webp"><img src="assets/tutorial/compass_north.webp" alt="Arrow up: north is at the top" loading="lazy"></a><figcaption>Arrow up: north is at the top</figcaption></figure>
-            <figure><a href="assets/tutorial/compass_east.webp"><img src="assets/tutorial/compass_east.webp" alt="Arrow left: north is to your left" loading="lazy"></a><figcaption>Arrow left: north is to your left</figcaption></figure>
-          </div>
-        </section>
-        <section class="tutorial-step">
-          <h3>9. The wind dial</h3>
-          <ul>
-            <li>The small box at the top left shows wind and gust speeds. Tap its arrows to open the round dial. Wind never changes the map.</li>
-            <li>The arrow points the way the wind is blowing.</li>
-            <li>While you drive, the dial says Travel up: the top of the dial is the way your truck is going. Arrow pointing down means wind in your face. Arrow pointing up means wind pushing you from behind. Arrow pointing left or right means a crosswind.</li>
-            <li>When you are stopped it says North up: the top of the dial is north.</li>
-            <li>The numbers are wind and gust speeds in mph. Tap the dial for Wind &amp; weather. Tap the arrows again to shrink it.</li>
-          </ul>
-          <div class="tutorial-shots small">
-            <figure><a href="assets/tutorial/wind_dial.webp"><img src="assets/tutorial/wind_dial.webp" alt="Wind dial" loading="lazy"></a><figcaption>Wind dial</figcaption></figure>
-          </div>
-        </section>
-        <section class="tutorial-step">
-          <h3>10. If you leave the route</h3>
-          <ul>
-            <li>A small red warning at the top says Off route, and the voice says &quot;Off route. Return to the permitted route.&quot;</li>
-            <li>A straight orange line points from your truck to the nearest part of your permitted route. It is not driving directions; find a safe, legal way back to the route.</li>
-            <li>When you are back on the route, the voice tells you.</li>
-          </ul>
-          <div class="tutorial-shots">
-            <figure><a href="assets/tutorial/off_route.webp"><img src="assets/tutorial/off_route.webp" alt="Off route warning" loading="lazy"></a><figcaption>Off route warning</figcaption></figure>
-          </div>
-        </section>
-        <h2 id="more">Part 2: Everything else</h2>
-        <p>Trips, tools, settings, and themes.</p>
-        <section class="tutorial-step">
-          <h3>Trips with more than one permit</h3>
-          <ul>
-            <li>Open Trips and tap + to create a trip. You do not need a name; the app names it from the route.</li>
-            <li>Tap Add permit: Scan new permit, From gallery, Upload PDF, or Add existing permit. Or open each PDF from email and add it to the trip.</li>
-            <li>Tap Verify next permit and check each one the same way as in Part 1. Review all permits shows them together.</li>
-            <li>When every permit is verified, tap Review full trip. Each colored line is one permit&#x27;s route.</li>
-            <li>Tap Start entire trip. At a state line, the banner offers to switch to the next state&#x27;s permit.</li>
-          </ul>
-          <div class="tutorial-shots">
-            <figure><a href="assets/tutorial/trip_detail.webp"><img src="assets/tutorial/trip_detail.webp" alt="Your trip" loading="lazy"></a><figcaption>Your trip</figcaption></figure>
-            <figure><a href="assets/tutorial/add_permit_sheet.webp"><img src="assets/tutorial/add_permit_sheet.webp" alt="Add permit" loading="lazy"></a><figcaption>Add permit</figcaption></figure>
-            <figure><a href="assets/tutorial/review_all.webp"><img src="assets/tutorial/review_all.webp" alt="Review all permits" loading="lazy"></a><figcaption>Review all permits</figcaption></figure>
-            <figure><a href="assets/tutorial/trip_overview.webp"><img src="assets/tutorial/trip_overview.webp" alt="Start entire trip" loading="lazy"></a><figcaption>Start entire trip</figcaption></figure>
-          </div>
-        </section>
-        <section class="tutorial-step">
-          <h3>Your trips</h3>
-          <ul>
-            <li>Trips lists your active and past trips. Tap a trip to continue.</li>
-            <li>A trip that already started shows Resume entire trip.</li>
-            <li>To delete a trip, open its ... menu or swipe it away. The app asks first, and the permits stay saved.</li>
-          </ul>
-          <div class="tutorial-shots">
-            <figure><a href="assets/tutorial/trips.webp"><img src="assets/tutorial/trips.webp" alt="Trips" loading="lazy"></a><figcaption>Trips</figcaption></figure>
-          </div>
-        </section>
-        <section class="tutorial-step">
-          <h3>Navigation settings</h3>
-          <ul>
-            <li>Tap More, then Settings during navigation to change voice, lock, map mode (Dark or Light), camera distance, automatic turn zoom, your truck icon and colors, and the route line.</li>
-            <li>My account → Navigation display has the truck icon and color, camera distance, automatic turn zoom, voice, lock, and North-up map. Map mode and the route line are only in Settings during navigation.</li>
-          </ul>
-          <div class="tutorial-shots">
-            <figure><a href="assets/tutorial/nav_settings.webp"><img src="assets/tutorial/nav_settings.webp" alt="Navigation settings" loading="lazy"></a><figcaption>Navigation settings</figcaption></figure>
-            <figure><a href="assets/tutorial/account_navigation.webp"><img src="assets/tutorial/account_navigation.webp" alt="My account settings" loading="lazy"></a><figcaption>My account settings</figcaption></figure>
-          </div>
-        </section>
-        <section class="tutorial-step">
-          <h3>Report a road problem</h3>
-          <ul>
-            <li>Tap Report during navigation and pick what you see, such as Route blocked, Lane restricted, or Work zone.</li>
-            <li>Your report warns other permitted-load drivers. It does not change anyone&#x27;s approved route.</li>
-            <li>Near a report, the app asks if it is still there: tap Cleared or Still there.</li>
-            <li>Only touch the phone when it is safe and legal.</li>
-          </ul>
-          <div class="tutorial-shots">
-            <figure><a href="assets/tutorial/report_condition.webp"><img src="assets/tutorial/report_condition.webp" alt="Report route condition" loading="lazy"></a><figcaption>Report route condition</figcaption></figure>
-          </div>
-        </section>
-        <section class="tutorial-step">
-          <h3>Permit history</h3>
-          <ul>
-            <li>Every permit you added, grouped by state. Tap one to see details and resume navigation.</li>
-            <li>Use the ⋯ button to delete a route. Choose History settings in the ⋮ menu to remove old routes automatically. Audit records are always kept.</li>
-          </ul>
-          <div class="tutorial-shots">
-            <figure><a href="assets/tutorial/history.webp"><img src="assets/tutorial/history.webp" alt="Permit history" loading="lazy"></a><figcaption>Permit history</figcaption></figure>
-          </div>
-        </section>
-        <section class="tutorial-step">
-          <h3>Audit records</h3>
-          <ul>
-            <li>One saved record for each route you accepted: the permit, the time, your device, and the route.</li>
-            <li>Each record includes fingerprints (hashes) of the permit text and image, which tie the record to the original permit. Tap a record to view it.</li>
-          </ul>
-          <div class="tutorial-shots">
-            <figure><a href="assets/tutorial/audit.webp"><img src="assets/tutorial/audit.webp" alt="Audit records" loading="lazy"></a><figcaption>Audit records</figcaption></figure>
-          </div>
-        </section>
-        <section class="tutorial-step">
-          <h3>State rules</h3>
-          <ul>
-            <li>Escort and pilot-car rules for every state: when an escort is needed, signs and flags, equipment, insurance, and certifications.</li>
-            <li>Search for a state or agency. Always confirm with your permit and the state.</li>
-          </ul>
-          <div class="tutorial-shots">
-            <figure><a href="assets/tutorial/state_rules.webp"><img src="assets/tutorial/state_rules.webp" alt="State rules" loading="lazy"></a><figcaption>State rules</figcaption></figure>
-          </div>
-        </section>
-        <section class="tutorial-step">
-          <h3>Sunrise &amp; sunset</h3>
-          <ul>
-            <li>Sunrise, sunset, and twilight times for any date and place. Tap Use my location or Change city.</li>
-            <li>Useful for daylight-only travel rules.</li>
-          </ul>
-          <div class="tutorial-shots">
-            <figure><a href="assets/tutorial/sunrise.webp"><img src="assets/tutorial/sunrise.webp" alt="Sunrise &amp; sunset" loading="lazy"></a><figcaption>Sunrise &amp; sunset</figcaption></figure>
-          </div>
-        </section>
-        <section class="tutorial-step">
-          <h3>Wind &amp; weather</h3>
-          <ul>
-            <li>Wind speed, gusts, and direction from the National Weather Service for where you are. Tap Change city for any U.S. city.</li>
-            <li>Readings refresh about every 10 minutes while the screen is open.</li>
-          </ul>
-          <div class="tutorial-shots">
-            <figure><a href="assets/tutorial/wind.webp"><img src="assets/tutorial/wind.webp" alt="Wind &amp; weather" loading="lazy"></a><figcaption>Wind &amp; weather</figcaption></figure>
-          </div>
-        </section>
-        <section class="tutorial-step">
-          <h3>Themes</h3>
-          <ul>
-            <li>Tap Appearance in the tools on Home, or go to My account → Appearance.</li>
-            <li>Tap a theme to select it, then tap Use and the theme name.</li>
-            <li>Themes: Original, Roadbook, Afterhours, Horizon, Field Notes, and Wayfinder.</li>
-            <li>A theme changes the colors and the Home layout. Your choice stays after app updates.</li>
-          </ul>
-          <div class="tutorial-shots">
-            <figure><a href="assets/tutorial/themes.webp"><img src="assets/tutorial/themes.webp" alt="Appearance" loading="lazy"></a><figcaption>Appearance</figcaption></figure>
-            <figure><a href="assets/tutorial/theme_roadbook.webp"><img src="assets/tutorial/theme_roadbook.webp" alt="Roadbook" loading="lazy"></a><figcaption>Roadbook</figcaption></figure>
-            <figure><a href="assets/tutorial/theme_afterhours.webp"><img src="assets/tutorial/theme_afterhours.webp" alt="Afterhours" loading="lazy"></a><figcaption>Afterhours</figcaption></figure>
-          </div>
-        </section>
-        <section class="tutorial-step">
-          <h3>My account</h3>
-          <ul>
-            <li>Your profile, subscription, Appearance, Navigation display, Check for updates, Share app, Help &amp; support, and Sign out.</li>
-            <li>Subscriptions are handled through Stripe: Subscribe, Manage subscription, or Refresh access.</li>
-            <li>One phone per account: signing in on a new phone signs out the old one.</li>
-          </ul>
-          <div class="tutorial-shots">
-            <figure><a href="assets/tutorial/account.webp"><img src="assets/tutorial/account.webp" alt="My account" loading="lazy"></a><figcaption>My account</figcaption></figure>
-          </div>
-        </section>
-        <section class="tutorial-step">
-          <h3>Share the app</h3>
-          <ul>
-            <li>Show the QR code to another driver, or send the install link by text or email.</li>
-          </ul>
-          <div class="tutorial-shots">
-            <figure><a href="assets/tutorial/share.webp"><img src="assets/tutorial/share.webp" alt="Share app" loading="lazy"></a><figcaption>Share app</figcaption></figure>
-          </div>
-        </section>
-        <section class="tutorial-step">
-          <h3>Report a problem</h3>
-          <ul>
-            <li>My account → Help &amp; support → Report a problem.</li>
-            <li>Say what went wrong, add screenshots or the permit, and tap Send report.</li>
-          </ul>
-          <div class="tutorial-shots">
-            <figure><a href="assets/tutorial/report_problem.webp"><img src="assets/tutorial/report_problem.webp" alt="Report a problem" loading="lazy"></a><figcaption>Report a problem</figcaption></figure>
-          </div>
-        </section>
-        <section class="tutorial-step">
-          <h3>Updates and about</h3>
-          <ul>
-            <li>Updates download and install by themselves while the app is closed, never during navigation. My account → App updates chooses Wi-Fi only or mobile data too; Check for updates gets one right away.</li>
-            <li>About shows your version and has Contact support.</li>
-          </ul>
-          <div class="tutorial-shots">
-            <figure><a href="assets/tutorial/about.webp"><img src="assets/tutorial/about.webp" alt="About" loading="lazy"></a><figcaption>About</figcaption></figure>
-          </div>
-        </section>
-
-        <h2>Ready to try it?</h2>
-        <p>Permit Route Pro is distributed as an Android APK during alpha. Follow the <a href="/install">installation instructions</a> and begin with a test permit.</p>
-        <a class="route-button primary" href="/install">Install Permit Route Pro for Android</a>
       </article>
     </main>
-    <footer class="atlas-wrap atlas-footer">For alpha testing and evaluation. Verify every route against the issued permit.</footer>
-    <script src="apk-downloads.js?v=0.4.28-alpha.57-15f8b0a-54"></script>
-    <script src="concepts/concepts.js?v=0.4.28-alpha.57-15f8b0a-54"></script>
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <div class="footer-about">
+          <a class="brand" href="/"><img class="brand-mark" src="/assets/icons/app-icon-96.webp" alt="" width="32" height="32" loading="lazy"><span>Permit Route Pro</span></a>
+          <p>For alpha testing and evaluation. Verify every route against the issued permit.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer">
+          <div>
+            <h2>The app</h2>
+            <ul>
+              <li><a href="/install">Install</a></li>
+              <li><a href="/#coverage">State coverage</a></li>
+              <li><a href="/screenshots">App screenshots</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Learn</h2>
+            <ul>
+              <li><a href="/tutorial">App tutorial</a></li>
+              <li><a href="/permit-route-review">Route review guide</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Releases</h2>
+            <ul>
+              <li><a href="/updates">What’s new</a></li>
+              <li><a href="/changelog">Changelog</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Contact</h2>
+            <ul>
+              <li><a href="/share-a-permit">Share a permit</a></li>
+              <li><a href="mailto:permitroutepro@gmail.com">permitroutepro@gmail.com</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </footer>
+    <script>
+      // Beside the steps on a wide screen the contents list starts open.
+      // First of the page-end scripts, so it never waits on a download.
+      if (window.matchMedia('(min-width: 68.75em)').matches) document.querySelector('.tutorial-toc details').open = true;
+    </script>
+    <script src="/apk-downloads.js?v=0.4.28-alpha.58-cdb2f9b-56"></script>
+    <script src="/site.js?v=0.4.28-alpha.58-cdb2f9b-56"></script>
   </body>
 </html>

@@ -3,6 +3,14 @@
   "schemaVersion": 2,
   "releases": [
     {
+      "version": "0.4.28-alpha.58+188",
+      "date": "2026-11-17",
+      "notes": [
+        "If your account can't finish opening because of a connection problem, the app now tries again by itself when your network changes or you reopen the app. You can still tap Retry at any time.",
+        "Checking your sign-in while the app is still opening no longer signs you out by mistake on a slow or changing connection."
+      ]
+    },
+    {
       "version": "0.4.28-alpha.57+187",
       "date": "2026-11-05",
       "notes": [

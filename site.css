@@ -1,0 +1,2873 @@
+/* Permit Route Pro website, version A "Cockpit".
+   The site wears the app's own dark theme. See DESIGN.md for the tokens. */
+
+/* DM Sans narrowed to the weights used here (400 to 700), Latin only: 35 KB. */
+@font-face {
+  font-family: "DM Sans";
+  src: url("/fonts/dm-sans-variable.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Stand-ins while DM Sans loads. Each is a system font resized to DM Sans's
+   measured width, so lines break in the same places and nothing moves when
+   the real font arrives. Arial covers Windows, macOS and (as Liberation Sans)
+   Linux; Roboto covers Android. Bold and large headings have their own sizes
+   because DM Sans changes proportion with weight and optical size. */
+@font-face {
+  font-family: "DMS Arial";
+  src: local("Arial"), local("Liberation Sans");
+  size-adjust: 104.6%;
+  ascent-override: 94.8%;
+  descent-override: 29.6%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "DMS Arial";
+  src: local("Arial Bold"), local("Liberation Sans Bold");
+  font-weight: 700;
+  size-adjust: 101.4%;
+  ascent-override: 97.8%;
+  descent-override: 30.6%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "DMS Roboto";
+  src: local("Roboto");
+  size-adjust: 104.9%;
+  ascent-override: 94.6%;
+  descent-override: 29.6%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "DMS Roboto";
+  src: local("Roboto Bold"), local("Roboto");
+  font-weight: 700;
+  size-adjust: 107.9%;
+  ascent-override: 91.9%;
+  descent-override: 28.7%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "DMS Arial Display";
+  src: local("Arial Bold"), local("Liberation Sans Bold");
+  font-weight: 700;
+  size-adjust: 92.5%;
+  ascent-override: 107.2%;
+  descent-override: 33.5%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "DMS Roboto Display";
+  src: local("Roboto Bold"), local("Roboto");
+  font-weight: 700;
+  size-adjust: 98.2%;
+  ascent-override: 101%;
+  descent-override: 31.6%;
+  line-gap-override: 0%;
+}
+
+:root {
+  /* Colour: the app's "Original" theme. */
+  --night: #000000;
+  --panel: #14181e;
+  --panel-raised: #1b2129;
+  --line: #2a313b;
+  --control: #5a6675; /* borders of things you can press or type in */
+  --sky: #40c4ff;
+  --sky-bright: #7dd6ff;
+  --sky-ink: #00131f;
+  --sky-soft: #0d2836;
+  --text: #f5f7fa;
+  --text-soft: #d5dce5;
+  --muted: #a7b0bc;
+  --ready: #34d399;
+  --ready-ink: #04261a;
+  --review: #fbbf24;
+  --danger: #ff8a8a;
+  --danger-fill: #dc2626;
+
+  --font-text: "DM Sans", "DMS Arial", "DMS Roboto", system-ui, sans-serif;
+  --font-display: "DM Sans", "DMS Arial Display", "DMS Roboto Display", system-ui, sans-serif;
+
+  /* Type: a 1.2 scale from 17px, fluid at the two display sizes. */
+  --size-small: 0.875rem;
+  --size-note: 0.9375rem;
+  --size-body: 1.0625rem;
+  --size-lead: 1.25rem;
+  --size-h3: 1.25rem;
+  --size-h2: clamp(1.75rem, 1.25rem + 2.1vw, 2.5rem);
+  --size-h1: clamp(2.125rem, 1.3rem + 3.5vw, 3.5rem);
+  --size-display: clamp(2.5rem, 1.25rem + 5.2vw, 4.5rem);
+
+  /* Space: 4, 8, 12, 16, 24, 32, 48, 64, 96. */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --section: clamp(3.5rem, 2rem + 6vw, 7rem);
+  --gutter: 1.25rem;
+
+  --header: 3.5rem;
+  --marker: 1.75rem; /* route markers and step nodes */
+  --route: 0.25rem; /* thickness of the route line */
+  --rail: calc(var(--marker) + var(--space-4)); /* room kept beside the route */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--night);
+  color-scheme: dark;
+  scroll-padding-top: calc(var(--header) + var(--space-5));
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--night);
+  color: var(--text-soft);
+  font-family: var(--font-text);
+  font-size: var(--size-body);
+  font-optical-sizing: auto;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  color: var(--text);
+  font-weight: 650;
+  text-wrap: balance;
+}
+
+/* Large headings always use DM Sans's display cut (optical size 40). */
+h1,
+h2 {
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 40;
+}
+
+h1 {
+  font-size: var(--size-h1);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: var(--size-h2);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+h3 {
+  font-size: var(--size-h3);
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin: 0;
+  text-wrap: pretty;
+}
+
+strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+a {
+  color: var(--sky);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  color: var(--sky-bright);
+  text-decoration-thickness: 2px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+:focus-visible {
+  outline: 2px solid var(--sky);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+::selection {
+  background: var(--sky);
+  color: var(--sky-ink);
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+/* Read by screen readers, not shown. The menu button's label is one of
+   these until there is room to show it beside the bars. */
+.sr-only,
+.menu-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.wrap {
+  width: 100%;
+  max-width: calc(72.5rem + 2 * var(--gutter));
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.skip-link {
+  position: absolute;
+  left: var(--gutter);
+  top: -4rem;
+  z-index: 30;
+  padding: var(--space-3) var(--space-4);
+  border-radius: 0.75rem;
+  background: var(--sky);
+  color: var(--sky-ink);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: var(--space-2);
+  color: var(--sky-ink);
+}
+
+/* Header ------------------------------------------------------------------ */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  border-bottom: 1px solid var(--line);
+  background: var(--night);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: var(--header);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  min-height: 2.75rem;
+  margin-right: auto;
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 650;
+  letter-spacing: -0.015em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.brand:hover {
+  color: var(--text);
+}
+
+.brand-mark {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 0.4375rem;
+}
+
+.site-menu-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  padding: 0 0.75rem;
+  border: 1px solid var(--control);
+  border-radius: 0.75rem;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: var(--size-note);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.site-menu-button:hover,
+.site-menu-button[aria-expanded="true"] {
+  background: var(--panel);
+}
+
+/* Three bars that become a cross while the menu is open. */
+.menu-icon,
+.menu-icon::before,
+.menu-icon::after {
+  display: block;
+  width: 1.125rem;
+  height: 2px;
+  border-radius: 1px;
+  background: currentColor;
+}
+
+.menu-icon {
+  position: relative;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.menu-icon::before {
+  top: -6px;
+}
+
+.menu-icon::after {
+  top: 6px;
+}
+
+[aria-expanded="true"] > .menu-icon {
+  background: transparent;
+}
+
+[aria-expanded="true"] > .menu-icon::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+[aria-expanded="true"] > .menu-icon::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+/* Phone: the open menu is a sheet that covers the page below the bar. */
+.site-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  display: grid;
+  align-content: start;
+  height: calc(100vh - var(--header));
+  height: calc(100dvh - var(--header));
+  padding: var(--space-2) var(--gutter) var(--space-5);
+  overflow-y: auto;
+  background: var(--panel);
+}
+
+.site-menu a {
+  display: flex;
+  align-items: center;
+  min-height: 3.25rem;
+  border-bottom: 1px solid var(--line);
+  color: var(--text);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.site-menu a:last-child {
+  border-bottom: 0;
+}
+
+.site-menu a[aria-current="page"] {
+  color: var(--sky);
+  font-weight: 650;
+}
+
+/* Narrow phones: tighten the bar so the wordmark, the button and the menu fit. */
+@media (max-width: 23.99rem) {
+  :root {
+    --gutter: 1rem;
+  }
+
+  .apk-download-options {
+    padding-inline: var(--space-3);
+  }
+
+  .apk-download-options summary {
+    margin-inline: calc(-1 * var(--space-3));
+    padding-inline: var(--space-3);
+  }
+
+  .permit-research-form {
+    padding: var(--space-4);
+  }
+
+  .permit-submit {
+    font-size: var(--size-note);
+  }
+
+  .header-inner {
+    gap: 0.375rem;
+  }
+
+  .brand {
+    gap: 0.5rem;
+    font-size: 0.9375rem;
+  }
+
+  .header-install {
+    padding-inline: 0.75rem;
+  }
+}
+
+@media (max-width: 21.24rem) {
+  .site-header .header-install {
+    display: none;
+  }
+}
+
+@media (min-width: 26rem) {
+  .menu-label {
+    position: static;
+    width: auto;
+    height: auto;
+    clip-path: none;
+  }
+
+  .header-inner {
+    gap: var(--space-3);
+  }
+}
+
+@media (min-width: 40rem) {
+  :root {
+    --gutter: 2rem;
+    --header: 4rem;
+  }
+
+  .brand {
+    font-size: 1.0625rem;
+  }
+
+  /* Tablet: the open menu is a panel hanging under its button. */
+  .site-menu {
+    top: calc(100% + var(--space-2));
+    right: var(--gutter);
+    left: auto;
+    width: 20rem;
+    height: auto;
+    max-height: calc(100vh - var(--header) - var(--space-6));
+    padding: var(--space-2) var(--space-5);
+    border: 1px solid var(--control);
+    border-radius: 1rem;
+    box-shadow: 0 1.5rem 3rem rgb(0 0 0 / 0.8);
+  }
+}
+
+/* Wide screens: the menu is a row of links, always visible. */
+@media (min-width: 68.75rem) {
+  .site-menu-button {
+    display: none;
+  }
+
+  .site-nav {
+    margin-right: auto;
+    margin-left: var(--space-7);
+  }
+
+  .brand {
+    margin-right: 0;
+  }
+
+  .site-menu,
+  .site-menu[hidden] {
+    position: static;
+    display: flex !important;
+    gap: var(--space-6);
+    width: auto;
+    max-height: none;
+    padding: 0;
+    overflow: visible;
+    border: 0;
+    border-radius: 0;
+    background: none;
+    box-shadow: none;
+  }
+
+  .site-menu a {
+    position: relative;
+    min-height: 2.75rem;
+    border-bottom: 0;
+    color: var(--muted);
+    font-size: var(--size-note);
+  }
+
+  .site-menu a:hover {
+    color: var(--text);
+  }
+
+  .site-menu a[aria-current="page"] {
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  /* The current page is marked on the bar's bottom edge. */
+  .site-menu a[aria-current="page"]::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: calc((2.75rem - var(--header)) / 2);
+    left: 0;
+    height: 2px;
+    background: var(--sky);
+  }
+
+  /* Reached from the wordmark, the button beside the menu, or the footer. */
+  .site-menu a[href="/"],
+  .site-menu a[href="/changelog"],
+  .site-menu a[href="/share-a-permit"],
+  .site-menu a[href="/install"] {
+    display: none;
+  }
+}
+
+/* Buttons ----------------------------------------------------------------- */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 3.25rem;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid transparent;
+  border-radius: 0.875rem;
+  font: inherit;
+  font-weight: 650;
+  line-height: 1.25;
+  letter-spacing: -0.005em;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 120ms ease, border-color 120ms ease;
+}
+
+.button-primary {
+  background: var(--sky);
+  color: var(--sky-ink);
+}
+
+.button-primary:hover {
+  background: var(--sky-bright);
+  color: var(--sky-ink);
+}
+
+.button-primary:active {
+  background: #24b3f5;
+}
+
+.button-primary:focus-visible {
+  outline-color: var(--text);
+}
+
+/* The bar's button is outlined, so each page has one filled action. */
+.button-secondary,
+.header-install {
+  border-color: var(--control);
+  background: var(--panel);
+  color: var(--text);
+}
+
+.button-secondary:hover,
+.header-install:hover {
+  border-color: var(--muted);
+  background: var(--panel-raised);
+  color: var(--text);
+}
+
+.button-small {
+  min-height: 2.75rem;
+  padding: 0.5rem 0.875rem;
+  border-radius: 0.75rem;
+  font-size: var(--size-note);
+  white-space: nowrap;
+}
+
+.button:disabled {
+  border-color: var(--line);
+  background: var(--panel-raised);
+  color: var(--muted);
+  cursor: progress;
+}
+
+/* Android mark on every APK link. Material icon, licence in assets/android.LICENSE.txt. */
+a[data-download]::before {
+  content: "";
+  flex: none;
+  width: 1.375rem;
+  height: 1.375rem;
+  background-color: currentColor;
+  -webkit-mask: url("/assets/android.svg") center / contain no-repeat;
+  mask: url("/assets/android.svg") center / contain no-repeat;
+}
+
+/* App screens ---------------------------------------------------------------
+   Every capture is shown without Android's status bar (its top 24px): the
+   picture keeps its bottom edge and loses that strip. */
+
+.phone {
+  --bezel: 0.3125rem;
+  --corner: 1.5rem;
+  margin: 0;
+  padding: var(--bezel);
+  border: 1px solid #353e4a;
+  border-radius: var(--corner);
+  background: var(--panel);
+}
+
+.phone img {
+  display: block;
+  width: 100%;
+  border-radius: calc(var(--corner) - var(--bezel));
+}
+
+img[height="1516"] {
+  aspect-ratio: 720 / 1492;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+img[height="1392"] {
+  aspect-ratio: 720 / 1368;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+/* Home: hero ----------------------------------------------------------------
+   The route starts here. A green S sits beside the title and a Sky line runs
+   down the left edge, out of the hero and into the steps below. */
+
+.hero {
+  --hero-title: var(--size-display);
+  padding-block: clamp(2.5rem, 1.5rem + 5vw, 5.5rem) var(--section);
+  overflow: hidden;
+  overflow: clip;
+}
+
+.hero-inner {
+  display: grid;
+  gap: var(--space-7);
+  padding-left: calc(var(--gutter) + var(--rail));
+}
+
+.hero-copy {
+  position: relative;
+}
+
+/* From S to the bottom of the hero; the hero clips whatever runs past it. */
+.hero-copy::before {
+  content: "";
+  position: absolute;
+  top: calc(var(--hero-title) * 0.51);
+  bottom: -200vh;
+  left: calc((var(--marker) - var(--route)) / 2 - var(--rail));
+  width: var(--route);
+  background: var(--sky);
+}
+
+.hero h1 {
+  max-width: 11.5em;
+  font-size: var(--hero-title);
+  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+}
+
+.lead {
+  max-width: 34em;
+  margin-top: var(--space-5);
+  font-size: clamp(1.0625rem, 1rem + 0.5vw, var(--size-lead));
+  line-height: 1.55;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+}
+
+.actions .button {
+  flex: 1 1 14rem;
+}
+
+.terms {
+  margin-top: var(--space-4);
+  color: var(--muted);
+  font-size: var(--size-note);
+}
+
+/* Phone and tablet: one whole screen, large enough to read. The navigation
+   screen joins it on a wide screen. The width is set, so the screen holds
+   its place before the picture arrives. */
+.hero-media {
+  display: grid;
+  grid-template-columns: min(16rem, 76%);
+  gap: var(--space-4);
+  align-items: start;
+  width: 100%;
+}
+
+.hero-media .phone-nav {
+  display: none;
+}
+
+/* Large phones held sideways and small tablets have room for both screens
+   whole, side by side. */
+@media (min-width: 34rem) and (max-width: 47.99rem) {
+  .hero-media {
+    grid-template-columns: repeat(2, minmax(0, 15rem));
+  }
+
+  .hero-media .phone-nav {
+    display: block;
+    margin-top: var(--space-7);
+  }
+}
+
+/* Phone: a little less air in the words, so the screens start sooner. */
+@media (max-width: 39.99rem) {
+  .hero-inner {
+    gap: var(--space-6);
+  }
+
+  .lead {
+    line-height: 1.5;
+  }
+
+  .actions {
+    margin-top: var(--space-5);
+  }
+}
+
+@media (min-width: 40rem) {
+  .actions .button {
+    flex: none;
+  }
+
+  .phone {
+    --bezel: 0.375rem;
+    --corner: 1.875rem;
+  }
+}
+
+/* Tablet: one large screen beside the words. */
+@media (min-width: 48rem) {
+  .hero {
+    --hero-title: clamp(2.5rem, 4.4vw, 4rem);
+    padding-bottom: var(--space-8);
+  }
+
+  .hero-inner {
+    grid-template-columns: minmax(0, 1fr) minmax(0, clamp(16.5rem, 30vw, 19rem));
+    align-items: center;
+    gap: var(--space-6);
+  }
+
+  .hero-media {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  /* Too narrow for two buttons in a row: stack them at one width. */
+  .actions {
+    display: grid;
+    grid-template-columns: max-content;
+  }
+}
+
+@media (min-width: 64rem) {
+  .hero-inner {
+    gap: var(--space-8);
+  }
+
+  .actions {
+    display: flex;
+  }
+}
+
+/* Wide: both screens, staggered. */
+@media (min-width: 75rem) {
+  .hero-inner {
+    grid-template-columns: minmax(0, 1fr) 31rem;
+  }
+
+  .hero-media {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-5);
+  }
+
+  .hero-media .phone-map {
+    margin-top: var(--space-7);
+  }
+
+  .hero-media .phone-nav {
+    display: block;
+  }
+}
+
+/* Home: the route ---------------------------------------------------------
+   The one loud thing on the site, drawn like the route and its start and end
+   markers on the app's map. It comes down from the S in the hero, passes the
+   section title, runs through the four numbered steps and stops at a red E. */
+
+.how {
+  padding-bottom: var(--section);
+}
+
+.route {
+  position: relative;
+}
+
+.route-marker {
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: var(--marker);
+  height: var(--marker);
+  border: 2px solid #ffffff;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.route-start {
+  /* Centred on the first line of the hero title, in the rail beside it. */
+  top: calc(var(--hero-title) * 0.51 - var(--marker) / 2);
+  left: calc(-1 * var(--rail));
+  border-radius: 50%;
+  background: var(--ready);
+  color: var(--ready-ink);
+}
+
+.route-end {
+  bottom: 0;
+  border-radius: 0.4375rem;
+  background: var(--danger-fill);
+  color: #ffffff;
+}
+
+.route h2 {
+  position: relative;
+  max-width: 19em;
+  padding: 0 0 var(--space-7) var(--rail);
+}
+
+/* Past the title, from the hero's edge down to the first step. */
+.route h2::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  bottom: 0;
+  left: calc((var(--marker) - var(--route)) / 2);
+  width: var(--route);
+  background: var(--sky);
+}
+
+/* The same list carries every real sequence: the four home steps, the five
+   install steps and the six steps of the route review guide. */
+.steps,
+.install-steps,
+.guide-steps {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+}
+
+.steps::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc((var(--marker) - var(--route)) / 2);
+  width: var(--route);
+  background: var(--sky);
+}
+
+.step,
+.install-steps li,
+.guide-step {
+  position: relative;
+  padding: 0 0 var(--space-7) var(--rail);
+  counter-increment: step;
+}
+
+.step:last-child {
+  padding-bottom: calc(var(--marker) + var(--space-5));
+}
+
+/* A numbered stop, drawn like a reviewed point on the app's route map:
+   a filled dot with a white ring. */
+.step::before,
+.install-steps li::before,
+.guide-step::before {
+  content: counter(step);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: var(--marker);
+  height: var(--marker);
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  background: var(--sky);
+  color: var(--sky-ink);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.step h3,
+.install-steps strong {
+  line-height: var(--marker);
+}
+
+/* Inner pages: the line runs from each stop to the next and ends at the
+   last one. On the home page it comes in from the hero and runs on to E. */
+.install-steps li,
+.guide-step {
+  --stop-y: calc(var(--marker) / 2);
+}
+
+.install-steps li:not(:last-child)::after,
+.guide-step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: var(--stop-y);
+  bottom: calc(-1 * var(--stop-y));
+  left: calc((var(--marker) - var(--route)) / 2);
+  width: var(--route);
+  background: var(--sky);
+}
+
+.step p {
+  max-width: 30em;
+  margin: var(--space-2) 0 var(--space-4);
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.how-more {
+  display: grid;
+  gap: var(--space-4);
+  max-width: 40em;
+  margin-top: var(--space-7);
+}
+
+/* Phone and tablet: the route runs straight down and arrives at E, where the
+   closing words sit. Each step shows only the part of its screen the words
+   are about, cut on a card edge or the screen's own edge. The full screens are
+   on the screenshots and tutorial pages. */
+@media (max-width: 74.99rem) {
+  .step .phone {
+    width: min(100%, 22rem);
+    padding: 0;
+    overflow: hidden;
+    border-radius: 0.875rem;
+  }
+
+  .step .phone img {
+    aspect-ratio: var(--detail-shape);
+    border-radius: 0;
+    object-position: 50% var(--detail-at);
+  }
+
+  /* Add a permit: the heading and its three buttons. */
+  .step:nth-child(1) {
+    --detail-shape: 720 / 332;
+    --detail-at: 45.3%;
+  }
+
+  /* Route review: the heading, Add and Permit text, and the first two roads
+     with their Edit controls. */
+  .step:nth-child(2) {
+    --detail-shape: 720 / 632;
+    --detail-at: 35.85%;
+  }
+
+  /* From the top of the map to the foot of the screen: reviewed points, the
+     ticked box, Accept route & navigate. */
+  .step:nth-child(3) {
+    --detail-shape: 720 / 911;
+    --detail-at: 100%;
+  }
+
+  /* From under the map to the foot of the screen: the verified permit and
+     Start entire trip. */
+  .step:nth-child(4) {
+    --detail-shape: 720 / 462;
+    --detail-at: 100%;
+  }
+
+  /* The closing words begin beside E. */
+  .how-more {
+    margin-top: calc(-1 * var(--marker));
+    padding-left: var(--rail);
+  }
+}
+
+/* Tablet: words on the left of each step, one larger detail on the right. */
+@media (min-width: 48rem) and (max-width: 74.99rem) {
+  .step {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 22rem);
+    grid-template-rows: auto 1fr;
+    column-gap: var(--space-6);
+  }
+
+  .step p {
+    grid-column: 1;
+    margin-bottom: 0;
+  }
+
+  .step .phone {
+    grid-area: 1 / 2 / span 2;
+    width: 100%;
+  }
+}
+
+@media (min-width: 62rem) and (max-width: 74.99rem) {
+  .step {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 26rem);
+    column-gap: var(--space-8);
+  }
+}
+
+/* Wide: four full screens across. The route turns once, at step 1, and runs
+   straight to E at the far edge. */
+@media (min-width: 75rem) {
+  .route h2::before {
+    bottom: calc(var(--marker) / -2);
+  }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: var(--space-6);
+  }
+
+  .steps::before {
+    top: calc((var(--marker) - var(--route)) / 2);
+    right: calc(var(--marker) / 2);
+    bottom: auto;
+    left: calc(var(--marker) / 2);
+    width: auto;
+    height: var(--route);
+  }
+
+  .step,
+  .step:last-child {
+    display: flex;
+    flex-direction: column;
+    padding: calc(var(--marker) + var(--space-5)) 0 0;
+  }
+
+  .step p {
+    margin-bottom: var(--space-6);
+  }
+
+  .step .phone {
+    margin-top: auto;
+  }
+
+  .route-end {
+    top: 0;
+    right: 0;
+    bottom: auto;
+    left: auto;
+  }
+
+  .how-more {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
+    max-width: none;
+    margin-top: var(--space-8);
+  }
+
+  .how-more p {
+    max-width: 34em;
+  }
+}
+
+/* Widest: the page margin has room for the route, so the line, S and its
+   turn hang in it, and the words beside them move out to the page's own left
+   edge, under the brand and in line with the steps, notices and coverage. */
+@media (min-width: 84rem) {
+  .hero-inner {
+    padding-left: var(--gutter);
+  }
+
+  .route h2 {
+    padding-left: 0;
+  }
+
+  .route h2::before {
+    bottom: calc((var(--marker) + var(--route)) / -2);
+    left: calc((var(--marker) - var(--route)) / 2 - var(--rail));
+  }
+
+  .steps::before {
+    left: calc((var(--marker) - var(--route)) / 2 - var(--rail));
+  }
+}
+
+/* Home: notices ----------------------------------------------------------- */
+
+.notices {
+  border-top: 1px solid var(--line);
+}
+
+.notice {
+  padding-block: var(--space-7);
+}
+
+.notice + .notice {
+  border-top: 1px solid var(--line);
+}
+
+.notice h2 {
+  font-family: var(--font-text);
+  font-variation-settings: normal;
+  display: flex;
+  gap: var(--space-3);
+  font-size: var(--size-h3);
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+}
+
+.notice h2::before {
+  content: "";
+  flex: none;
+  width: 1.5rem;
+  height: 1.75rem;
+  background: var(--tone);
+  -webkit-mask: var(--icon) center / 1.5rem no-repeat;
+  mask: var(--icon) center / 1.5rem no-repeat;
+}
+
+.notice-alpha {
+  --tone: var(--review);
+  --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill-rule='evenodd' d='M12 2.5 1 21.5h22L12 2.5Zm-1 7h2v6h-2v-6Zm0 8h2v2h-2v-2Z'/%3E%3C/svg%3E");
+}
+
+.notice-pdf {
+  --tone: var(--sky);
+  --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill-rule='evenodd' d='M5 2h9l5 5v15H5V2Zm8 2v4h4l-4-4ZM8 12h8v1.6H8V12Zm0 3.4h8V17H8v-1.6Z'/%3E%3C/svg%3E");
+}
+
+.notice p {
+  max-width: 34em;
+  margin-top: var(--space-2);
+  padding-left: calc(1.5rem + var(--space-3));
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+@media (min-width: 48rem) {
+  .notice-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .notice {
+    padding-right: var(--space-6);
+  }
+
+  .notice + .notice {
+    padding-right: 0;
+    padding-left: var(--space-6);
+    border-top: 0;
+    border-left: 1px solid var(--line);
+  }
+}
+
+@media (min-width: 62rem) {
+  .notice {
+    padding-block: var(--space-8);
+    padding-right: var(--space-8);
+  }
+
+  .notice + .notice {
+    padding-left: var(--space-8);
+  }
+}
+
+/* Home: state coverage ---------------------------------------------------- */
+
+.coverage {
+  padding-block: var(--section);
+  border-top: 1px solid var(--line);
+}
+
+.coverage-inner {
+  display: grid;
+  gap: var(--space-7);
+}
+
+.coverage-intro p {
+  max-width: 34em;
+  margin-top: var(--space-4);
+}
+
+.state-map {
+  display: grid;
+  grid-template-columns: repeat(11, minmax(0, 1fr));
+  gap: 0.25rem;
+  width: 100%;
+  max-width: 34rem;
+}
+
+.state-tile {
+  grid-row: var(--row);
+  grid-column: var(--col);
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  border-radius: 0.375rem;
+  font-size: clamp(0.625rem, 0.3rem + 1.7vw, 0.8125rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+/* Four tiers told apart by fill and edge, not colour: solid, outlined,
+   dashed, plain. Neutral on purpose, so data never looks like a button;
+   Sky is kept for actions and the route. */
+.state-tile[data-tier="full"],
+[data-tier="full"] .tier-key {
+  background: var(--text);
+  color: var(--night);
+}
+
+.state-tile[data-tier="full"] {
+  font-weight: 700;
+}
+
+.state-tile[data-tier="partial"],
+[data-tier="partial"] .tier-key {
+  box-shadow: inset 0 0 0 2px var(--text);
+  background: var(--line);
+  color: var(--text);
+}
+
+.state-tile[data-tier="progress"],
+[data-tier="progress"] .tier-key {
+  border: 2px dashed var(--muted);
+  color: var(--text-soft);
+}
+
+.state-tile[data-tier="none"],
+[data-tier="none"] .tier-key {
+  box-shadow: inset 0 0 0 1px #4a5564;
+  background: var(--panel);
+  color: var(--muted);
+}
+
+.coverage-table {
+  display: block;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.coverage-table tbody,
+.coverage-table tr,
+.coverage-table th,
+.coverage-table td {
+  display: block;
+}
+
+.coverage-table tr {
+  padding-block: var(--space-4);
+  border-top: 1px solid var(--line);
+}
+
+.coverage-table tr:last-child {
+  padding-bottom: 0;
+}
+
+.coverage-table th {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 0;
+  color: var(--text);
+  font-weight: 600;
+  text-align: left;
+}
+
+.tier-key {
+  flex: none;
+  width: 1.125rem;
+  height: 1.125rem;
+  border-radius: 0.25rem;
+}
+
+.tier-count {
+  margin-left: auto;
+  color: var(--muted);
+  font-size: var(--size-note);
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.coverage-table td {
+  margin-top: var(--space-1);
+  padding: 0 0 0 calc(1.125rem + var(--space-3));
+  font-size: 1rem;
+}
+
+.coverage-table tr[data-tier="none"] td {
+  color: var(--muted);
+}
+
+.coverage-foot {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.coverage-note {
+  color: var(--muted);
+  font-size: var(--size-note);
+}
+
+@media (min-width: 40rem) {
+  .state-map {
+    gap: 0.375rem;
+  }
+}
+
+/* Tablet: the map beside the title, the lists across the page below. */
+@media (min-width: 48rem) {
+  .coverage-inner {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 26rem);
+    grid-template-areas:
+      "intro map"
+      "table table"
+      "foot foot";
+    gap: var(--space-7) var(--space-6);
+  }
+
+  .coverage-intro {
+    grid-area: intro;
+  }
+
+  .state-map {
+    grid-area: map;
+    align-self: start;
+  }
+
+  .coverage-table {
+    grid-area: table;
+  }
+
+  .coverage-foot {
+    grid-area: foot;
+    align-content: start;
+  }
+}
+
+/* Wide: the map fills the larger column. */
+@media (min-width: 62rem) {
+  .coverage-inner {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:
+      "intro map"
+      "table map"
+      "table foot";
+    gap: var(--space-7) var(--space-8);
+  }
+
+  .state-map {
+    max-width: none;
+    gap: 0.5rem;
+  }
+
+  .state-tile {
+    border-radius: 0.5rem;
+    font-size: 0.9375rem;
+  }
+}
+
+/* Footer ------------------------------------------------------------------ */
+
+.site-footer {
+  padding-block: var(--space-7) var(--space-8);
+  border-top: 1px solid var(--line);
+  font-size: var(--size-note);
+}
+
+.footer-inner {
+  display: grid;
+  gap: var(--space-7);
+}
+
+.footer-about p {
+  max-width: 22em;
+  margin-top: var(--space-3);
+  color: var(--muted);
+}
+
+/* Two columns on a phone with one shared edge. The second takes the room
+   the first does not need, so the address stays on one line from 360px.
+   Narrower than that, the group with the address takes a row of its own. */
+.footer-nav {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: var(--space-6) var(--space-4);
+}
+
+@media (max-width: 22.49rem) {
+  .footer-nav > div:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+.footer-nav h2 {
+  font-family: var(--font-text);
+  font-variation-settings: normal;
+  font-size: var(--size-note);
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0;
+}
+
+.footer-nav ul {
+  margin: var(--space-1) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.footer-nav a:hover {
+  color: var(--text);
+  text-decoration: underline;
+}
+
+@media (min-width: 40rem) {
+  .footer-nav {
+    grid-template-columns: repeat(4, auto);
+    justify-content: space-between;
+    gap: var(--space-6);
+  }
+
+}
+
+@media (min-width: 68.75rem) {
+  .footer-inner {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: var(--space-8);
+  }
+
+  .footer-nav {
+    gap: var(--space-8);
+  }
+
+  .footer-nav a {
+    min-height: 2rem;
+  }
+}
+
+/* Inner pages: shared pieces ---------------------------------------------- */
+
+.install,
+.updates,
+.changelog,
+.screens,
+.share,
+.guide,
+.tutorial {
+  padding-block: clamp(2.5rem, 1.5rem + 4vw, 4.5rem) var(--section);
+}
+
+
+.download-actions {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.download-actions .button {
+  width: 100%;
+}
+
+.apk-universal-download {
+  padding-inline: var(--space-4);
+  font-size: 1rem;
+}
+
+.apk-update-notice {
+  padding: var(--space-4);
+  border-radius: 0.875rem;
+  background: var(--sky-soft);
+  color: #b9e6fb;
+  font-size: var(--size-note);
+}
+
+.apk-update-notice strong {
+  display: block;
+  color: #e3f5ff;
+}
+
+/* Space is held for the status line and the picker that site.js fills in,
+   so the page does not move when the release data arrives. Once the picker
+   has loaded and a visitor closes it, the space is given back. */
+.download-device {
+  min-height: 15.5rem;
+}
+
+.download-device:has(> .apk-download-options:not([open]):not([hidden])) {
+  min-height: 0;
+}
+
+.apk-download-status {
+  min-height: 3.2em;
+  color: var(--muted);
+  font-size: var(--size-note);
+}
+
+.apk-download-options {
+  margin-top: var(--space-3);
+  padding-inline: var(--space-4);
+  border: 1px solid var(--line);
+  border-radius: 0.875rem;
+  background: var(--panel);
+}
+
+.apk-download-options summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  min-height: 3rem;
+  margin-inline: calc(-1 * var(--space-4));
+  padding: 0 var(--space-4);
+  border-radius: 0.875rem;
+  color: var(--text);
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Chevron: points down when closed, up when open. */
+.apk-download-options summary::after,
+.history-release summary::after {
+  content: "";
+  flex: none;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin: 0 0.25rem 0.25rem;
+  border-right: 2px solid var(--muted);
+  border-bottom: 2px solid var(--muted);
+  transform: rotate(45deg);
+}
+
+.apk-download-options[open] summary::after,
+.history-release[open] summary::after {
+  margin-bottom: -0.25rem;
+  transform: rotate(-135deg);
+}
+
+/* Sized so the chosen download reads in full on a 360px phone. */
+.apk-download-options select {
+  padding-right: 2.25rem;
+  padding-left: 0.75rem;
+  background-position: right 0.75rem center;
+  font-size: var(--size-note);
+}
+
+.apk-download-options label {
+  display: block;
+  margin-bottom: var(--space-2);
+  color: var(--text);
+  font-size: var(--size-note);
+  font-weight: 600;
+}
+
+.apk-download-options p {
+  margin-block: var(--space-3) var(--space-4);
+  color: var(--muted);
+  font-size: var(--size-small);
+  line-height: 1.5;
+}
+
+select,
+input[type="text"],
+input[type="email"],
+textarea {
+  display: block;
+  width: 100%;
+  min-height: 3rem;
+  padding: 0.6875rem 0.875rem;
+  border: 1px solid var(--control);
+  border-radius: 0.75rem;
+  background: var(--night);
+  color: var(--text);
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+select {
+  padding-right: 2.5rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='m1 1.5 5 5 5-5' fill='none' stroke='%23a7b0bc' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.875rem center;
+  background-size: 0.75rem;
+  text-overflow: ellipsis;
+  appearance: none;
+  cursor: pointer;
+}
+
+select:hover,
+input[type="text"]:hover,
+input[type="email"]:hover,
+textarea:hover {
+  border-color: var(--muted);
+}
+
+select:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  border-color: var(--sky);
+  outline-offset: 1px;
+  border-radius: 0.75rem;
+}
+
+::placeholder {
+  color: #8e99a6;
+  opacity: 1;
+}
+
+/* Install ----------------------------------------------------------------- */
+
+.install-grid {
+  display: grid;
+  gap: var(--space-7);
+}
+
+.install-intro {
+  display: grid;
+  gap: var(--space-4);
+  align-content: start;
+}
+
+.install-intro > p:not([class]) {
+  max-width: 34em;
+}
+
+.install-intro .terms {
+  margin-top: var(--space-2);
+  color: var(--text);
+  font-size: var(--size-body);
+}
+
+.install-intro .download-actions {
+  margin-top: var(--space-3);
+}
+
+.install-side {
+  display: grid;
+  gap: var(--space-6);
+  align-content: start;
+}
+
+/* The five steps are stops on the route line (rules with the home steps). */
+.install-steps li {
+  padding-bottom: var(--space-6);
+}
+
+.install-steps li:last-child {
+  padding-bottom: 0;
+}
+
+.install-steps strong {
+  display: block;
+}
+
+.install-steps span,
+.install-qr span {
+  display: block;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.install-qr {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--line);
+}
+
+.install-qr img {
+  flex: none;
+  width: 6rem;
+  height: 6rem;
+  padding: 0.375rem;
+  border-radius: 0.75rem;
+  background: #ffffff;
+}
+
+.release-strip {
+  border-top: 1px solid var(--line);
+  background: var(--panel);
+}
+
+.release-strip-inner {
+  display: grid;
+  gap: var(--space-5);
+  padding-block: var(--space-7);
+}
+
+.release-strip strong {
+  display: block;
+  font-size: var(--size-lead);
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  font-variant-numeric: tabular-nums;
+}
+
+.release-strip p {
+  margin-top: var(--space-1);
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+@media (min-width: 40rem) {
+  .download-actions {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /* Side by side when both fit; otherwise each fills a row. */
+  .download-actions .button {
+    flex: 1 1 auto;
+    width: auto;
+  }
+
+  .release-strip-inner {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+  }
+}
+
+@media (min-width: 62rem) {
+  .install-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 27rem);
+    gap: var(--space-9);
+  }
+
+  .install-side {
+    padding-top: var(--space-2);
+  }
+
+  /* On a desktop the code is the way in, so it leads the column; the steps
+     follow under a rule. It holds nothing to focus, so only the eye's order
+     changes. */
+  .install-qr {
+    order: -1;
+    padding: 0 0 var(--space-6);
+    border-top: 0;
+    border-bottom: 1px solid var(--line);
+  }
+}
+
+/* What's new --------------------------------------------------------------
+   Written order is the order seen: title, notes, then everything about
+   downloading. From a tablet up the downloads are a panel beside the notes,
+   as the form is on the Share a permit page. */
+
+.updates-grid {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.updates-head p {
+  max-width: 30em;
+  margin-top: var(--space-4);
+}
+
+.updates-head p + p {
+  margin-top: var(--space-2);
+}
+
+/* The version is the title's second line: same colour, lighter weight. Its
+   size follows the column it sits in, so the longest version stays on one
+   line at every width. Browsers without container units keep the small size. */
+.updates-head {
+  container-type: inline-size;
+}
+
+.title-version {
+  display: block;
+  margin-top: var(--space-2);
+  color: var(--text);
+  font-size: 0.56em;
+  font-size: min(0.8em, 8.5cqi);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+/* The notes sit under a quiet label that says what they are. */
+.notes {
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--line);
+}
+
+.notes h2 {
+  color: var(--muted);
+  font-family: var(--font-text);
+  font-variation-settings: normal;
+  font-size: var(--size-note);
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0;
+}
+
+/* Room for one short note (four lines on a phone), so a typical release does
+   not move the downloads below it when the notes arrive. */
+.current-notes {
+  min-height: 6.75rem;
+  margin: var(--space-3) 0 0;
+  padding: 0;
+  list-style: none;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.current-notes li {
+  max-width: 34em;
+}
+
+.current-notes li + li {
+  margin-top: var(--space-5);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--line);
+}
+
+.updates-aside {
+  display: grid;
+  gap: var(--space-4);
+  align-content: start;
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--line);
+}
+
+.updates-aside .download-actions {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.build-facts {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  margin: 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.build-facts div {
+  padding-bottom: var(--space-4);
+}
+
+.build-facts div + div {
+  padding-left: var(--space-5);
+  border-left: 1px solid var(--line);
+}
+
+.build-facts dt {
+  color: var(--muted);
+  font-size: var(--size-small);
+}
+
+.build-facts dd {
+  margin: 0;
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+@media (min-width: 48rem) {
+  .updates-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 24rem);
+    grid-template-rows: auto 1fr;
+    gap: var(--space-6) var(--space-6);
+  }
+
+  .updates-head {
+    grid-area: 1 / 1;
+  }
+
+  .notes {
+    grid-area: 2 / 1;
+  }
+
+  .current-notes {
+    min-height: 0;
+  }
+
+  .updates-aside {
+    grid-area: 1 / 2 / span 2;
+    align-self: start;
+    padding: var(--space-5);
+    border: 1px solid var(--line);
+    border-radius: 1.25rem;
+    background: var(--panel);
+  }
+
+  .updates-aside .button-secondary,
+  .updates-aside .apk-download-options {
+    background: var(--night);
+  }
+
+  .updates-aside .button-secondary:hover {
+    background: var(--panel-raised);
+  }
+
+  .updates-aside .download-device {
+    min-height: 14.5rem;
+  }
+}
+
+@media (min-width: 62rem) {
+  .updates-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 26rem);
+    gap: var(--space-7) var(--space-9);
+  }
+
+  .updates-aside {
+    padding: var(--space-6);
+  }
+}
+
+/* Changelog --------------------------------------------------------------- */
+
+/* The column may not grow past the page: on a 360px phone a release row is
+   a few pixels wider than the column if it is left to size itself. */
+.changelog-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-7);
+}
+
+@media (max-width: 23.99rem) {
+  .history-release summary {
+    gap: var(--space-3);
+  }
+}
+
+.changelog-intro p {
+  max-width: 26em;
+  margin-top: var(--space-4);
+}
+
+.release-history {
+  min-height: 80vh;
+  border-bottom: 1px solid var(--line);
+}
+
+.release-history > p {
+  padding-block: var(--space-4);
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+}
+
+.history-release {
+  border-top: 1px solid var(--line);
+}
+
+/* The row reaches a little past the text on both sides, so the focus ring
+   does not touch the version. */
+.history-release summary {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  min-height: 3.5rem;
+  margin-inline: calc(-1 * var(--space-2));
+  padding: var(--space-3) var(--space-2);
+  cursor: pointer;
+  list-style: none;
+}
+
+.history-release summary:focus-visible {
+  outline-offset: -2px;
+}
+
+.history-release summary:hover .history-release-version {
+  color: var(--sky);
+}
+
+.history-release-version {
+  color: var(--text);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.history-release-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0 var(--space-4);
+  margin-left: auto;
+  color: var(--muted);
+  font-size: var(--size-small);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.history-release-notes {
+  display: grid;
+  gap: var(--space-3);
+  max-width: 42em;
+  margin: 0;
+  padding: 0 0 var(--space-5) 1.25rem;
+  font-size: 1rem;
+}
+
+.history-release-notes li::marker {
+  color: var(--sky);
+}
+
+@media (min-width: 62rem) {
+  .changelog-grid {
+    grid-template-columns: minmax(0, 20rem) minmax(0, 1fr);
+    gap: var(--space-9);
+  }
+
+  .changelog-intro {
+    position: sticky;
+    top: calc(var(--header) + var(--space-7));
+    align-self: start;
+  }
+}
+
+/* Screenshots ------------------------------------------------------------- */
+
+.screens-intro p {
+  max-width: 38em;
+  margin-top: var(--space-4);
+}
+
+.screens-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-6) var(--space-4);
+  margin-top: var(--space-7);
+}
+
+.screens-grid figure {
+  margin: 0;
+}
+
+.screens-grid figcaption {
+  padding: var(--space-3) var(--space-1) 0;
+  color: var(--text);
+  font-size: var(--size-note);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+@media (min-width: 48rem) {
+  .screens-grid {
+    grid-template-columns: repeat(3, minmax(0, 19rem));
+    justify-content: space-between;
+    gap: var(--space-8) var(--space-5);
+    margin-top: var(--space-8);
+  }
+}
+
+/* Share a permit ---------------------------------------------------------- */
+
+.share-grid {
+  display: grid;
+  gap: var(--space-7);
+}
+
+.share-copy {
+  display: grid;
+  gap: var(--space-5);
+  align-content: start;
+}
+
+.share-copy > p {
+  max-width: 36em;
+}
+
+.permit-privacy-note {
+  padding: var(--space-4);
+  border-radius: 0.875rem;
+  background: #3b2c0a;
+  color: #fdd76a;
+  font-size: 1rem;
+}
+
+.permit-privacy-note strong {
+  color: #ffe9a8;
+}
+
+.permit-email-note {
+  color: var(--muted);
+  font-size: var(--size-note);
+}
+
+.permit-research-form {
+  display: grid;
+  gap: var(--space-5);
+  align-content: start;
+  padding: var(--space-5);
+  border: 1px solid var(--line);
+  border-radius: 1.25rem;
+  background: var(--panel);
+}
+
+.permit-field-grid {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.permit-research-form label {
+  display: block;
+  color: var(--text);
+  font-size: var(--size-note);
+  font-weight: 600;
+}
+
+.permit-research-form label > input,
+.permit-research-form label > textarea {
+  margin-top: var(--space-2);
+}
+
+/* "(optional)" beside a field name. */
+.permit-research-form label > span:not(:first-child) {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+textarea {
+  min-height: 7.5rem;
+  resize: vertical;
+}
+
+.permit-research-form .permit-file-drop {
+  display: grid;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  border: 1px dashed var(--control);
+  border-radius: 0.875rem;
+  background: var(--night);
+}
+
+.permit-file-drop small {
+  color: var(--muted);
+  font-size: var(--size-small);
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.permit-file-drop input[type="file"] {
+  width: 100%;
+  min-height: 2.75rem;
+  color: var(--muted);
+  font: inherit;
+  font-size: var(--size-small);
+  font-weight: 400;
+}
+
+.permit-file-drop input[type="file"]::file-selector-button {
+  min-height: 2.75rem;
+  margin-right: var(--space-3);
+  padding: 0 var(--space-4);
+  border: 1px solid var(--control);
+  border-radius: 0.75rem;
+  background: var(--panel);
+  color: var(--text);
+  font: inherit;
+  font-size: var(--size-note);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.permit-file-drop input[type="file"]:hover::file-selector-button {
+  border-color: var(--muted);
+  background: var(--panel-raised);
+}
+
+.permit-file-drop output {
+  color: var(--text-soft);
+  font-size: var(--size-small);
+  font-weight: 400;
+}
+
+.permit-research-form .permit-consent {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: var(--space-3);
+  align-items: start;
+  min-height: 2.75rem;
+  font-weight: 400;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.permit-consent input {
+  width: 1.375rem;
+  height: 1.375rem;
+  margin: 0.0625rem 0 0;
+  border: 2px solid var(--control);
+  border-radius: 0.375rem;
+  background: var(--night) center / 0.875rem no-repeat;
+  appearance: none;
+  cursor: pointer;
+}
+
+.permit-consent input:hover {
+  border-color: var(--muted);
+}
+
+.permit-consent input:checked {
+  border-color: var(--sky);
+  background-color: var(--sky);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='m2.5 7.5 3 3 6-7' fill='none' stroke='%2300131f' stroke-width='2.25' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+.permit-research-form .permit-consent span {
+  color: var(--text-soft);
+}
+
+.permit-submit {
+  width: 100%;
+  padding-inline: var(--space-3);
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+/* Empty until site.js writes a message; then it is a banner. */
+.permit-form-status {
+  font-size: 1rem;
+}
+
+.permit-form-status:empty {
+  display: none;
+}
+
+.permit-form-status[data-state] {
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid;
+  border-radius: 0.75rem;
+  font-weight: 600;
+}
+
+.permit-form-status[data-state="error"] {
+  border-color: var(--danger);
+  background: #431a1a;
+  color: #ffd0d0;
+}
+
+.permit-form-status[data-state="success"] {
+  border-color: var(--ready);
+  background: #10342a;
+  color: #b4f7dc;
+}
+
+@media (min-width: 40rem) {
+  .permit-research-form {
+    padding: var(--space-6);
+  }
+
+  .permit-field-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 62rem) {
+  .share-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 31rem);
+    gap: var(--space-9);
+  }
+}
+
+/* Route review guide ------------------------------------------------------
+   The six steps ride the route line (rules with the home steps), each with
+   the part of the app screen it is about. Their headings carry the numbers,
+   so the stops are plain route points. */
+
+.guide {
+  --guide-h2: clamp(1.375rem, 1.2rem + 0.8vw, 1.75rem);
+}
+
+.guide-head p,
+.guide-text,
+.guide-faq {
+  max-width: 40rem;
+}
+
+.guide h1 {
+  max-width: 15em;
+}
+
+.guide p {
+  margin-top: var(--space-4);
+}
+
+.guide h1 + p,
+.tutorial-head h1 + p {
+  margin-top: var(--space-5);
+  color: var(--text);
+  font-size: clamp(1.0625rem, 1rem + 0.5vw, var(--size-lead));
+  line-height: 1.55;
+}
+
+.guide h2 {
+  font-family: var(--font-text);
+  font-variation-settings: normal;
+  font-size: var(--guide-h2);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.guide-steps {
+  margin-top: var(--space-8);
+}
+
+.guide-step {
+  --stop-y: calc(var(--guide-h2) * 0.6);
+}
+
+.guide-step:last-child {
+  padding-bottom: 0;
+}
+
+/* A route point, centred on the first line of the step's heading. */
+.guide-step::before {
+  content: "";
+  top: calc(var(--stop-y) - 0.5rem);
+  left: calc((var(--marker) - 1rem) / 2);
+  width: 1rem;
+  height: 1rem;
+}
+
+/* The part of the screen the step is about, cut on the screen's own edges. */
+.guide-step .phone {
+  width: min(100%, 22rem);
+  margin-top: var(--space-5);
+  padding: 0;
+  overflow: hidden;
+  border-radius: 0.875rem;
+}
+
+.guide-step .phone img {
+  aspect-ratio: 720 / var(--crop);
+  border-radius: 0;
+  object-position: 50% var(--focus);
+}
+
+.guide-faq {
+  margin-top: var(--space-8);
+}
+
+.guide-faq > div {
+  padding-block: var(--space-6);
+  border-top: 1px solid var(--line);
+}
+
+.guide-faq > div:last-child {
+  padding-bottom: 0;
+}
+
+.guide .button {
+  margin-top: var(--space-6);
+}
+
+/* Tablet up: each step's words on the left, its picture on the right. */
+@media (min-width: 48rem) {
+  .guide-step {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) clamp(17rem, 38vw, 20rem);
+    column-gap: var(--space-6);
+    align-items: start;
+  }
+
+  .guide-step .phone {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+/* Desktop: the text keeps its measure and the picture sits at the far
+   edge. Everything shares the edge of the step text. */
+@media (min-width: 62rem) {
+  .guide-head,
+  .guide-faq {
+    margin-left: var(--rail);
+  }
+
+  .guide-step {
+    grid-template-columns: minmax(0, 40rem) minmax(0, 22rem);
+    justify-content: space-between;
+    column-gap: var(--space-7);
+  }
+}
+
+/* Wide: larger pictures, and the three questions side by side under one
+   rule (the last column holds the install button on one line). */
+@media (min-width: 75rem) {
+  .guide-step {
+    grid-template-columns: minmax(0, 40rem) minmax(0, 26rem);
+  }
+
+  .guide-faq {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: var(--space-6);
+    max-width: none;
+    border-top: 1px solid var(--line);
+  }
+
+  .guide-faq > div {
+    border-top: 0;
+  }
+}
+
+/* Widest: as on the home page, the line and its points hang in the page
+   margin and the title, the steps and the questions share the page's edge. */
+@media (min-width: 84rem) {
+  .guide-head,
+  .guide-faq {
+    margin-left: 0;
+  }
+
+  .guide-step {
+    padding-left: 0;
+  }
+
+  .guide-step::before {
+    left: calc((var(--marker) - 1rem) / 2 - var(--rail));
+  }
+
+  .guide-step:not(:last-child)::after {
+    left: calc((var(--marker) - var(--route)) / 2 - var(--rail));
+  }
+}
+
+/* App tutorial ------------------------------------------------------------ */
+
+.tutorial-head > p {
+  max-width: 40em;
+  margin-top: var(--space-4);
+}
+
+.tutorial-layout {
+  display: grid;
+  gap: var(--space-7);
+  margin-top: var(--space-6);
+}
+
+/* Contents: one closed row on a phone, an open list beside the steps on a
+   wide screen (a line of script in the page opens it there). */
+.tutorial-toc details {
+  border: 1px solid var(--line);
+  border-radius: 0.875rem;
+  background: var(--panel);
+}
+
+.tutorial-toc summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 3.25rem;
+  padding-inline: var(--space-4);
+  border-radius: 0.875rem;
+  color: var(--text);
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+
+.tutorial-toc summary::after {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  margin: 0 0.25rem 0.25rem;
+  border-right: 2px solid var(--muted);
+  border-bottom: 2px solid var(--muted);
+  transform: rotate(45deg);
+}
+
+.tutorial-toc details[open] summary::after {
+  margin-bottom: -0.25rem;
+  transform: rotate(-135deg);
+}
+
+.tutorial-toc details > div {
+  padding: 0 var(--space-4) var(--space-3);
+  border-top: 1px solid var(--line);
+}
+
+.tutorial-toc h2 {
+  font-family: var(--font-text);
+  font-variation-settings: normal;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+.tutorial-toc ol,
+.tutorial-toc ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--size-note);
+}
+
+.tutorial-toc ol {
+  counter-reset: toc;
+}
+
+.tutorial-toc ol li {
+  counter-increment: toc;
+}
+
+.tutorial-toc a {
+  display: flex;
+  gap: 0.75em;
+  align-items: center;
+  min-height: 2.75rem;
+  color: var(--muted);
+  line-height: 1.35;
+  text-decoration: none;
+}
+
+.tutorial-toc h2 a {
+  color: var(--text);
+}
+
+.tutorial-toc ol a::before {
+  content: counter(toc);
+  flex: none;
+  min-width: 1.2em;
+  color: var(--text-soft);
+  font-variant-numeric: tabular-nums;
+}
+
+.tutorial-toc a:hover {
+  color: var(--text);
+  text-decoration: underline;
+}
+
+.tutorial-body {
+  min-width: 0;
+}
+
+.tutorial-body > h2 {
+  padding-top: var(--space-7);
+  border-top: 1px solid var(--line);
+}
+
+.tutorial-body > h2:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.tutorial-body > h2 + p {
+  margin: var(--space-3) 0 var(--space-6);
+  color: var(--muted);
+}
+
+.tutorial-step {
+  padding-block: var(--space-7);
+  border-top: 1px solid var(--line);
+}
+
+.tutorial-step h3 {
+  font-size: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+}
+
+.tutorial-step ul {
+  display: grid;
+  gap: var(--space-3);
+  align-content: start;
+  max-width: 38em;
+  margin: var(--space-4) 0 0;
+  padding-left: 1.25rem;
+}
+
+.tutorial-step li::marker {
+  color: var(--sky);
+}
+
+.tutorial-shots {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-5) var(--space-4);
+  margin-top: var(--space-6);
+}
+
+.tutorial-shots figure {
+  margin: 0;
+}
+
+.tutorial-shots a {
+  display: block;
+  padding: 0.25rem;
+  border: 1px solid #353e4a;
+  border-radius: 1.25rem;
+  background: var(--panel);
+  cursor: zoom-in;
+}
+
+.tutorial-shots img {
+  display: block;
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.tutorial-shots a:hover {
+  border-color: var(--control);
+}
+
+.tutorial-shots figcaption {
+  padding: var(--space-2) var(--space-1) 0;
+  color: var(--muted);
+  font-size: var(--size-small);
+  line-height: 1.4;
+}
+
+/* Phone: a single picture gets most of the width so it can be read in place. */
+@media (max-width: 39.99rem) {
+  .tutorial-shots:not(.small):not(:has(figure + figure)) {
+    grid-template-columns: minmax(0, 72%);
+  }
+}
+
+.tutorial-shots.small {
+  grid-template-columns: repeat(2, minmax(0, 8.5rem));
+}
+
+.tutorial-shots.small a {
+  border-radius: 1rem;
+}
+
+.tutorial-shots.small img {
+  border-radius: 0.75rem;
+}
+
+.tutorial-end {
+  padding-top: var(--space-7);
+  border-top: 1px solid var(--line);
+}
+
+.tutorial-end p {
+  max-width: 34em;
+  margin-top: var(--space-3);
+}
+
+.tutorial-end .button {
+  margin-top: var(--space-5);
+}
+
+@media (min-width: 40rem) {
+  .tutorial-shots {
+    grid-template-columns: repeat(auto-fill, 12.5rem);
+    gap: var(--space-5);
+  }
+}
+
+/* Tablet and wider: words on the left, pictures on the right, two across. */
+@media (min-width: 48rem) {
+  .tutorial-step {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-rows: auto 1fr;
+    column-gap: var(--space-7);
+  }
+
+  .tutorial-step h3,
+  .tutorial-step ul {
+    grid-column: 1;
+  }
+
+  .tutorial-shots {
+    --shot: 10rem;
+    grid-area: 1 / 2 / span 2;
+    grid-template-columns: repeat(2, var(--shot));
+    align-content: start;
+    margin-top: 0;
+  }
+
+  .tutorial-shots:not(:has(figure + figure)) {
+    grid-template-columns: var(--shot);
+  }
+
+  .tutorial-shots.small {
+    grid-template-columns: repeat(2, 8.5rem);
+  }
+
+  .tutorial-shots.small:not(:has(figure + figure)) {
+    grid-template-columns: 8.5rem;
+  }
+}
+
+@media (min-width: 62rem) {
+  .tutorial-shots {
+    --shot: 12.5rem;
+  }
+}
+
+@media (min-width: 68.75rem) {
+  .tutorial-layout {
+    grid-template-columns: 14rem minmax(0, 1fr);
+    gap: var(--space-8);
+    margin-top: var(--space-8);
+  }
+
+  /* The contents list stays beside the steps while they scroll. */
+  .tutorial-toc {
+    position: sticky;
+    top: calc(var(--header) + var(--space-5));
+    align-self: start;
+    max-height: calc(100vh - var(--header) - 2 * var(--space-5));
+    padding-right: var(--space-2);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: var(--control) transparent;
+  }
+
+  .tutorial-toc details {
+    border: 0;
+    border-radius: 0;
+    background: none;
+  }
+
+  .tutorial-toc summary {
+    min-height: 2.75rem;
+    padding-inline: 0;
+    font-size: var(--size-note);
+  }
+
+  .tutorial-toc details > div {
+    padding: var(--space-2) 0;
+  }
+
+  .tutorial-toc h2 {
+    font-size: var(--size-note);
+  }
+
+  .tutorial-toc ol,
+  .tutorial-toc ul {
+    font-size: var(--size-small);
+  }
+
+  .tutorial-toc a {
+    align-items: baseline;
+    min-height: 0;
+    padding-block: 0.25rem;
+    line-height: 1.3;
+  }
+}
+
+/* Page not found ---------------------------------------------------------- */
+
+.not-found {
+  display: grid;
+  align-items: center;
+  min-height: 62vh;
+  padding-block: var(--section);
+}
+
+.not-found h1 {
+  max-width: 12em;
+}
+
+.not-found p {
+  max-width: 30em;
+  margin-top: var(--space-5);
+}
+
+.not-found .button {
+  margin-top: var(--space-6);
+}
+
+/* Touch screens keep full-height rows in the contents list at every width;
+   the tighter rows beside the text are for a mouse. */
+@media (pointer: coarse) {
+  .tutorial-toc a {
+    align-items: center;
+    min-height: 2.75rem;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+}

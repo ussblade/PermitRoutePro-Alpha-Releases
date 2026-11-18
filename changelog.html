@@ -6,15 +6,31 @@
     <meta name="description" content="Read the complete Permit Route Pro Android alpha release history and changes by version.">
     <link rel="canonical" href="https://permit-route-pro.com/changelog">
     <title>Release Changelog | Permit Route Pro</title>
-    <link rel="stylesheet" href="concepts/concepts.css?v=0.4.28-alpha.57-15f8b0a-54">
+    <meta name="theme-color" content="#000000">
+    <meta name="color-scheme" content="dark">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Permit Route Pro">
+    <meta property="og:title" content="Release Changelog | Permit Route Pro">
+    <meta property="og:description" content="Read the complete Permit Route Pro Android alpha release history and changes by version.">
+    <meta property="og:url" content="https://permit-route-pro.com/changelog">
+    <meta property="og:image" content="https://permit-route-pro.com/assets/og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/icons/favicon-48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/icon-192.png">
+    <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+    <link rel="preload" href="/fonts/dm-sans-variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/site.css?v=0.4.28-alpha.58-cdb2f9b-56">
   </head>
-  <body class="atlas">
+  <body class="page-changelog">
     <a class="skip-link" href="#main">Skip to content</a>
-    <header class="atlas-wrap site-header">
-      <nav class="atlas-nav" aria-label="Primary navigation">
-        <a class="atlas-brand" href="/">Permit Route Pro</a>
-        <button class="site-menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="site-menu"><span class="site-menu-icon" aria-hidden="true">☰</span> Menu</button>
-        <div class="site-menu" id="site-menu" hidden>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="/"><img class="brand-mark" src="/assets/icons/app-icon-96.webp" alt="" width="32" height="32"><span>Permit Route Pro</span></a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <button class="site-menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="site-menu"><span class="menu-icon" aria-hidden="true"></span><span class="menu-label">Menu</span></button>
+          <div class="site-menu" id="site-menu" hidden>
             <a href="/">Home</a>
             <a href="/#coverage">State coverage</a>
             <a href="/updates">What’s new</a>
@@ -24,21 +40,62 @@
             <a href="/changelog" aria-current="page">Changelog</a>
             <a href="/share-a-permit">Share a permit</a>
             <a href="/install">Install</a>
-        </div>
-      </nav>
+          </div>
+        </nav>
+        <a class="button button-small header-install" href="/install">Get the app</a>
+      </div>
     </header>
     <main id="main">
-      <section class="atlas-log" id="history">
-        <div class="atlas-wrap atlas-log-grid">
-          <header><p class="map-key">Field log</p><h1>Release history.</h1><p>Choose a version to see only the changes introduced in that build.</p></header>
-          <div class="atlas-release-history" data-changelog aria-live="polite"><p>Loading the complete release history…</p></div>
+      <section class="changelog" id="history">
+        <div class="wrap changelog-grid">
+          <header class="changelog-intro">
+            <h1>Release history.</h1>
+            <p>Choose a version to see only the changes introduced in that build.</p>
+          </header>
+          <div class="release-history" data-changelog aria-live="polite"><p>Loading the complete release history…</p></div>
         </div>
       </section>
-
-
     </main>
-    <footer class="atlas-wrap atlas-footer">For alpha testing and evaluation. Verify every route against the issued permit.</footer>
-    <script src="apk-downloads.js?v=0.4.28-alpha.57-15f8b0a-54"></script>
-    <script src="concepts/concepts.js?v=0.4.28-alpha.57-15f8b0a-54"></script>
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <div class="footer-about">
+          <a class="brand" href="/"><img class="brand-mark" src="/assets/icons/app-icon-96.webp" alt="" width="32" height="32" loading="lazy"><span>Permit Route Pro</span></a>
+          <p>For alpha testing and evaluation. Verify every route against the issued permit.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer">
+          <div>
+            <h2>The app</h2>
+            <ul>
+              <li><a href="/install">Install</a></li>
+              <li><a href="/#coverage">State coverage</a></li>
+              <li><a href="/screenshots">App screenshots</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Learn</h2>
+            <ul>
+              <li><a href="/tutorial">App tutorial</a></li>
+              <li><a href="/permit-route-review">Route review guide</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Releases</h2>
+            <ul>
+              <li><a href="/updates">What’s new</a></li>
+              <li><a href="/changelog">Changelog</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Contact</h2>
+            <ul>
+              <li><a href="/share-a-permit">Share a permit</a></li>
+              <li><a href="mailto:permitroutepro@gmail.com">permitroutepro@gmail.com</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </footer>
+    <script src="/apk-downloads.js?v=0.4.28-alpha.58-cdb2f9b-56"></script>
+    <script src="/site.js?v=0.4.28-alpha.58-cdb2f9b-56"></script>
   </body>
 </html>

@@ -6,15 +6,31 @@
     <meta name="description" content="Download the current Permit Route Pro Android APK, choose a device download, and follow the installation steps.">
     <link rel="canonical" href="https://permit-route-pro.com/install">
     <title>Download and Install | Permit Route Pro</title>
-    <link rel="stylesheet" href="concepts/concepts.css?v=0.4.28-alpha.57-15f8b0a-54">
+    <meta name="theme-color" content="#000000">
+    <meta name="color-scheme" content="dark">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Permit Route Pro">
+    <meta property="og:title" content="Download and Install | Permit Route Pro">
+    <meta property="og:description" content="Download the current Permit Route Pro Android APK, choose a device download, and follow the installation steps.">
+    <meta property="og:url" content="https://permit-route-pro.com/install">
+    <meta property="og:image" content="https://permit-route-pro.com/assets/og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/icons/favicon-48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/icon-192.png">
+    <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+    <link rel="preload" href="/fonts/dm-sans-variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/site.css?v=0.4.28-alpha.58-cdb2f9b-56">
   </head>
-  <body class="atlas">
+  <body class="page-install">
     <a class="skip-link" href="#main">Skip to content</a>
-    <header class="atlas-wrap site-header">
-      <nav class="atlas-nav" aria-label="Primary navigation">
-        <a class="atlas-brand" href="/">Permit Route Pro</a>
-        <button class="site-menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="site-menu"><span class="site-menu-icon" aria-hidden="true">☰</span> Menu</button>
-        <div class="site-menu" id="site-menu" hidden>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="/"><img class="brand-mark" src="/assets/icons/app-icon-96.webp" alt="" width="32" height="32"><span>Permit Route Pro</span></a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <button class="site-menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="site-menu"><span class="menu-icon" aria-hidden="true"></span><span class="menu-label">Menu</span></button>
+          <div class="site-menu" id="site-menu" hidden>
             <a href="/">Home</a>
             <a href="/#coverage">State coverage</a>
             <a href="/updates">What’s new</a>
@@ -24,52 +40,98 @@
             <a href="/changelog">Changelog</a>
             <a href="/share-a-permit">Share a permit</a>
             <a href="/install" aria-current="page">Install</a>
-        </div>
-      </nav>
+          </div>
+        </nav>
+        <a class="button button-small header-install" href="/install">Get the app</a>
+      </div>
     </header>
     <main id="main">
-      <section class="atlas-install" id="install">
-        <div class="atlas-wrap atlas-install-grid">
-          <div class="atlas-install-intro">
-            <p class="map-key">Android field setup</p>
+      <section class="install" id="install">
+        <div class="wrap install-grid">
+          <div class="install-intro">
             <h1>Install the alpha build.</h1>
-            <p><strong>14-day free trial, then $5/month during alpha.</strong></p>
+            <p class="terms"><strong>14-day free trial, then $5/month during alpha.</strong></p>
             <p>Create an account and verify your email to start your trial. No payment is required to start. Subscribe in the app to keep access after the trial. Selected alpha testers have free access.</p>
             <p>Check the <a href="/#coverage">state coverage</a> before installing.</p>
             <p>This testing build is distributed outside the Play Store. Download it only from this website or the public Permit Route Pro release repository.</p>
-            <a class="route-button primary" data-download href="https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases">Download the current APK</a>
-            <a class="route-button apk-universal-download" data-download-universal href="https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases">Download full universal APK</a>
+            <div class="download-actions">
+              <a class="button button-primary" data-download href="https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases">Download the current APK</a>
+              <a class="button button-secondary apk-universal-download" data-download-universal href="https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases">Download full universal APK</a>
+            </div>
             <p class="apk-update-notice"><strong>Smaller updates after your first install.</strong> The full APK includes support for several types of Android devices. Future updates download the smaller version made for your device, leaving out what it doesn’t need.</p>
-            <p class="apk-download-status" data-download-status role="status"></p>
-            <details class="apk-download-options" data-download-options open hidden>
-              <summary>Smaller APKs by device</summary>
-              <label for="apk-choice">Android download</label>
-              <select id="apk-choice" data-apk-choice></select>
-              <p>Not sure which one to use? Choose Universal. Your choice changes the main download buttons. The full universal APK is always available separately.</p>
-            </details>
-            <div class="atlas-install-qr">
-              <img src="assets/permit-route-pro-download-qr.svg" alt="QR code linking to the Permit Route Pro website">
-              <p><strong>Installing on another device?</strong><span>Scan the code with its camera.</span></p>
+            <div class="download-device">
+              <p class="apk-download-status" data-download-status role="status"></p>
+              <details class="apk-download-options" data-download-options open hidden>
+                <summary>Smaller APKs by device</summary>
+                <label for="apk-choice">Android download</label>
+                <select id="apk-choice" data-apk-choice></select>
+                <p>Not sure which one to use? Choose Universal. Your choice changes the main download buttons. The full universal APK is always available separately.</p>
+              </details>
             </div>
           </div>
-          <ol class="atlas-install-steps">
-            <li><strong>Download the APK.</strong><span>Use a download button on this page from your Android device.</span></li>
-            <li><strong>Open the downloaded file.</strong><span>Android may ask which app should install the package.</span></li>
-            <li><strong>Allow this source.</strong><span>If prompted, permit installs from the browser or file manager you used.</span></li>
-            <li><strong>Finish installation.</strong><span>Return to the installer and tap Install.</span></li>
-            <li><strong>Open Permit Route Pro.</strong><span>Sign in, or create an account and verify your email to start your free trial. Begin with a test permit.</span></li>
-          </ol>
+          <div class="install-side">
+            <ol class="install-steps">
+              <li><strong>Download the APK.</strong> <span>Use a download button on this page from your Android device.</span></li>
+              <li><strong>Open the downloaded file.</strong> <span>Android may ask which app should install the package.</span></li>
+              <li><strong>Allow this source.</strong> <span>If prompted, permit installs from the browser or file manager you used.</span></li>
+              <li><strong>Finish installation.</strong> <span>Return to the installer and tap Install.</span></li>
+              <li><strong>Open Permit Route Pro.</strong> <span>Sign in, or create an account and verify your email to start your free trial. Begin with a test permit.</span></li>
+            </ol>
+            <div class="install-qr">
+              <img src="/assets/permit-route-pro-download-qr.svg" alt="QR code linking to the Permit Route Pro website" width="120" height="120">
+              <p><strong>Installing on another device?</strong> <span>Scan the code with its camera.</span></p>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="atlas-wrap atlas-release" aria-label="Current release download">
-        <img src="assets/permit-route-pro-download-qr.svg" alt="QR code linking to the Permit Route Pro website">
-        <div><strong>Field build <span data-version>Checking…</span></strong><p>Published <span data-published>Checking…</span>. Verify every route against the issued permit.</p></div>
-        <a class="route-button primary" data-download href="https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases">Get the APK</a>
+      <section class="release-strip" aria-label="Current release download">
+        <div class="wrap release-strip-inner">
+          <div><strong>Current build <span data-version>Checking…</span></strong><p>Published <span data-published>Checking…</span>. Verify every route against the issued permit.</p></div>
+          <a class="button button-primary" data-download href="https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases">Get the APK</a>
+        </div>
       </section>
     </main>
-    <footer class="atlas-wrap atlas-footer">For alpha testing and evaluation. Verify every route against the issued permit.</footer>
-    <script src="apk-downloads.js?v=0.4.28-alpha.57-15f8b0a-54"></script>
-    <script src="concepts/concepts.js?v=0.4.28-alpha.57-15f8b0a-54"></script>
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <div class="footer-about">
+          <a class="brand" href="/"><img class="brand-mark" src="/assets/icons/app-icon-96.webp" alt="" width="32" height="32" loading="lazy"><span>Permit Route Pro</span></a>
+          <p>For alpha testing and evaluation. Verify every route against the issued permit.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer">
+          <div>
+            <h2>The app</h2>
+            <ul>
+              <li><a href="/install">Install</a></li>
+              <li><a href="/#coverage">State coverage</a></li>
+              <li><a href="/screenshots">App screenshots</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Learn</h2>
+            <ul>
+              <li><a href="/tutorial">App tutorial</a></li>
+              <li><a href="/permit-route-review">Route review guide</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Releases</h2>
+            <ul>
+              <li><a href="/updates">What’s new</a></li>
+              <li><a href="/changelog">Changelog</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Contact</h2>
+            <ul>
+              <li><a href="/share-a-permit">Share a permit</a></li>
+              <li><a href="mailto:permitroutepro@gmail.com">permitroutepro@gmail.com</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </footer>
+    <script src="/apk-downloads.js?v=0.4.28-alpha.58-cdb2f9b-56"></script>
+    <script src="/site.js?v=0.4.28-alpha.58-cdb2f9b-56"></script>
   </body>
 </html>

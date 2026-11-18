@@ -6,15 +6,31 @@
     <meta name="description" content="See only the changes in the current public Permit Route Pro Android build, with links to the full version-by-version changelog.">
     <link rel="canonical" href="https://permit-route-pro.com/updates">
     <title>Current Update Notes | Permit Route Pro</title>
-    <link rel="stylesheet" href="concepts/concepts.css?v=0.4.28-alpha.57-15f8b0a-54">
+    <meta name="theme-color" content="#000000">
+    <meta name="color-scheme" content="dark">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Permit Route Pro">
+    <meta property="og:title" content="Current Update Notes | Permit Route Pro">
+    <meta property="og:description" content="See only the changes in the current public Permit Route Pro Android build, with links to the full version-by-version changelog.">
+    <meta property="og:url" content="https://permit-route-pro.com/updates">
+    <meta property="og:image" content="https://permit-route-pro.com/assets/og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/icons/favicon-48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/icon-192.png">
+    <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+    <link rel="preload" href="/fonts/dm-sans-variable.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/site.css?v=0.4.28-alpha.58-cdb2f9b-56">
   </head>
-  <body class="atlas">
+  <body class="page-updates">
     <a class="skip-link" href="#main">Skip to content</a>
-    <header class="atlas-wrap site-header">
-      <nav class="atlas-nav" aria-label="Primary navigation">
-        <a class="atlas-brand" href="/">Permit Route Pro</a>
-        <button class="site-menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="site-menu"><span class="site-menu-icon" aria-hidden="true">☰</span> Menu</button>
-        <div class="site-menu" id="site-menu" hidden>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="brand" href="/"><img class="brand-mark" src="/assets/icons/app-icon-96.webp" alt="" width="32" height="32"><span>Permit Route Pro</span></a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <button class="site-menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="site-menu"><span class="menu-icon" aria-hidden="true"></span><span class="menu-label">Menu</span></button>
+          <div class="site-menu" id="site-menu" hidden>
             <a href="/">Home</a>
             <a href="/#coverage">State coverage</a>
             <a href="/updates" aria-current="page">What’s new</a>
@@ -24,39 +40,87 @@
             <a href="/changelog">Changelog</a>
             <a href="/share-a-permit">Share a permit</a>
             <a href="/install">Install</a>
-        </div>
-      </nav>
+          </div>
+        </nav>
+        <a class="button button-small header-install" href="/install">Get the app</a>
+      </div>
     </header>
     <main id="main">
-      <section class="atlas-bulletin" id="updates">
-        <div class="atlas-wrap bulletin-grid">
-          <header>
-            <p class="map-key">Current field bulletin</p>
-            <h1>What’s new in <span data-version>the latest release</span>.</h1>
+      <section class="updates" id="updates">
+        <div class="wrap updates-grid">
+          <header class="updates-head">
+            <h1>What’s new in <span class="title-version"><span data-version>the latest release</span>.</span></h1>
             <p>Release details update automatically whenever a public Android build is published.</p>
-            <dl class="atlas-build-facts">
+            <p><a href="/changelog">Browse the full release history</a> for earlier builds.</p>
+          </header>
+          <section class="notes" aria-labelledby="notes-title">
+            <h2 id="notes-title">Changes in this build</h2>
+            <ul class="current-notes" data-release-list aria-live="polite"><li>Loading the latest release notes…</li></ul>
+          </section>
+          <div class="updates-aside">
+            <dl class="build-facts">
               <div><dt>Version</dt><dd data-version>Checking…</dd></div>
               <div><dt>Published</dt><dd data-published>Checking…</dd></div>
             </dl>
-            <p class="download-coverage-reminder">Check the <a href="/#coverage">state coverage legend</a> before installing this alpha build.</p>
-            <a class="route-button primary" data-download href="https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases">Download the current APK</a>
-            <a class="route-button apk-universal-download" data-download-universal href="https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases">Download full universal APK</a>
+            <p class="download-coverage-reminder">Check the <a href="/#coverage">state coverage</a> before installing this alpha build.</p>
+            <div class="download-actions">
+              <a class="button button-primary" data-download href="https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases">Download the current APK</a>
+              <a class="button button-secondary apk-universal-download" data-download-universal href="https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases">Download full universal APK</a>
+            </div>
             <p class="apk-update-notice"><strong>Smaller updates after your first install.</strong> The full APK includes support for several types of Android devices. Future updates download the smaller version made for your device, leaving out what it doesn’t need.</p>
-            <p class="apk-download-status" data-download-status role="status"></p>
-            <details class="apk-download-options" data-download-options open hidden>
-              <summary>Smaller APKs by device</summary>
-              <label for="apk-choice">Android download</label>
-              <select id="apk-choice" data-apk-choice></select>
-              <p>Not sure which one to use? Choose Universal. Your choice changes the main download buttons. The full universal APK is always available separately.</p>
-            </details>
-            <p><a href="/changelog">Browse the full release history</a> for earlier builds.</p>
-          </header>
-          <ul class="atlas-current-notes" data-release-list aria-live="polite"><li>Loading the latest release notes…</li></ul>
+            <div class="download-device">
+              <p class="apk-download-status" data-download-status role="status"></p>
+              <details class="apk-download-options" data-download-options open hidden>
+                <summary>Smaller APKs by device</summary>
+                <label for="apk-choice">Android download</label>
+                <select id="apk-choice" data-apk-choice></select>
+                <p>Not sure which one to use? Choose Universal. Your choice changes the main download buttons. The full universal APK is always available separately.</p>
+              </details>
+            </div>
+          </div>
         </div>
       </section>
     </main>
-    <footer class="atlas-wrap atlas-footer">For alpha testing and evaluation. Verify every route against the issued permit.</footer>
-    <script src="apk-downloads.js?v=0.4.28-alpha.57-15f8b0a-54"></script>
-    <script src="concepts/concepts.js?v=0.4.28-alpha.57-15f8b0a-54"></script>
+    <footer class="site-footer">
+      <div class="wrap footer-inner">
+        <div class="footer-about">
+          <a class="brand" href="/"><img class="brand-mark" src="/assets/icons/app-icon-96.webp" alt="" width="32" height="32" loading="lazy"><span>Permit Route Pro</span></a>
+          <p>For alpha testing and evaluation. Verify every route against the issued permit.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer">
+          <div>
+            <h2>The app</h2>
+            <ul>
+              <li><a href="/install">Install</a></li>
+              <li><a href="/#coverage">State coverage</a></li>
+              <li><a href="/screenshots">App screenshots</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Learn</h2>
+            <ul>
+              <li><a href="/tutorial">App tutorial</a></li>
+              <li><a href="/permit-route-review">Route review guide</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Releases</h2>
+            <ul>
+              <li><a href="/updates">What’s new</a></li>
+              <li><a href="/changelog">Changelog</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2>Contact</h2>
+            <ul>
+              <li><a href="/share-a-permit">Share a permit</a></li>
+              <li><a href="mailto:permitroutepro@gmail.com">permitroutepro@gmail.com</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </footer>
+    <script src="/apk-downloads.js?v=0.4.28-alpha.58-cdb2f9b-56"></script>
+    <script src="/site.js?v=0.4.28-alpha.58-cdb2f9b-56"></script>
   </body>
 </html>

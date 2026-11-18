@@ -4,9 +4,9 @@
   const releaseFallback =
     'https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases';
   const labels = {
-    'arm64-v8a': 'ARM64 — most modern Android phones',
-    'armeabi-v7a': 'ARM32 — older 32-bit Android devices',
-    'x86_64': 'x86_64 — compatible Intel/AMD Android devices',
+    'arm64-v8a': 'ARM64 — most phones',
+    'armeabi-v7a': 'ARM32 — older phones',
+    'x86_64': 'x86_64 — Intel or AMD',
   };
 
   function trustedApkUrl(value) {
@@ -27,7 +27,7 @@
     const universalUrl = trustedApkUrl(manifest?.apkUrl);
     if (universalUrl) {
       const size = Number(manifest?.apkSizeBytes);
-      result.push({ abi: 'universal', label: 'Universal — all supported Android architectures', url: universalUrl,
+      result.push({ abi: 'universal', label: 'Universal — any device', url: universalUrl,
         ...(Number.isSafeInteger(size) && size > 0 ? { sizeBytes: size } : {}) });
     }
     for (const [abi, label] of Object.entries(labels)) {

@@ -1,32 +1,41 @@
 {
-  "latestVersionName": "0.4.28-alpha.57",
-  "latestVersionCode": 2187,
-  "minimumVersionCode": 2187,
+  "latestVersionName": "0.4.28-alpha.58",
+  "latestVersionCode": 2188,
+  "minimumVersionCode": 2188,
   "required": true,
-  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.57/permit-route-pro-v0.4.28-alpha.57.apk",
-  "apkSha256": "be0e07df21d4fe3d555d72750034344729a1679064c897187e5e94a5fb7614a5",
-  "apkSizeBytes": 66979261,
+  "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.58/permit-route-pro-v0.4.28-alpha.58.apk",
+  "apkSha256": "8d4ccf894b187c92a006ec0dded8414a290755ff77edc6a6fb565e39f0f8d946",
+  "apkSizeBytes": 67050057,
   "apks": {
     "arm64-v8a": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.57/permit-route-pro-v0.4.28-alpha.57-arm64-v8a.apk",
-      "apkSha256": "33585d22ae2562dadb4704df276b82d78add63ed82f7add016e93ed8460ffee9",
-      "apkSizeBytes": 34760251
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.58/permit-route-pro-v0.4.28-alpha.58-arm64-v8a.apk",
+      "apkSha256": "663d74a49c45653d8fc7aac36675ae1829423710926837861f41e1c21c352657",
+      "apkSizeBytes": 34781103
     },
     "armeabi-v7a": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.57/permit-route-pro-v0.4.28-alpha.57-armeabi-v7a.apk",
-      "apkSha256": "1107886b4e8fb6fcf9b9473c3c473f6abb39e347d0d3c33776601bba45658e43",
-      "apkSizeBytes": 33393103
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.58/permit-route-pro-v0.4.28-alpha.58-armeabi-v7a.apk",
+      "apkSha256": "b42783443a21b660e39903bbc23021beb26d7fb432e344df647ffc1573f6dd74",
+      "apkSizeBytes": 33419371
     },
     "x86_64": {
-      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.57/permit-route-pro-v0.4.28-alpha.57-x86_64.apk",
-      "apkSha256": "e8f4c3c26d71417961292557594bf387252280b6188df56301dc3d365115be31",
-      "apkSizeBytes": 35338463
+      "apkUrl": "https://github.com/ussblade/PermitRoutePro-Alpha-Releases/releases/download/v0.4.28-alpha.58/permit-route-pro-v0.4.28-alpha.58-x86_64.apk",
+      "apkSha256": "0a74f8f27eb37c4bdfe282ae6e66cfd597eed60f40584c48c8a8bb1a1ed3cc84",
+      "apkSizeBytes": 35362135
     }
   },
   "releaseNotes": [
-    "The app now opens right away, even with a long permit history. Your saved permits and audit records load while the splash screen shows."
+    "If your account can't finish opening because of a connection problem, the app now tries again by itself when your network changes or you reopen the app. You can still tap Retry at any time.",
+    "Checking your sign-in while the app is still opening no longer signs you out by mistake on a slow or changing connection."
   ],
   "releaseHistory": [
+    {
+      "versionName": "0.4.28-alpha.58",
+      "versionCode": 2188,
+      "notes": [
+        "If your account can't finish opening because of a connection problem, the app now tries again by itself when your network changes or you reopen the app. You can still tap Retry at any time.",
+        "Checking your sign-in while the app is still opening no longer signs you out by mistake on a slow or changing connection."
+      ]
+    },
     {
       "versionName": "0.4.28-alpha.57",
       "versionCode": 2187,
@@ -725,5 +734,5 @@
       ]
     }
   ],
-  "publishedAt": "2026-11-05T18:57:40Z"
+  "publishedAt": "2026-11-18T01:04:29Z"
 }
